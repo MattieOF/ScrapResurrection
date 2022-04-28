@@ -1,9 +1,10 @@
 {
   "resources": [
-    {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"order":0,},
+    {"id":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"order":0,},
     {"id":{"name":"sTempPlayer","path":"sprites/sTempPlayer/sTempPlayer.yy",},"order":0,},
     {"id":{"name":"scrStringUtil","path":"scripts/scrStringUtil/scrStringUtil.yy",},"order":0,},
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"order":0,},
+    {"id":{"name":"sBasicGradient","path":"sprites/sBasicGradient/sBasicGradient.yy",},"order":1,},
     {"id":{"name":"rmTest","path":"rooms/rmTest/rmTest.yy",},"order":0,},
   ],
   "Options": [
