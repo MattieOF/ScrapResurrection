@@ -1,9 +1,11 @@
 {
   "resources": [
     {"id":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"order":0,},
+    {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},"order":3,},
     {"id":{"name":"scrDebugUtil","path":"scripts/scrDebugUtil/scrDebugUtil.yy",},"order":1,},
     {"id":{"name":"rmInit","path":"rooms/rmInit/rmInit.yy",},"order":1,},
     {"id":{"name":"sTempPlayer","path":"sprites/sTempPlayer/sTempPlayer.yy",},"order":0,},
+    {"id":{"name":"sWall","path":"sprites/sWall/sWall.yy",},"order":2,},
     {"id":{"name":"oScriptUtil","path":"objects/oScriptUtil/oScriptUtil.yy",},"order":2,},
     {"id":{"name":"scrStringUtil","path":"scripts/scrStringUtil/scrStringUtil.yy",},"order":0,},
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"order":0,},
