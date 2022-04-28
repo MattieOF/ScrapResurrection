@@ -1,15 +1,23 @@
 {
   "resources": [
     {"id":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"order":0,},
+    {"id":{"name":"sqIntro","path":"sequences/sqIntro/sqIntro.yy",},"order":0,},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},"order":3,},
     {"id":{"name":"scrDebugUtil","path":"scripts/scrDebugUtil/scrDebugUtil.yy",},"order":1,},
+    {"id":{"name":"scrOptions","path":"scripts/scrOptions/scrOptions.yy",},"order":2,},
+    {"id":{"name":"oCamZone","path":"objects/oCamZone/oCamZone.yy",},"order":5,},
+    {"id":{"name":"fntLogo","path":"fonts/fntLogo/fntLogo.yy",},"order":0,},
+    {"id":{"name":"sqIntro_Events5","path":"scripts/sqIntro_Events5/sqIntro_Events5.yy",},"order":1,},
     {"id":{"name":"rmInit","path":"rooms/rmInit/rmInit.yy",},"order":1,},
+    {"id":{"name":"oIntro","path":"objects/oIntro/oIntro.yy",},"order":4,},
     {"id":{"name":"sTempPlayer","path":"sprites/sTempPlayer/sTempPlayer.yy",},"order":0,},
+    {"id":{"name":"scrIniExtensions","path":"scripts/scrIniExtensions/scrIniExtensions.yy",},"order":3,},
     {"id":{"name":"sWall","path":"sprites/sWall/sWall.yy",},"order":2,},
     {"id":{"name":"oScriptUtil","path":"objects/oScriptUtil/oScriptUtil.yy",},"order":2,},
     {"id":{"name":"scrStringUtil","path":"scripts/scrStringUtil/scrStringUtil.yy",},"order":0,},
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"order":0,},
     {"id":{"name":"sBasicGradient","path":"sprites/sBasicGradient/sBasicGradient.yy",},"order":1,},
+    {"id":{"name":"sEmpty","path":"sprites/sEmpty/sEmpty.yy",},"order":3,},
     {"id":{"name":"rmTest","path":"rooms/rmTest/rmTest.yy",},"order":0,},
   ],
   "Options": [
@@ -46,6 +54,7 @@
     {"folderPath":"folders/Extensions.yy","order":14,"resourceVersion":"1.0","name":"Extensions","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/Players.yy","order":1,"resourceVersion":"1.0","name":"Players","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Scripts/Utility.yy","order":1,"resourceVersion":"1.0","name":"Utility","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sequences/Intro.yy","order":2,"resourceVersion":"1.0","name":"Intro","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
