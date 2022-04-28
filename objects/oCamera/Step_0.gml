@@ -11,11 +11,11 @@ if (instance_exists(target))
 x += (xTo - x) / cameraMoveFractionPerFrame;
 y += (yTo - y) / cameraMoveFractionPerFrame;
 
-_widthCurrent += (width - _widthCurrent) / cameraMoveFractionPerFrame;
-_heightCurrent += (height - _heightCurrent) / cameraMoveFractionPerFrame;
+_widthCurrent += (width - _widthCurrent) / cameraAdjustFractionPerFrame;
+_heightCurrent += (height - _heightCurrent) / cameraAdjustFractionPerFrame;
 
-_xOffsetCurrent += (xOffset - _xOffsetCurrent) / cameraMoveFractionPerFrame;
-_yOffsetCurrent += (yOffset - _yOffsetCurrent) / cameraMoveFractionPerFrame;
+_xOffsetCurrent += (xOffset - _xOffsetCurrent) / cameraAdjustFractionPerFrame;
+_yOffsetCurrent += (yOffset - _yOffsetCurrent) / cameraAdjustFractionPerFrame;
 
 // If the smooth value is close enough, change values to exact values
 if (abs(xTo - x) < 0.5) x = xTo;

@@ -9,6 +9,9 @@ if (col != noone)
 		oCamera.height  = col.heightMultiplier * 540;
 		oCamera.xOffset = col.xOffset;
 		oCamera.yOffset = col.yOffset;
+		
+		oCamera.cameraMoveFractionPerFrame   = col.camMoveFraction;
+		oCamera.cameraAdjustFractionPerFrame = col.camAdjustFraction;
 	}
 }
 

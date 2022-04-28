@@ -26,6 +26,7 @@
         {"properties":[
             {"propertyId":{"name":"widthMultiplier","path":"objects/oCamZone/oCamZone.yy",},"objectId":{"name":"oCamZone","path":"objects/oCamZone/oCamZone.yy",},"value":"0.5","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
             {"propertyId":{"name":"heightMultiplier","path":"objects/oCamZone/oCamZone.yy",},"objectId":{"name":"oCamZone","path":"objects/oCamZone/oCamZone.yy",},"value":"0.5","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+            {"propertyId":{"name":"camMoveFraction","path":"objects/oCamZone/oCamZone.yy",},"objectId":{"name":"oCamZone","path":"objects/oCamZone/oCamZone.yy",},"value":"6","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
           ],"isDnd":false,"objectId":{"name":"oCamZone","path":"objects/oCamZone/oCamZone.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":13.5,"scaleY":2.5,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1152.0,"y":320.0,"resourceVersion":"1.0","name":"inst_15961480","tags":[],"resourceType":"GMRInstance",},
         {"properties":[
             {"propertyId":{"name":"widthMultiplier","path":"objects/oCamZone/oCamZone.yy",},"objectId":{"name":"oCamZone","path":"objects/oCamZone/oCamZone.yy",},"value":"1.5","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
