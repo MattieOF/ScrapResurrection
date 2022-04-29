@@ -39,13 +39,15 @@ var pm = matrix_build_projection_ortho(_widthCurrent, _heightCurrent, 1, 10000);
 camera_set_view_mat(camera, vm);
 camera_set_proj_mat(camera, pm);
 
-
-add_debug_text("Camera");
-add_debug_text(format_string("Target Pos:        [X: {0}, Y: {1}]", xTo, yTo));
-add_debug_text(format_string("Current Pos:       [X: {0}, Y: {1}]", x, y));
-add_debug_text(format_string("Target Size:       [Width: {0}, Height: {1}]", width, height));
-add_debug_text(format_string("Current Size:      [Width: {0}, Height: {1}]", _widthCurrent, _heightCurrent));
-add_debug_text(format_string("Target Rotation:   {0}", angle));
-add_debug_text(format_string("Current Rotation:  {0}", _angleCurrent));
-add_debug_text("");
+if (global.drawDebugItems)
+{
+	add_debug_text("Camera");
+	add_debug_text(format_string("Target Pos:        [X: {0}, Y: {1}]", xTo, yTo));
+	add_debug_text(format_string("Current Pos:       [X: {0}, Y: {1}]", x, y));
+	add_debug_text(format_string("Target Size:       [Width: {0}, Height: {1}]", width, height));
+	add_debug_text(format_string("Current Size:      [Width: {0}, Height: {1}]", _widthCurrent, _heightCurrent));
+	add_debug_text(format_string("Target Rotation:   {0}", angle));
+	add_debug_text(format_string("Current Rotation:  {0}", _angleCurrent));
+	add_debug_text("");	
+}
 
