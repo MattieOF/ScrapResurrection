@@ -11,6 +11,7 @@ if (active)
 			oCamera.height  = col.heightMultiplier * 540;
 			oCamera.xOffset = col.xOffset;
 			oCamera.yOffset = col.yOffset;
+			oCamera.angle   = col.angle;
 		
 			oCamera.cameraMoveFractionPerFrame   = col.camMoveFraction;
 			oCamera.cameraAdjustFractionPerFrame = col.camAdjustFraction;

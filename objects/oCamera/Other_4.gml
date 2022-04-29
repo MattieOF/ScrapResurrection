@@ -57,10 +57,12 @@ xTo = x;
 yTo = y;
 xOffset = 0;
 yOffset = 0;
+angle = 0;
 
 // Initialise values for smoothing
 _xOffsetCurrent = xOffset;
 _yOffsetCurrent = yOffset;
 _widthCurrent = width;
 _heightCurrent = height;
+_angleCurrent = 0;
 
