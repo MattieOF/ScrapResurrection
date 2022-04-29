@@ -16,6 +16,7 @@
     {"id":{"name":"oScriptUtil","path":"objects/oScriptUtil/oScriptUtil.yy",},"order":2,},
     {"id":{"name":"scrStringUtil","path":"scripts/scrStringUtil/scrStringUtil.yy",},"order":0,},
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"order":0,},
+    {"id":{"name":"scrControls","path":"scripts/scrControls/scrControls.yy",},"order":4,},
     {"id":{"name":"sBasicGradient","path":"sprites/sBasicGradient/sBasicGradient.yy",},"order":1,},
     {"id":{"name":"sEmpty","path":"sprites/sEmpty/sEmpty.yy",},"order":3,},
     {"id":{"name":"rmTest","path":"rooms/rmTest/rmTest.yy",},"order":0,},
@@ -64,7 +65,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2022.3.0.625",
+    "IDEVersion": "2022.3.0.624",
   },
   "resourceVersion": "1.5",
   "name": "ScrapResurrection",

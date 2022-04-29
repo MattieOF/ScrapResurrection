@@ -1,3 +1,9 @@
 /// @description Insert description here
-if (global.skipIntro) room_goto(rmTest);
+
+function intro_complete()
+{
+	room_goto(rmTest);
+}
+
+if (global.skipIntro) intro_complete();
 
