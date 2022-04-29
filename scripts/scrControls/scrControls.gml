@@ -6,6 +6,7 @@ enum controls
 	left,
 	right,
 	jump,
+	switchCharacter,
 	quit,
 	screenshot
 }
@@ -52,6 +53,8 @@ function control_defaults()
 	// Init default controls
 	set_control(controls.left,            new Control(controlType.key,        ord("A")));
 	set_control(controls.right,           new Control(controlType.key,        ord("D")));
+	set_control(controls.jump,            new Control(controlType.key,        vk_space));
+	set_control(controls.switchCharacter, new Control(controlType.key,        ord("C")));
 	// set_control(controls.attackPrimary,   new Control(controlType.mouse,      mb_left));
 	set_control(controls.quit,            new Control(controlType.key,        vk_escape));
 	// set_control(controls.toggleFPS,       new Control(controlType.key,        vk_f1));

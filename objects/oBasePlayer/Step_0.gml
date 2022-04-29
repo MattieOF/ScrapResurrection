@@ -4,9 +4,11 @@
 
 add_debug_text(format_string("X: {0}, Y: {1}", x, y));
 
-var keyRight = keyboard_check(vk_right) || keyboard_check(ord("D"));
-var keyLeft  = keyboard_check(vk_left)  || keyboard_check(ord("A"));
-var keyJump  = keyboard_check(vk_space) || keyboard_check(ord("W"));
+var keyRight = control_check(controls.right);
+var keyLeft  = control_check(controls.left);
+var keyJump  = control_check(controls.jump);
+
+// add_debug_text(format_string("Right: {0}, Left: {1}, Jump: {2}", keyRight, keyLeft, keyJump));
 
 hsp = (keyRight - keyLeft) * walkSpeed;
 vsp += grv;
