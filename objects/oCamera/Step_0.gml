@@ -4,6 +4,9 @@
 if (instance_exists(target))
 {
 	xTo = target.x + _xOffsetCurrent;
+	add_debug_text("Camera");
+	add_debug_text(format_string("Target Pos: [X: {0}, Y: {1}]", xTo, yTo));
+	add_debug_text("");
 	yTo = target.y + _yOffsetCurrent;
 }
 

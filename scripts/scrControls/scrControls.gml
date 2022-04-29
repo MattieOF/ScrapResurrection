@@ -8,7 +8,8 @@ enum controls
 	jump,
 	switchCharacter,
 	quit,
-	screenshot
+	screenshot,
+	toggleDebug
 }
 
 /// @description Enum representing the types of a control (key, mouse)
@@ -60,6 +61,7 @@ function control_defaults()
 	// set_control(controls.toggleFPS,       new Control(controlType.key,        vk_f1));
 	// set_control(controls.toggleDistort,   new Control(controlType.key,        vk_f2));
 	set_control(controls.screenshot,      new Control(controlType.key,        vk_f5));
+	set_control(controls.toggleDebug,     new Control(controlType.key,        vk_f3));
 	// set_control(controls.reload,          new Control(controlType.key,        ord("R")));
 	// set_control(controls.weaponNext,      new Control(controlType.mousewheel, mouseWheelDir.up));
 	// set_control(controls.weaponPrevious,  new Control(controlType.mousewheel, mouseWheelDir.down));

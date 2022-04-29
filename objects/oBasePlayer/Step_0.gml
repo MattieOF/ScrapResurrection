@@ -2,13 +2,14 @@
 
 // Movement code adapted from https://www.youtube.com/watch?v=ywgkXbHYJNE
 
-add_debug_text(format_string("X: {0}, Y: {1}", x, y));
+var keyRight = active ? control_check(controls.right) : 0;
+var keyLeft  = active ? control_check(controls.left) : 0;
+var keyJump  = active ? control_check(controls.jump) : 0;
 
-var keyRight = control_check(controls.right);
-var keyLeft  = control_check(controls.left);
-var keyJump  = control_check(controls.jump);
-
-// add_debug_text(format_string("Right: {0}, Left: {1}, Jump: {2}", keyRight, keyLeft, keyJump));
+add_debug_text(name);
+add_debug_text(format_string("Pos:      [X: {0}, Y: {1}]", x, y));
+add_debug_text(format_string("Movement: [Right: {0}, Left: {1}, Jump: {2}]", keyRight, keyLeft, keyJump));
+add_debug_text("");
 
 hsp = (keyRight - keyLeft) * walkSpeed;
 vsp += grv;

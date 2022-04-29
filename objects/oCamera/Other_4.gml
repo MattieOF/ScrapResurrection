@@ -7,8 +7,8 @@ function set_target(newTarget, instant)
 	if (instance_exists(newTarget))
 	{
 		target = newTarget;
-		xTo = newTarget.x;
-		yTo = newTarget.y;
+		xTo = target.x;
+		yTo = target.y;
 		
 		if (instant)
 		{
@@ -50,8 +50,8 @@ display_set_gui_size(global.displayWidth, global.displayHeight); // Same for GUI
 if (!centeredWindow)
 	alarm[0] = 1;
 
-if (instance_exists(oBasePlayer))
-	set_target(oBasePlayer, true);
+// if (instance_exists(oBasePlayer))
+// 	set_target(oBasePlayer, true);
 
 xTo = x;
 yTo = y;

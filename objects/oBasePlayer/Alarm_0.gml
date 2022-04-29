@@ -1,17 +1,20 @@
 /// @description Check for cam zones
 
-var col = instance_place(x, y, oCamZone);
-if (col != noone)
+if (active)
 {
-	if (instance_exists(oCamera))
+	var col = instance_place(x, y, oCamZone);
+	if (col != noone)
 	{
-		oCamera.width   = col.widthMultiplier  * 960;
-		oCamera.height  = col.heightMultiplier * 540;
-		oCamera.xOffset = col.xOffset;
-		oCamera.yOffset = col.yOffset;
+		if (instance_exists(oCamera))
+		{
+			oCamera.width   = col.widthMultiplier  * 960;
+			oCamera.height  = col.heightMultiplier * 540;
+			oCamera.xOffset = col.xOffset;
+			oCamera.yOffset = col.yOffset;
 		
-		oCamera.cameraMoveFractionPerFrame   = col.camMoveFraction;
-		oCamera.cameraAdjustFractionPerFrame = col.camAdjustFraction;
+			oCamera.cameraMoveFractionPerFrame   = col.camMoveFraction;
+			oCamera.cameraAdjustFractionPerFrame = col.camAdjustFraction;
+		}
 	}
 }
 
