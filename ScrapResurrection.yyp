@@ -9,6 +9,7 @@
     {"id":{"name":"scrDebugUtil","path":"scripts/scrDebugUtil/scrDebugUtil.yy",},"order":1,},
     {"id":{"name":"scrOptions","path":"scripts/scrOptions/scrOptions.yy",},"order":2,},
     {"id":{"name":"oCamZone","path":"objects/oCamZone/oCamZone.yy",},"order":5,},
+    {"id":{"name":"scrGeneralUtility","path":"scripts/scrGeneralUtility/scrGeneralUtility.yy",},"order":5,},
     {"id":{"name":"fntLogo","path":"fonts/fntLogo/fntLogo.yy",},"order":0,},
     {"id":{"name":"sqIntro_Events5","path":"scripts/sqIntro_Events5/sqIntro_Events5.yy",},"order":1,},
     {"id":{"name":"sTempPlayerB","path":"sprites/sTempPlayerB/sTempPlayerB.yy",},"order":5,},

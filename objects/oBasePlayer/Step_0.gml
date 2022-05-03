@@ -5,15 +5,16 @@
 var keyRight = active ? control_check(controls.right) : 0;
 var keyLeft  = active ? control_check(controls.left) : 0;
 var keyJump  = active ? control_check(controls.jump) : 0;
-var keyDash  = active ? control_check(controls.dash) : 0;
+var keyDash  = active ? control_check_pressed(controls.dash) : 0;
 
 if (global.drawDebugItems)
 {
 	add_debug_text(format_string("{0}{1}", name, active ? " [ACTIVE]" : ""));
-	add_debug_text(format_string("Pos:         [X: {0}, Y: {1}]", x, y));
-	add_debug_text(format_string("Movement:    [Right: {0}, Left: {1}, Jump: {2}]", keyRight, keyLeft, keyJump));
-	add_debug_text(format_string("Dash Speed:  {0}", dsp));
-	add_debug_text(format_string("Dash Time:   {0}", _currentDashTime));
+	add_debug_text(format_string("Pos:          [X: {0}, Y: {1}]", x, y));
+	add_debug_text(format_string("Movement:     [Right: {0}, Left: {1}, Jump: {2}]", keyRight, keyLeft, keyJump));
+	add_debug_text(format_string("Dash Speed:   {0}", dsp));
+	add_debug_text(format_string("Dash Time:    {0}", _currentDashTime));
+	add_debug_text(format_string("Dash Charges: {0}", dashCharges));
 	add_debug_text("");
 }
 
@@ -27,11 +28,20 @@ if ((canJump-- > 0) && keyJump)
 }
 
 // Dash related code
-if (dsp > 0)
-	dsp -= 5;
+if (dsp != 0)
+	dsp = approach(dsp, 0, 3);
 
-if (_currentDashTime > 0) _currentDashTime--;
-if (keyDash && _currentDashTime <= 0 && dashCharges > 0)
+if (_currentDashTime > 0)
+{
+	_currentDashTime--;
+	if (_currentDashTime == 0 && dashCharges < maxDashCharges)
+	{
+		dashCharges++;
+		_currentDashTime = dashRecharge * room_speed;
+	}
+}
+
+if (keyDash && dashCharges > 0)
 {
 	_currentDashTime = dashRecharge * room_speed;
 	if (dashCharges == 0)
@@ -44,7 +54,7 @@ if (keyDash && _currentDashTime <= 0 && dashCharges > 0)
 }
 
 // Collide and move
-if (place_meeting(x + hsp, y, oWall))
+if (place_meeting(x + hsp + dsp, y, oWall))
 {
 	while (abs(hsp + dsp) > 0.1)
 	{
