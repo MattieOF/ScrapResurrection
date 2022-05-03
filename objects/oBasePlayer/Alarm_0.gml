@@ -12,9 +12,12 @@ if (active)
 			oCamera.xOffset = col.xOffset;
 			oCamera.yOffset = col.yOffset;
 			oCamera.angle   = col.angle;
-		
-			oCamera.cameraMoveFractionPerFrame   = col.camMoveFraction;
-			oCamera.cameraAdjustFractionPerFrame = col.camAdjustFraction;
+			
+			if (!global.speedChangeBlocked)
+			{
+				oCamera.cameraMoveFractionPerFrame   = col.camMoveFraction;
+				oCamera.cameraAdjustFractionPerFrame = col.camAdjustFraction;	
+			}
 		}
 	}
 }

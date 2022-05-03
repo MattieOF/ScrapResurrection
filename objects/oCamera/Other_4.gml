@@ -23,6 +23,29 @@ function set_target(newTarget, instant)
 	}
 }
 
+function time_to_move_to_target(newTarget)
+{
+	var curX = x;
+	var curY = x;
+	var newX = newTarget.x;
+	var newY = newTarget.y;
+	
+	var steps = 0;
+	
+	while (abs(newX - curX) > 0.5 || abs(newY - curY) > 0.5)
+	{
+		curX += (newX - curX) / cameraMoveFractionPerFrame;
+		curY += (newY - curY) / cameraMoveFractionPerFrame;
+		steps++;
+		
+		// Failsafe: we've been going for way too long
+		if (steps > 400)
+			return steps;
+	}
+	
+	return steps;
+}
+
 camera = camera_create();
 
 var vm = matrix_build_lookat(x, y, -10, x, y, 0, 0, 1, 0);

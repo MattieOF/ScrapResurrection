@@ -2,6 +2,7 @@
 
 characters = ds_list_create();
 currentCharacterIndex = 0;
+global.speedChangeBlocked = false;
 
 with (oBasePlayer)
 	ds_list_add(oGameManager.characters, id);
@@ -27,6 +28,8 @@ function switch_character(index, instant = false)
 	if (instance_exists(oCamera))
 	{
 		oCamera.cameraMoveFractionPerFrame = 25;
+		alarm[0] = oCamera.time_to_move_to_target(characters[| currentCharacterIndex]);
+		global.speedChangeBlocked = true;
 		oCamera.set_target(characters[| currentCharacterIndex], instant);
 	}
 	characters[| currentCharacterIndex].active = true;
