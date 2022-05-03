@@ -7,6 +7,7 @@ canJump = jumpFrames;
 dsp = 0;
 _currentDashTime = 0;
 maxDashCharges = dashCharges;
+floating = false;
 
 alarm[0] = 1;
 

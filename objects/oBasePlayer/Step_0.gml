@@ -15,11 +15,12 @@ if (global.drawDebugItems)
 	add_debug_text(format_string("Dash Speed:   {0}", dsp));
 	add_debug_text(format_string("Dash Time:    {0}", _currentDashTime));
 	add_debug_text(format_string("Dash Charges: {0}", dashCharges));
+	add_debug_text(format_string("Floating:     {0}", floating ? "True" : "False"));
 	add_debug_text("");
 }
 
 hsp = (keyRight - keyLeft) * walkSpeed;
-vsp += grv;
+if (!floating) vsp += grv;
 
 if ((canJump-- > 0) && keyJump)
 {
@@ -29,7 +30,7 @@ if ((canJump-- > 0) && keyJump)
 
 // Dash related code
 if (dsp != 0)
-	dsp = approach(dsp, 0, 3);
+	dsp = approach(dsp, 0, dashDeaccelerationPerSec);
 
 if (_currentDashTime > 0)
 {
@@ -51,6 +52,11 @@ if (keyDash && dashCharges > 0)
 	var _dir = sign(hsp);
 	if (_dir == 0) _dir = 1;
 	dsp = _dir * dashSpeed;
+	vsp = 0;
+	
+	// Float (no gravity) for amount of time it takes to dsp to decrease to 0
+	floating = true;
+	alarm[1] = dsp / dashDeaccelerationPerStep; 
 }
 
 // Collide and move
