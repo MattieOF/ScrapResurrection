@@ -48,7 +48,7 @@ if (global.drawDebugItems)
 	add_debug_text(format_string("Current Size:          [Width: {0}, Height: {1}]", _widthCurrent, _heightCurrent));
 	add_debug_text(format_string("Target Rotation:       {0}", angle));
 	add_debug_text(format_string("Current Rotation:      {0}", _angleCurrent));
-	add_debug_text(format_string("Speed Change Blocked:  {0}", global.speedChangeBlocked));
+	add_debug_text(format_string("Speed Change Blocked:  {0}", global.speedChangeBlocked ? "True" : "False"));
 	add_debug_text("");	
 }
 
