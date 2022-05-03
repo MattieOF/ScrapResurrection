@@ -1,8 +1,6 @@
 /// @description Draw debug items
 if (!global.drawDebugItems) return;
 
-add_debug_text(format_string("FPS: {0}", fps_real));
-
 var _y = 5;
 for (var i = 0; i < ds_list_size(global.debugItems); i++)
 {
