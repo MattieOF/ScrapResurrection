@@ -16,21 +16,28 @@ if (global.drawDebugItems)
 	add_debug_text(format_string("Dash Time:    {0}", _currentDashTime));
 	add_debug_text(format_string("Dash Charges: {0}", dashCharges));
 	add_debug_text(format_string("Floating:     {0}", floating ? "True" : "False"));
+	add_debug_text(format_string("EJumps Left:  {0}", _currentExtraJumps));
 	add_debug_text("");
 }
 
 hsp = (keyRight - keyLeft) * walkSpeed;
 if (!floating) vsp += grv;
 
-if ((canJump-- > 0) && keyJump)
+if (((canJump-- > 0) || _currentExtraJumps > 0) && keyJump)
 {
-	vsp = -jumpHeight;
-	canJump = 0;
+	var isExtraJump = canJump <= 0;
+	if (!isExtraJump || control_check_pressed(controls.jump))
+	{
+		vsp = -jumpHeight * (isExtraJump ? extraJumpPowerModifier : 1);
+		if (isExtraJump) 
+			_currentExtraJumps--;
+		canJump = 0;
+	}
 }
 
 // Dash related code
 if (dsp != 0)
-	dsp = approach(dsp, 0, dashDeaccelerationPerSec);
+	dsp = approach(dsp, 0, dashDeaccelerationPerStep);
 
 if (_currentDashTime > 0)
 {
@@ -56,7 +63,7 @@ if (keyDash && dashCharges > 0)
 	
 	// Float (no gravity) for amount of time it takes to dsp to decrease to 0
 	floating = true;
-	alarm[1] = dsp / dashDeaccelerationPerStep; 
+	alarm[1] = abs(dsp) / dashDeaccelerationPerStep; 
 }
 
 // Collide and move
@@ -80,7 +87,11 @@ x += dsp;
 
 if (place_meeting(x, y + vsp, oWall))
 {
-	if (vsp > 0) canJump = jumpFrames;
+	if (vsp > 0) 
+	{
+		canJump = jumpFrames;
+		_currentExtraJumps = extraJumps;
+	}
 	while (abs(vsp) > 0.1)
 	{
 		vsp *= 0.5;
