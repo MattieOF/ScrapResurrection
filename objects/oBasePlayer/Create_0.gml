@@ -10,5 +10,10 @@ maxDashCharges = dashCharges;
 floating = false;
 _currentExtraJumps = extraJumps;
 
+function is_grounded()
+{
+	return place_meeting(x, y + 1, oWall);
+}
+
 alarm[0] = 1;
 

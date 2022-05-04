@@ -11,6 +11,7 @@ if (global.drawDebugItems)
 {
 	add_debug_text(format_string("{0}{1}", name, active ? " [ACTIVE]" : ""));
 	add_debug_text(format_string("Pos:          [X: {0}, Y: {1}]", x, y));
+	add_debug_text(format_string("H/VSP:        [H: {0}, V: {1}]", hsp, vsp));
 	add_debug_text(format_string("Movement:     [Right: {0}, Left: {1}, Jump: {2}]", keyRight, keyLeft, keyJump));
 	add_debug_text(format_string("Dash Speed:   {0}", dsp));
 	add_debug_text(format_string("Dash Time:    {0}", _currentDashTime));
@@ -81,12 +82,23 @@ if (place_meeting(x + hsp + dsp, y, oWall))
 	}
 	hsp = 0;
 	dsp = 0;
+	
+	if (canWallSlide && !floating && !is_grounded())
+	{
+		vsp = min(vsp, 2);
+		// TODO: Wallsliding particle
+	}
 }
 x += hsp;
 x += dsp;
 
 if (place_meeting(x, y + vsp, oWall))
 {
+	if (vsp > 17.5)
+	{
+		// TODO: Take fall damage
+	}
+	
 	if (vsp > 0) 
 	{
 		canJump = jumpFrames;
