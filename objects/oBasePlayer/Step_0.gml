@@ -6,6 +6,7 @@ var keyRight = active ? control_check(controls.right) : 0;
 var keyLeft  = active ? control_check(controls.left) : 0;
 var keyJump  = active ? control_check(controls.jump) : 0;
 var keyDash  = active ? control_check_pressed(controls.dash) : 0;
+var keyHook  = active ? control_check(controls.grapplingHook) : 0;
 
 if (global.drawDebugItems)
 {
@@ -18,6 +19,7 @@ if (global.drawDebugItems)
 	add_debug_text(format_string("Dash Charges: {0}", dashCharges));
 	add_debug_text(format_string("Floating:     {0}", floating ? "True" : "False"));
 	add_debug_text(format_string("EJumps Left:  {0}", _currentExtraJumps));
+	add_debug_text(format_string("Grappling:    {0}", state == playerState.grappling ? "True" : "False"));
 	add_debug_text("");
 }
 
@@ -85,7 +87,7 @@ if (place_meeting(x + hsp + dsp, y, oWall))
 	
 	if (canWallSlide && !floating && !is_grounded())
 	{
-		vsp = min(vsp, 2);
+		vsp = min(vsp, wallslideSpeed);
 		// TODO: Wallsliding particle
 	}
 }

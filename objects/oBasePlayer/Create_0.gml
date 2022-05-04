@@ -1,5 +1,12 @@
 /// @description Init some values
 
+enum playerState
+{
+	normal,
+	shootingHook,
+	grappling
+}
+
 active = false;
 hsp = 0;
 vsp = 0;
@@ -9,6 +16,8 @@ _currentDashTime = 0;
 maxDashCharges = dashCharges;
 floating = false;
 _currentExtraJumps = extraJumps;
+
+state = playerState.normal;
 
 function is_grounded()
 {
