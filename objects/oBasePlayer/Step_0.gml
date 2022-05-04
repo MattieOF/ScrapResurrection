@@ -26,7 +26,31 @@ if (global.drawDebugItems)
 hsp = (keyRight - keyLeft) * walkSpeed;
 if (!floating) vsp += grv;
 
-if (((canJump-- > 0) || _currentExtraJumps > 0) && keyJump)
+if (keyHook && hasGrapplingHook)
+{	
+	switch(state)
+	{
+		case playerState.normal:
+			_hookDir = point_direction(x, y, mouse_x, mouse_y);
+			state = playerState.shootingHook;
+			break;
+		case playerState.shootingHook:
+			var targetDir = point_direction(x, y, mouse_x, mouse_y);
+			_hookDir = approach(_hookDir, targetDir, 1.5);
+			_currentHookLen += grappleSpeed;
+			break;
+		case playerState.grappling:
+			
+			break;
+	}
+}
+else
+{
+	state = playerState.normal;
+	_currentHookLen = 0;
+}
+
+if (((canJump-- > 0) || _currentExtraJumps > 0) && keyJump && state == playerState.normal)
 {
 	var isExtraJump = canJump <= 0;
 	if (!isExtraJump || control_check_pressed(controls.jump))

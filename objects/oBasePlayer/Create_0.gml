@@ -16,6 +16,8 @@ _currentDashTime = 0;
 maxDashCharges = dashCharges;
 floating = false;
 _currentExtraJumps = extraJumps;
+_currentHookLen = 0;
+_hookDir = 0;
 
 state = playerState.normal;
 
