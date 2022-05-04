@@ -18,6 +18,8 @@ floating = false;
 _currentExtraJumps = extraJumps;
 _currentHookLen = 0;
 _hookDir = 0;
+_gX = 0;
+_gY = 0;
 
 state = playerState.normal;
 

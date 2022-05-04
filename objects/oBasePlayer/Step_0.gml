@@ -36,11 +36,25 @@ if (keyHook && hasGrapplingHook)
 			break;
 		case playerState.shootingHook:
 			var targetDir = point_direction(x, y, mouse_x, mouse_y);
-			_hookDir = approach(_hookDir, targetDir, 1.5);
+			_gX = lengthdir_x(_currentHookLen, _hookDir) + x;
+			_gY = lengthdir_y(_currentHookLen, _hookDir) + y;
+			_hookDir += clamp(angle_difference(targetDir, _hookDir), -2.5, 2.5);
 			_currentHookLen += grappleSpeed;
+			
+			var hit = raycast(x, y, _hookDir, _currentHookLen, oWall);
+			if (hit.obj != noone)
+			{
+				state = playerState.grappling;
+			}
+			_gX = hit.X;
+			_gY = hit.Y;
+			
 			break;
 		case playerState.grappling:
-			
+			_hookDir = point_direction(x, y, _gX, _gY);
+			hsp = lengthdir_x(grappleSpeed, _hookDir);
+			vsp = lengthdir_y(grappleSpeed, _hookDir);
+
 			break;
 	}
 }
