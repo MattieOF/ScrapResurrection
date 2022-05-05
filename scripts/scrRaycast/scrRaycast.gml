@@ -6,7 +6,7 @@
 ///@arg dir
 ///@arg range
 ///@arg obj
-function raycast() {
+function raycast(_x, _y, _dir, _range, _objToCollide) {
 
 	/*
 		Shoot out a ray which travels a certain distance until it collides with something.
@@ -29,12 +29,7 @@ function raycast() {
 	
 	*/
 
-	var _x, _y, _dir, _range, _xA, _yA, _rangeCount, _objToCollide;
-	_x = argument[0];
-	_y = argument[1];
-	_dir = argument[2];
-	_range = argument[3];
-	_objToCollide = argument[4];
+	var _xA, _yA, _rangeCount;
 
 	var _col;
 	var _list = 

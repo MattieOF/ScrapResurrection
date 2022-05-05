@@ -11,6 +11,7 @@ var keyHook  = active ? control_check(controls.grapplingHook) : 0;
 if (global.drawDebugItems)
 {
 	add_debug_text(format_string("{0}{1}", name, active ? " [ACTIVE]" : ""));
+	add_debug_text(format_string("Health:       {0}", hp));
 	add_debug_text(format_string("Pos:          [X: {0}, Y: {1}]", x, y));
 	add_debug_text(format_string("H/VSP:        [H: {0}, V: {1}]", hsp, vsp));
 	add_debug_text(format_string("Movement:     [Right: {0}, Left: {1}, Jump: {2}]", keyRight, keyLeft, keyJump));
@@ -19,7 +20,7 @@ if (global.drawDebugItems)
 	add_debug_text(format_string("Dash Charges: {0}", dashCharges));
 	add_debug_text(format_string("Floating:     {0}", floating ? "True" : "False"));
 	add_debug_text(format_string("EJumps Left:  {0}", _currentExtraJumps));
-	add_debug_text(format_string("Grappling:    {0}", state == playerState.grappling ? "True" : "False"));
+	add_debug_text(format_string("State:        {0}", state_string()));
 	add_debug_text("");
 }
 
@@ -134,10 +135,9 @@ x += dsp;
 
 if (place_meeting(x, y + vsp, oWall))
 {
-	if (vsp > 17.5)
-	{
-		// TODO: Take fall damage
-	}
+	// Fall damage
+	if (vsp > fallDmgStart && state != playerState.grappling)
+		hurt((vsp - fallDmgStart) * fallDmgMultiplier);
 	
 	if (vsp > 0) 
 	{
