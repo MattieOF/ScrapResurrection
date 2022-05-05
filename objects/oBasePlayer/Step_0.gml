@@ -46,10 +46,6 @@ if (keyHook && hasGrapplingHook)
 				-grappleDirAdjustRate, grappleDirAdjustRate);
 			_currentHookLen += grappleSpeed;
 			
-			// Prevent length going above maximum
-			if (_currentHookLen > grappleMaxLength)
-				_currentHookLen = grappleMaxLength
-			
 			var hit = raycast(x, y, _hookDir, _currentHookLen, oWall);
 			if (hit.obj != noone)
 			{
@@ -57,6 +53,12 @@ if (keyHook && hasGrapplingHook)
 			}
 			_gX = hit.X;
 			_gY = hit.Y;
+			
+			// Missed hook
+			if (_currentHookLen > grappleMaxLength)
+			{
+				state = playerState.missedHook;
+			}
 			
 			break;
 		case playerState.grappling:
@@ -67,8 +69,18 @@ if (keyHook && hasGrapplingHook)
 			break;
 	}
 }
-else
+else if (state != playerState.missedHook) // Player has missed hook, keep them in that state
 	state = playerState.normal;
+	
+if (state == playerState.missedHook)
+{
+	_currentHookLen -= grappleSpeed;
+	_gX = x + lengthdir_x(_currentHookLen, _hookDir);
+	_gY = y + lengthdir_y(_currentHookLen, _hookDir);
+	
+	if (_currentHookLen < 0)
+		state = playerState.normal;
+}
 
 if (((canJump-- > 0) || _currentExtraJumps > 0) && keyJump && state == playerState.normal)
 {

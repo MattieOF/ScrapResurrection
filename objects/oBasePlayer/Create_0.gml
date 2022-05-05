@@ -4,6 +4,7 @@ enum playerState
 {
 	normal,
 	shootingHook,
+	missedHook,
 	grappling
 }
 
@@ -15,6 +16,8 @@ function state_string()
 			return "Normal";
 		case playerState.shootingHook:
 			return "Shooting Hook";
+		case playerState.missedHook:
+			return "Missed Hook";
 		case playerState.grappling:
 			return "Grappling";
 	}
