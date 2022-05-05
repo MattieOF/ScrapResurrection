@@ -34,6 +34,9 @@ if (keyHook && hasGrapplingHook)
 		case playerState.normal:
 			_hookDir = point_direction(x, y, mouse_x, mouse_y);
 			state = playerState.shootingHook;
+			_currentHookLen = 0;
+			_gX = x;
+			_gY = y;
 			break;
 		case playerState.shootingHook:
 			var targetDir = point_direction(x, y, mouse_x, mouse_y);
@@ -60,10 +63,7 @@ if (keyHook && hasGrapplingHook)
 	}
 }
 else
-{
 	state = playerState.normal;
-	_currentHookLen = 0;
-}
 
 if (((canJump-- > 0) || _currentExtraJumps > 0) && keyJump && state == playerState.normal)
 {
