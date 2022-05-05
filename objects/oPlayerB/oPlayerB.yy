@@ -31,6 +31,11 @@
     {"propertyId":{"name":"dashSpeed","path":"objects/oBasePlayer/oBasePlayer.yy",},"objectId":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"value":"25","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"dashCharges","path":"objects/oBasePlayer/oBasePlayer.yy",},"objectId":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"value":"3","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"dashRecharge","path":"objects/oBasePlayer/oBasePlayer.yy",},"objectId":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"value":"1.25","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"baseHealth","path":"objects/oBasePlayer/oBasePlayer.yy",},"objectId":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"value":"80","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"grappleMaxLength","path":"objects/oBasePlayer/oBasePlayer.yy",},"objectId":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"value":"900","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"fallDmgStart","path":"objects/oBasePlayer/oBasePlayer.yy",},"objectId":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"value":"10","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"grappleStartCol","path":"objects/oBasePlayer/oBasePlayer.yy",},"objectId":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"value":"$FF9A00FF","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"grappleEndCol","path":"objects/oBasePlayer/oBasePlayer.yy",},"objectId":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"value":"$FFFFFFFF","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "Players",

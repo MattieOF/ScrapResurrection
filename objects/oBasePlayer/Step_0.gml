@@ -42,8 +42,13 @@ if (keyHook && hasGrapplingHook)
 			var targetDir = point_direction(x, y, mouse_x, mouse_y);
 			_gX = lengthdir_x(_currentHookLen, _hookDir) + x;
 			_gY = lengthdir_y(_currentHookLen, _hookDir) + y;
-			_hookDir += clamp(angle_difference(targetDir, _hookDir), -2.5, 2.5);
+			_hookDir += clamp(angle_difference(targetDir, _hookDir), 
+				-grappleDirAdjustRate, grappleDirAdjustRate);
 			_currentHookLen += grappleSpeed;
+			
+			// Prevent length going above maximum
+			if (_currentHookLen > grappleMaxLength)
+				_currentHookLen = grappleMaxLength
 			
 			var hit = raycast(x, y, _hookDir, _currentHookLen, oWall);
 			if (hit.obj != noone)

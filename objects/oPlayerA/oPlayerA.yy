@@ -32,6 +32,12 @@
     {"propertyId":{"name":"dashCharges","path":"objects/oBasePlayer/oBasePlayer.yy",},"objectId":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"value":"1","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"dashSpeed","path":"objects/oBasePlayer/oBasePlayer.yy",},"objectId":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"value":"35","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"dashRecharge","path":"objects/oBasePlayer/oBasePlayer.yy",},"objectId":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"value":"3","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"fallDmgStart","path":"objects/oBasePlayer/oBasePlayer.yy",},"objectId":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"value":"15","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"fallDmgMultiplier","path":"objects/oBasePlayer/oBasePlayer.yy",},"objectId":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"value":"2.5","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"baseHealth","path":"objects/oBasePlayer/oBasePlayer.yy",},"objectId":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"value":"125","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"grappleMaxLength","path":"objects/oBasePlayer/oBasePlayer.yy",},"objectId":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"value":"500","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"grappleEndCol","path":"objects/oBasePlayer/oBasePlayer.yy",},"objectId":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"value":"$FF0000E5","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"grappleStartCol","path":"objects/oBasePlayer/oBasePlayer.yy",},"objectId":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"value":"$FF00004C","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "Players",
