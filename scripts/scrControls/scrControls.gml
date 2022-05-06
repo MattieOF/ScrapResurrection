@@ -11,7 +11,8 @@ enum controls
 	quit,
 	screenshot,
 	toggleDebug,
-	grapplingHook
+	grapplingHook,
+	use
 }
 
 /// @description Enum representing the types of a control (key, mouse)
@@ -58,6 +59,7 @@ function control_defaults()
 	set_control(controls.right,           new Control(controlType.key,        ord("D")));
 	set_control(controls.jump,            new Control(controlType.key,        vk_space));
 	set_control(controls.switchCharacter, new Control(controlType.key,        ord("C")));
+	set_control(controls.use, new Control(controlType.key,        ord("E")));
 	set_control(controls.dash,            new Control(controlType.key,        vk_lshift));
 	set_control(controls.grapplingHook,   new Control(controlType.mouse,      mb_middle));
 	// set_control(controls.attackPrimary,   new Control(controlType.mouse,      mb_left));

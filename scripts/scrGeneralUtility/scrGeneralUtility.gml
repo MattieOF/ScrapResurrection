@@ -132,3 +132,15 @@ function random_free_point_in_rect(x1, y1, x2, y2, obj = undefined, tries = 100)
 	};
 }
 
+function create_sprite(_sprite, _x, _y, _layer = undefined, _imagespeed = 1, _imagexscale = 1, _imageyscale = 1)
+{
+	var obj = instance_create_layer(_x, _y, _layer == undefined ? layer : _layer, oSprite);
+	obj.sprite_index = _sprite;
+	obj.image_speed = _imagespeed;
+	obj.image_xscale = _imagexscale;
+	obj.image_yscale = _imageyscale;
+	
+	return obj;
+}
+
+
