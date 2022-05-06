@@ -32,8 +32,8 @@
   ],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Visual",
+    "path": "folders/Objects/Control/Visual.yy",
   },
   "resourceVersion": "1.0",
   "name": "oCamera",

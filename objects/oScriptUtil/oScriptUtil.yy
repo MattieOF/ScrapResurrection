@@ -28,8 +28,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Debug",
+    "path": "folders/Objects/Control/Debug.yy",
   },
   "resourceVersion": "1.0",
   "name": "oScriptUtil",
