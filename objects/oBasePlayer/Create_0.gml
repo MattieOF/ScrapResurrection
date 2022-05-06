@@ -37,6 +37,7 @@ _hookDir = 0;
 _gX = 0;
 _gY = 0;
 hp = baseHealth;
+armor = 0;
 
 state = playerState.normal;
 
@@ -47,7 +48,35 @@ function is_grounded()
 
 function hurt(dmg)
 {
+	if (armor > 0)
+	{
+		// We have armor, take it from that first
+		if (armor < dmg)
+		{
+			// We don't have enough armor to absorb all the damage, so:
+			// 1. Take what we can from the armor
+			// 2. Ensure the armor is now zero
+			dmg -= armor;
+			armor = 0;
+		}
+		else
+		{
+			// Our armor can fully absorb the damage
+			// Take the dmg from the armor, and return from the function
+			armor -= dmg;
+			return;
+		}
+	}
+	
+	// If there is still dmg to take after the armor, then subtract it from HP
 	hp -= dmg;
+}
+
+function add_armor(amount)
+{
+	armor += amount;
+	if (armor > maxArmor)
+		armor = maxArmor;
 }
 
 alarm[0] = 1;

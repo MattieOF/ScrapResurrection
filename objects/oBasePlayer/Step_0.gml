@@ -12,6 +12,7 @@ if (global.drawDebugItems)
 {
 	add_debug_text(format_string("{0}{1}", name, active ? " [ACTIVE]" : ""));
 	add_debug_text(format_string("Health:       {0}", hp));
+	add_debug_text(format_string("Armor:        {0}", armor));
 	add_debug_text(format_string("Pos:          [X: {0}, Y: {1}]", x, y));
 	add_debug_text(format_string("H/VSP:        [H: {0}, V: {1}]", hsp, vsp));
 	add_debug_text(format_string("Movement:     [Right: {0}, Left: {1}, Jump: {2}]", keyRight, keyLeft, keyJump));
