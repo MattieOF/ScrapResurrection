@@ -12,10 +12,14 @@ function onPickup(player)
 function use(player)
 {
 	if (onPickupFunc(player))
-		add_pickup_notif("1", "test", true, 1.5);
+		pickupNotifFunc();
 }
 
 onPickupFunc = onPickup;
+pickupNotifFunc = function() 
+{
+	show_debug_message("Base pickupNotifFunc() called, this shouldn't happen.");
+};
 
 // Initialise size of sprite based on range
 sprite = create_sprite(sprite_index, x, y,,,image_xscale, image_yscale);

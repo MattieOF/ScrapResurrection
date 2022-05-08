@@ -7,7 +7,7 @@ if (useTextAlpha > 0)
 }
 
 var targetX = global.displayWidth - 5;
-var _y = global.displayHeight - 5;
+var _y = global.displayHeight - 10;
 for (var i = 0; i < array_length(pickupNotifs); i++)
 {
 	pickupNotifs[i].text.draw(pickupNotifs[i].x, _y);
