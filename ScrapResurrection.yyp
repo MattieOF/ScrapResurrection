@@ -11,7 +11,7 @@
     {"id":{"name":"sqIntro","path":"sequences/sqIntro/sqIntro.yy",},"order":0,},
     {"id":{"name":"__scribble_font_add_msdf_from_project","path":"scripts/__scribble_font_add_msdf_from_project/__scribble_font_add_msdf_from_project.yy",},"order":7,},
     {"id":{"name":"scribble_font_bake_outline_4dir","path":"scripts/scribble_font_bake_outline_4dir/scribble_font_bake_outline_4dir.yy",},"order":0,},
-    {"id":{"name":"oBaseUsable","path":"objects/oBaseUsable/oBaseUsable.yy",},"order":2,},
+    {"id":{"name":"oBaseUsable","path":"objects/oBaseUsable/oBaseUsable.yy",},"order":1,},
     {"id":{"name":"__shd_scribble_msdf","path":"shaders/__shd_scribble_msdf/__shd_scribble_msdf.yy",},"order":5,},
     {"id":{"name":"scribble_font_has_character","path":"scripts/scribble_font_has_character/scribble_font_has_character.yy",},"order":8,},
     {"id":{"name":"scribble_super_glyph_delete","path":"scripts/scribble_super_glyph_delete/scribble_super_glyph_delete.yy",},"order":4,},
@@ -171,6 +171,7 @@
     {"folderPath":"folders/Scribble/Fonts.yy","order":4,"resourceVersion":"1.0","name":"Fonts","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Scribble/Miscellaneous.yy","order":5,"resourceVersion":"1.0","name":"Miscellaneous","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Scribble/Superfonts.yy","order":6,"resourceVersion":"1.0","name":"Superfonts","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/Pickups/Base.yy","order":3,"resourceVersion":"1.0","name":"Base","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},

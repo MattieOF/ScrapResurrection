@@ -13,7 +13,6 @@ function use(player)
 	onPickupFunc(player);
 }
 
-active = requireKeyPress;
 onPickupFunc = onPickup;
 
 // Initialise size of sprite based on range

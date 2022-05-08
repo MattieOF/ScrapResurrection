@@ -38,8 +38,8 @@
     {"propertyId":{"name":"verb","path":"objects/oBaseUsable/oBaseUsable.yy",},"objectId":{"name":"oBaseUsable","path":"objects/oBaseUsable/oBaseUsable.yy",},"value":"pick up","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
-    "name": "Pickups",
-    "path": "folders/Objects/Pickups.yy",
+    "name": "Base",
+    "path": "folders/Objects/Pickups/Base.yy",
   },
   "resourceVersion": "1.0",
   "name": "oBasePickup",
