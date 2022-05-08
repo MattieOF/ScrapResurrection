@@ -4,6 +4,7 @@ currentPlayer = undefined;
 showUseText = false;
 useText = undefined;
 useTextAlpha = 0;
+pickupNotifs = array_create();
 
 function update_use_text(verb = "use", controlId = controls.use, show = true)
 {

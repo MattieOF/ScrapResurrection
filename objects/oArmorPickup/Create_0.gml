@@ -4,10 +4,10 @@ event_inherited();
 
 function onPickup(player)
 {
-	if (player.hp >= player.baseHealth)
+	if (player.armor >= player.maxArmor)
 		return false;
 	
-	player.hp = min(player.hp + healthValue, player.baseHealth);
+	player.armor = min(player.armor + armorValue, player.maxArmor);
 	instance_destroy(id);
 	return true;
 }

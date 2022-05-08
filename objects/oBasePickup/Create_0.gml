@@ -6,11 +6,13 @@ function onPickup(player)
 {
 	// This function should be overwridden by the child object
 	show_debug_message("Base onPickup() called, this shouldn't happen.");
+	return false;
 }
 
 function use(player)
 {
-	onPickupFunc(player);
+	if (onPickupFunc(player))
+		add_pickup_notif("1", "test", true, 1.5);
 }
 
 onPickupFunc = onPickup;
