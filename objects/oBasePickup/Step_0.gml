@@ -2,8 +2,8 @@
 
 if (!active) return;
 
-if (sprite.layer == global.highlightedPickupsLayer && !highlighted)
-	sprite.layer = global.pickupsLayer;
+if (sprite.layer == global.highlightedUsablesLayer && !highlighted)
+	sprite.layer = global.usablesLayer;
 
 highlighted = false;
 

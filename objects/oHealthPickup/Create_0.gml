@@ -10,4 +10,5 @@ function onPickup(player)
 	player.hp = min(player.hp + healthValue, player.baseHealth);
 	instance_destroy(id);
 }
+onPickupFunc = onPickup;
 

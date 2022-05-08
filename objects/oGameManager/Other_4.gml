@@ -3,6 +3,10 @@
 characters = ds_list_create();
 currentCharacterIndex = 0;
 global.speedChangeBlocked = false;
+global.usablesLayer = layer_get_id("Usables");
+global.highlightedUsablesLayer = layer_get_id("UsablesHighlighted");
+
+highlightedFx = undefined;
 
 with (oBasePlayer)
 	ds_list_add(oGameManager.characters, id);
@@ -36,4 +40,13 @@ function switch_character(index, instant = false)
 }
 
 switch_character(0, true);
+
+hud = instance_create_layer(0, 0, layer_create(0, "HUD"), oHUD);
+if (ds_list_size(characters) > 0) 
+	hud.currentPlayer = characters[| currentCharacterIndex];
+
+if (global.highlightedUsablesLayer != -1)
+{
+	highlightedFx = layer_get_fx(global.highlightedUsablesLayer);
+}
 

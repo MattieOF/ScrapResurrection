@@ -29,7 +29,9 @@
   "properties": [
     {"varType":0,"value":"25","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"healthValue","tags":[],"resourceType":"GMObjectProperty",},
   ],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"requireKeyPress","path":"objects/oBaseUsable/oBaseUsable.yy",},"objectId":{"name":"oBaseUsable","path":"objects/oBaseUsable/oBaseUsable.yy",},"value":"True","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
   "parent": {
     "name": "Pickups",
     "path": "folders/Objects/Pickups.yy",

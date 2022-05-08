@@ -15,7 +15,6 @@ function use(player)
 
 active = requireKeyPress;
 onPickupFunc = onPickup;
-highlighted = false;
 
 // Initialise size of sprite based on range
 sprite = create_sprite(sprite_index, x, y,,,image_xscale, image_yscale);

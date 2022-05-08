@@ -172,34 +172,3 @@ if (place_meeting(x, y + vsp, oWall))
 }
 y += vsp;
 
-var usableCol = instance_place(x, y, oBaseUsable);
-if (usableCol != noone && usableCol.active)
-{
-	// Player is in range of a usable
-	// 1. Ignore if its not active (done in previous if)
-	// 2. Show UI
-	// 3. Check for use
-	
-	// Show UI
-	
-	
-	// Check for use
-	if (keyUse)
-	{
-		usableCol.use(id);
-	}
-}
-
-var pickupCol = instance_place(x, y, oBasePickup);
-if (pickupCol != noone)
-{
-	// If it doesn't need keypress, pick it up
-	if (!pickupCol.requireKeyPress) pickupCol.onPickup(id);
-	else
-	{
-		// If not, highlight it
-		pickupCol.sprite.layer = global.highlightedPickupsLayer;
-		pickupCol.highlighted = true;
-	}
-}
-
