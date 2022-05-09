@@ -112,6 +112,8 @@ if (_currentDashTime > 0)
 
 if (keyDash && dashCharges > 0)
 {
+	create_debris(sTestEnemy, x, y);
+	
 	_currentDashTime = dashRecharge * room_speed;
 	if (dashCharges == 0)
 		_currentDashTime *= outOfDashPenalty;

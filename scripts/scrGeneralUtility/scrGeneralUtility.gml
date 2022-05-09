@@ -1,3 +1,5 @@
+randomize();
+
 /// @desc Destroys the provided target if the number of the provided object is over the provided threshold
 /// @param {object} objectIndex - Type of object to look for the number of. If undefined, it's set to object_index.
 /// @param {int} threshold - If amount of instances of objectIndex is over this value, destroy the target. 1 by default.
@@ -281,5 +283,21 @@ function mouse_wheel_string(mw)
 		case mouseWheelDir.down: return "Mouse Wheel Down";	
 		case mouseWheelDir.none: return "Mouse Wheel None";	
 	}
+}
+
+function Bound(_min, _max) constructor
+{
+	minimum = _min;
+	maximum = _max;
+}
+
+function get_real_inside_bound(bound)
+{
+	return random_range(bound.minimum, bound.maximum);
+}
+
+function get_int_inside_bound(bound)
+{
+	return irandom_range(bound.minimum, bound.maximum);
 }
 
