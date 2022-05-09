@@ -21,7 +21,10 @@ with (currentChar)
 		//    2c. Check for use keypress
 	
 		if (!usableCol.requireKeyPress)
+		{
+			oGameManager.hud.showUseText = false;
 			usableCol.use(id);
+		}
 		else
 		{
 			// Show UI

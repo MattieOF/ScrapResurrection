@@ -16,6 +16,9 @@ function DebrisElement(_x, _y, _sprite, _width, _height, _spd, _dir, _rotateSpd,
 	tX = irandom_range(0, sprite_get_width(_sprite)  - width);
 	tY = irandom_range(0, sprite_get_height(_sprite) - height);
 	
+	X += hsp;
+	Y += vsp;
+	
 	function update()
 	{
 		vsp += grv;

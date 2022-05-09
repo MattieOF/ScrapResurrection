@@ -46,8 +46,17 @@ function is_grounded()
 	return place_meeting(x, y + 1, oWall);
 }
 
+function on_hit(hitInfo)
+{
+	hurt(hitInfo.damage);
+}
+
 function hurt(dmg)
 {
+	// We're in dash iframes, don't take dmg
+	if (dsp > 0)
+		return;
+	
 	if (armor > 0)
 	{
 		// We have armor, take it from that first

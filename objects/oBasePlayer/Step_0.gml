@@ -2,12 +2,13 @@
 
 // Movement code adapted from https://www.youtube.com/watch?v=ywgkXbHYJNE
 
-var keyRight = active ? control_check(controls.right) : 0;
-var keyLeft  = active ? control_check(controls.left) : 0;
-var keyJump  = active ? control_check(controls.jump) : 0;
-var keyDash  = active ? control_check_pressed(controls.dash) : 0;
-var keyHook  = active ? control_check(controls.grapplingHook) : 0;
-var keyUse   = active ? control_check_pressed(controls.use) : 0;
+var keyRight    = active ? control_check(controls.right) : 0;
+var keyLeft     = active ? control_check(controls.left) : 0;
+var keyJump     = active ? control_check(controls.jump) : 0;
+var keyDash     = active ? control_check_pressed(controls.dash) : 0;
+var keyHook     = active ? control_check(controls.grapplingHook) : 0;
+var keyUse      = active ? control_check_pressed(controls.use) : 0;
+var keyPrimary  = active ? control_check_pressed(controls.primaryFire) : 0;
 
 if (global.drawDebugItems)
 {
@@ -173,4 +174,7 @@ if (place_meeting(x, y + vsp, oWall))
 	vsp = 0;
 }
 y += vsp;
+
+if (keyPrimary)
+	shoot_hitscan(id, point_direction(x, y, mouse_x, mouse_y), global.weaponLMG);
 

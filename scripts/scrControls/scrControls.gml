@@ -12,7 +12,9 @@ enum controls
 	screenshot,
 	toggleDebug,
 	grapplingHook,
-	use
+	use,
+	primaryFire,
+	reload
 }
 
 /// @description Enum representing the types of a control (key, mouse)
@@ -59,20 +61,15 @@ function control_defaults()
 	set_control(controls.right,           new Control(controlType.key,        ord("D")));
 	set_control(controls.jump,            new Control(controlType.key,        vk_space));
 	set_control(controls.switchCharacter, new Control(controlType.key,        ord("C")));
-	set_control(controls.use, new Control(controlType.key,        ord("E")));
+	set_control(controls.use,             new Control(controlType.key,        ord("E")));
 	set_control(controls.dash,            new Control(controlType.key,        vk_lshift));
 	set_control(controls.grapplingHook,   new Control(controlType.mouse,      mb_middle));
-	// set_control(controls.attackPrimary,   new Control(controlType.mouse,      mb_left));
 	set_control(controls.quit,            new Control(controlType.key,        vk_escape));
-	// set_control(controls.toggleFPS,       new Control(controlType.key,        vk_f1));
-	// set_control(controls.toggleDistort,   new Control(controlType.key,        vk_f2));
 	set_control(controls.screenshot,      new Control(controlType.key,        vk_f5));
 	set_control(controls.toggleDebug,     new Control(controlType.key,        vk_f3));
-	// set_control(controls.reload,          new Control(controlType.key,        ord("R")));
-	// set_control(controls.weaponNext,      new Control(controlType.mousewheel, mouseWheelDir.up));
-	// set_control(controls.weaponPrevious,  new Control(controlType.mousewheel, mouseWheelDir.down));
-	// set_control(controls.save,            new Control(controlType.key,        ord("E")));
-	// set_control(controls.openInventory,   new Control(controlType.key,        vk_tab));
+	set_control(controls.primaryFire,     new Control(controlType.mouse,      mb_left));
+	set_control(controls.reload,          new Control(controlType.key,        ord("R")));
+	
 }
 
 /// @description Save backup of controls file, reset controls to default, and save again.
