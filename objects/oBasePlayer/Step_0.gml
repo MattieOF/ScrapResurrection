@@ -30,8 +30,6 @@ if (global.drawDebugItems)
 	var weapon = current_weapon();
 	var weaponName = (weapon == pointer_null ? "None" : weapon.weapon.name);
 	add_debug_text(format_string("Weapon:       {0}", weaponName));
-	show_debug_message(currentLoadoutSlot);
-	show_debug_message(weapon);
 	var ammoString = (weapon.ammoClip == pointer_null ? "N/A" : format_string("{0}/{1}", string(weapon.ammoClip), string(weapon.ammoReserve)));
 	add_debug_text(format_string("Ammo:         {0}", ammoString));
 	add_debug_text("");
