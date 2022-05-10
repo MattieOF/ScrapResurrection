@@ -43,6 +43,7 @@ armor = 0;
 currentLoadoutSlot = -1;
 loadout = array_create(0);
 reloading = false;
+reloadTime = 0;
 shootCooldown = 0;
 
 state = playerState.normal;
@@ -135,6 +136,12 @@ function switch_weapon(index)
 		index = 0;
 	else if (index < 0)
 		index = array_length(loadout) - 1;
+		
+	if (reloading)
+	{
+		reloading = false;
+		reloadTime = 0;
+	}
 		
 	currentLoadoutSlot = index;
 	return true;

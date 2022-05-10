@@ -8,6 +8,8 @@ global.highlightedUsablesLayer = layer_get_id("UsablesHighlighted");
 
 highlightedFx = undefined;
 
+window_set_cursor(cr_none);
+
 with (oBasePlayer)
 	ds_list_add(oGameManager.characters, id);
 
@@ -37,6 +39,12 @@ function switch_character(index, instant = false)
 		oCamera.set_target(characters[| currentCharacterIndex], instant);
 	}
 	characters[| currentCharacterIndex].active = true;
+}
+
+function current_character()
+{
+	if (array_length(characters) == 0) return pointer_null;
+	else return characters[| currentCharacterIndex];
 }
 
 switch_character(0, true);

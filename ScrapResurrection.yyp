@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"scrDrawUtils","path":"scripts/scrDrawUtils/scrDrawUtils.yy",},"order":11,},
     {"id":{"name":"__scribble_gen_5_finalize_bidi","path":"scripts/__scribble_gen_5_finalize_bidi/__scribble_gen_5_finalize_bidi.yy",},"order":5,},
     {"id":{"name":"__scribble_gen_6_build_lines","path":"scripts/__scribble_gen_6_build_lines/__scribble_gen_6_build_lines.yy",},"order":6,},
     {"id":{"name":"scribble_anim_wave","path":"scripts/scribble_anim_wave/scribble_anim_wave.yy",},"order":7,},
@@ -92,9 +93,11 @@
     {"id":{"name":"scribble_anim_wheel","path":"scripts/scribble_anim_wheel/scribble_anim_wheel.yy",},"order":8,},
     {"id":{"name":"scribble_fallback_font","path":"fonts/scribble_fallback_font/scribble_fallback_font.yy",},"order":12,},
     {"id":{"name":"__scribble_system","path":"scripts/__scribble_system/__scribble_system.yy",},"order":10,},
+    {"id":{"name":"sCrosshair","path":"sprites/sCrosshair/sCrosshair.yy",},"order":10,},
     {"id":{"name":"scrStringUtil","path":"scripts/scrStringUtil/scrStringUtil.yy",},"order":0,},
     {"id":{"name":"scribble_super_glyph_copy_all","path":"scripts/scribble_super_glyph_copy_all/scribble_super_glyph_copy_all.yy",},"order":3,},
     {"id":{"name":"oDebris","path":"objects/oDebris/oDebris.yy",},"order":4,},
+    {"id":{"name":"sCrosshairGrappling","path":"sprites/sCrosshairGrappling/sCrosshairGrappling.yy",},"order":11,},
     {"id":{"name":"scribble_font_combine","path":"scripts/scribble_font_combine/scribble_font_combine.yy",},"order":5,},
     {"id":{"name":"scrHittable","path":"scripts/scrHittable/scrHittable.yy",},"order":7,},
     {"id":{"name":"__scribble_gen_10_set_padding_flags","path":"scripts/__scribble_gen_10_set_padding_flags/__scribble_gen_10_set_padding_flags.yy",},"order":1,},
@@ -130,6 +133,7 @@
     {"id":{"name":"sTestEnemy","path":"sprites/sTestEnemy/sTestEnemy.yy",},"order":8,},
     {"id":{"name":"scribble_font_bake_shadow","path":"scripts/scribble_font_bake_shadow/scribble_font_bake_shadow.yy",},"order":4,},
     {"id":{"name":"oArmorPickup","path":"objects/oArmorPickup/oArmorPickup.yy",},"order":4,},
+    {"id":{"name":"oCrosshair","path":"objects/oCrosshair/oCrosshair.yy",},"order":6,},
     {"id":{"name":"sEmpty","path":"sprites/sEmpty/sEmpty.yy",},"order":3,},
     {"id":{"name":"rmTest","path":"rooms/rmTest/rmTest.yy",},"order":0,},
   ],
