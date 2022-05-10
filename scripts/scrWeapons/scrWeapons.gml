@@ -1,7 +1,7 @@
 global.weaponPistol = new WeaponHitscan("Pistol", sTestEnemy, 25, 1000, 0.75, 2, 10, 40, 
 	new WeaponSounds(), 1, 0, false);
 global.weaponLMG = new WeaponHitscan("LMG", sTestEnemy, 15, 1000, 0.1, 2.5, 30, 120, 
-	new WeaponSounds(), 1, 2.5, false);
+	new WeaponSounds(), 1, 2.5, true);
 
 enum weaponType
 {
@@ -10,20 +10,11 @@ enum weaponType
 	melee
 }
 
-function LoadoutItem(_weapon) constructor
-{
-	weapon = _weapon;
-	if (variable_struct_exists(_weapon, "ammoClip"))
-	{
-		ammoClip = _weapon.ammoClip;
-		ammoReserve = _weapon.ammoReserve;
-	}
-}
-
-function WeaponSounds(_shoot = undefined, _reload = undefined) constructor
+function WeaponSounds(_shoot = undefined, _reload = undefined, _dryFire = undefined) constructor
 {
 	soundShoot = _shoot;
 	soundReload = _reload;
+	soundDryFire = _dryFire;
 }
 
 function WeaponHitscan(_name, _sprite, _damage, _range, _rof, _reloadTime, _clip, _reserve, _sounds, _shots = 1, _spread = 0, _auto = false) constructor

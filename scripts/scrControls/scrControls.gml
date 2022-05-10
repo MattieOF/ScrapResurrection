@@ -14,7 +14,9 @@ enum controls
 	grapplingHook,
 	use,
 	primaryFire,
-	reload
+	reload,
+	weaponPrevious,
+	weaponNext
 }
 
 /// @description Enum representing the types of a control (key, mouse)
@@ -68,6 +70,8 @@ function control_defaults()
 	set_control(controls.screenshot,      new Control(controlType.key,        vk_f5));
 	set_control(controls.toggleDebug,     new Control(controlType.key,        vk_f3));
 	set_control(controls.primaryFire,     new Control(controlType.mouse,      mb_left));
+	set_control(controls.weaponPrevious,  new Control(controlType.mousewheel, mouseWheelDir.down));
+	set_control(controls.weaponNext,      new Control(controlType.mousewheel, mouseWheelDir.up));
 	set_control(controls.reload,          new Control(controlType.key,        ord("R")));
 	
 }

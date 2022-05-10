@@ -39,6 +39,12 @@ _gY = 0;
 hp = baseHealth;
 armor = 0;
 
+// Weapon related variables
+currentLoadoutSlot = -1;
+loadout = array_create(0);
+reloading = false;
+shootCooldown = 0;
+
 state = playerState.normal;
 
 function is_grounded()
@@ -88,5 +94,146 @@ function add_armor(amount)
 		armor = maxArmor;
 }
 
+// -------------------------
+// Loadout related functions
+// -------------------------
+function add_weapon(_weapon)
+{
+	array_push(loadout, new LoadoutItem(_weapon));
+}
+
+function remove_weapon(_weapon)
+{
+	for (var i = 0; i < array_length(loadout); i++)
+	{
+		if (loadout[i].weapon == _weapon)
+		{
+			array_delete(loadout, i, 1);
+			if (i != array_length(loadout))
+				i--;
+		}
+	}
+}
+
+function current_weapon()
+{
+	if (array_length(loadout) <= currentLoadoutSlot || currentLoadoutSlot < 0)
+		return pointer_null;
+	else
+		return loadout[currentLoadoutSlot];
+}
+
+function switch_weapon(index)
+{
+	if (array_length(loadout) == 0)
+	{
+		currentLoadoutSlot = -1;
+		return false;
+	}
+	
+	if (index >= array_length(loadout))
+		index = 0;
+	else if (index < 0)
+		index = array_length(loadout) - 1;
+		
+	currentLoadoutSlot = index;
+	return true;
+}
+
+function next_weapon()
+{
+	switch_weapon(currentLoadoutSlot + 1);
+}
+
+function previous_weapon()
+{
+	switch_weapon(currentLoadoutSlot - 1);
+}
+
+function shoot()
+{
+	// Return if we can't shoot right now
+	if (reloading) return; // Currently reloading
+	if (currentLoadoutSlot == -1) return; // No valid weapon selected
+	if (shootCooldown > 0) return; // On shoot cooldown
+	if (!loadout[currentLoadoutSlot].weapon.auto && !control_check_pressed(controls.primaryFire)) return; // Non auto weapon, but we're holding the button
+	
+	// Get direction to fire weapon
+	var dir = point_direction(x, y, mouse_x, mouse_y);
+	
+	switch (loadout[currentLoadoutSlot].weapon.type)
+	{
+		case weaponType.melee:
+			// Figure out how to do melee
+			// Sword slash object/sprite?
+			
+			play_sound_if_exists(loadout[currentLoadoutSlot].weapon.sounds.soundShoot, 1, false);
+			shootCooldown = loadout[currentLoadoutSlot].weapon.rof * room_speed;
+			break;
+		case weaponType.hitscan:
+			if (loadout[currentLoadoutSlot].ammoClip <= 0) 
+			{
+				play_sound_if_exists(loadout[currentLoadoutSlot].weapon.sounds.soundDryFire, 1, false);
+				shootCooldown = loadout[currentLoadoutSlot].weapon.rof * room_speed;
+				return;
+			}
+			
+			repeat (loadout[currentLoadoutSlot].weapon.shots)
+			{
+				var spread = loadout[currentLoadoutSlot].weapon.spread;
+				var shotDir = dir + random_range(-spread, spread);
+				shoot_hitscan(id, shotDir, loadout[currentLoadoutSlot].weapon);
+			}
+			
+			play_sound_if_exists(loadout[currentLoadoutSlot].weapon.sounds.soundShoot, 1, false);
+			shootCooldown = loadout[currentLoadoutSlot].weapon.rof * room_speed;
+			loadout[currentLoadoutSlot].ammoClip--;
+			break;
+		case weaponType.projectile:
+			if (loadout[currentLoadoutSlot].ammoClip <= 0) 
+			{
+				play_sound_if_exists(loadout[currentLoadoutSlot].weapon.sounds.soundDryFire, 1, false);
+				shootCooldown = loadout[currentLoadoutSlot].weapon.rof * room_speed;
+				return;
+			}
+			
+			var spread = loadout[currentLoadoutSlot].weapon.spread;
+			var shotDir = dir + random_range(-spread, spread);
+			play_sound_if_exists(loadout[currentLoadoutSlot].weapon.sounds.soundShoot, 1, false);
+			// create_projectile(x + lengthdir_x(16, dir), y + lengthdir_y(16, dir), loadout[currentLoadoutSlot].weapon.projectile, shotDir);
+			shootCooldown = loadout[currentLoadoutSlot].weapon.rof * room_speed;
+			loadout[currentLoadoutSlot].ammoClip--;
+			break;
+	}
+}
+
+function reload_pressed()
+{
+	// Return if we can't reload
+	if (reloading) return; // Already reloading
+	if (!variable_struct_exists(loadout[currentLoadoutSlot], "ammoClip")) return; // Ammoless weapon
+	if (loadout[currentLoadoutSlot].ammoClip == loadout[currentLoadoutSlot].weapon.ammoClip) 
+		return;  // Clip is full
+	if (loadout[currentLoadoutSlot].ammoReserve == 0) return; // Out of reserve ammo
+	
+	play_sound_if_exists(loadout[currentLoadoutSlot].weapon.sounds.soundReload, 1, false);
+	
+	reloading = true;
+	reloadTime = loadout[currentLoadoutSlot].weapon.reloadTime * room_speed;
+}
+
+function reload()
+{
+	var needed = loadout[currentLoadoutSlot].weapon.ammoClip - loadout[currentLoadoutSlot].ammoClip;
+	var toBeAdded = min(loadout[currentLoadoutSlot].ammoReserve, needed);
+	
+	loadout[currentLoadoutSlot].ammoClip += toBeAdded;
+	loadout[currentLoadoutSlot].ammoReserve -= toBeAdded;
+}
+
 alarm[0] = 1;
+
+add_weapon(global.weaponLMG);
+add_weapon(global.weaponPistol);
+next_weapon();
 

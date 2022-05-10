@@ -8,7 +8,10 @@ var keyJump     = active ? control_check(controls.jump) : 0;
 var keyDash     = active ? control_check_pressed(controls.dash) : 0;
 var keyHook     = active ? control_check(controls.grapplingHook) : 0;
 var keyUse      = active ? control_check_pressed(controls.use) : 0;
-var keyPrimary  = active ? control_check_pressed(controls.primaryFire) : 0;
+var keyPrimary  = active ? control_check(controls.primaryFire) : 0;
+var keyNext     = active ? control_check_pressed(controls.weaponNext) : 0;
+var keyPrevious = active ? control_check_pressed(controls.weaponPrevious) : 0;
+var keyReload   = active ? control_check_pressed(controls.reload) : 0;
 
 if (global.drawDebugItems)
 {
@@ -24,6 +27,13 @@ if (global.drawDebugItems)
 	add_debug_text(format_string("Floating:     {0}", floating ? "True" : "False"));
 	add_debug_text(format_string("EJumps Left:  {0}", _currentExtraJumps));
 	add_debug_text(format_string("State:        {0}", state_string()));
+	var weapon = current_weapon();
+	var weaponName = (weapon == pointer_null ? "None" : weapon.weapon.name);
+	add_debug_text(format_string("Weapon:       {0}", weaponName));
+	show_debug_message(currentLoadoutSlot);
+	show_debug_message(weapon);
+	var ammoString = (weapon.ammoClip == pointer_null ? "N/A" : format_string("{0}/{1}", string(weapon.ammoClip), string(weapon.ammoReserve)));
+	add_debug_text(format_string("Ammo:         {0}", ammoString));
 	add_debug_text("");
 }
 
@@ -175,6 +185,28 @@ if (place_meeting(x, y + vsp, oWall))
 }
 y += vsp;
 
+if (shootCooldown > 0)
+	shootCooldown--;
+if (reloading)
+	reloadTime--;
+
+if (reloading && reloadTime <= 0)
+{
+	reload();
+	reloading = false;
+}
+
 if (keyPrimary)
-	shoot_hitscan(id, point_direction(x, y, mouse_x, mouse_y), global.weaponLMG);
+{
+	// Shoot
+	shoot();
+}
+
+if (keyNext)
+	next_weapon();
+else if (keyPrevious)
+	previous_weapon();
+	
+if (keyReload)
+	reload_pressed();
 
