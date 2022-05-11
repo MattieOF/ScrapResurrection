@@ -38,6 +38,9 @@ if (global.drawDebugItems)
 hsp = (keyRight - keyLeft) * walkSpeed;
 if (!floating) vsp += grv;
 
+grappleStartCol = make_color_hsv(((sin(current_time / 500) + 1) / 2) * 255, 255, 255);
+grappleEndCol = make_color_hsv((((sin(current_time / 500) + 1) / 2) * 255 - 100), 255, 255);
+
 if (keyHook && hasGrapplingHook)
 {	
 	switch(state)
