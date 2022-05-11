@@ -60,6 +60,8 @@ if (keyHook && hasGrapplingHook)
 			var hit = raycast(x, y, _hookDir, _currentHookLen, oWall);
 			if (hit.obj != noone)
 			{
+				var angleReverse = angle_reverse(_hookDir);
+				create_debris(sWallWNS, hit.X, hit.Y,,,,new Bound(angleReverse - 5, angleReverse + 5));
 				state = playerState.grappling;
 			}
 			_gX = hit.X;
