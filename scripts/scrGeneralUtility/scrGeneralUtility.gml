@@ -1,4 +1,5 @@
 randomize();
+global.flynnHook = false;
 
 /// @desc Destroys the provided target if the number of the provided object is over the provided threshold
 /// @param {object} objectIndex - Type of object to look for the number of. If undefined, it's set to object_index.

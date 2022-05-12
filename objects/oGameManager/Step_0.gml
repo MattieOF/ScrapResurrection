@@ -44,6 +44,23 @@ with (currentChar)
 		oGameManager.hud.showUseText = false;
 }
 
+if (!global.flynnHook)
+{
+	show_debug_message(keyboard_lastchar);
+	show_debug_message(flynnHookProgress);
+	show_debug_message(array_length(flynnHookCode));
+	
+	if(keyboard_lastchar == string_lower(flynnHookCode[flynnHookProgress]))
+		flynnHookProgress++;
+	else if (keyboard_lastchar != "")
+		flynnHookProgress = 0;
+	
+	keyboard_lastchar = "";
+	
+	if (flynnHookProgress == array_length(flynnHookCode))
+		global.flynnHook = true;
+}
+
 //if (highlightedFx != undefined)
 //{
 //	var col = make_color_hsv((current_time / 50) % 255, 40, 255);

@@ -58,3 +58,9 @@ if (global.highlightedUsablesLayer != -1)
 	highlightedFx = layer_get_fx(global.highlightedUsablesLayer);
 }
 
+flynnHookCode = array_create(0);
+flynnHookProgress = 0;
+array_push(flynnHookCode, "F");
+array_push(flynnHookCode, "F");
+array_push(flynnHookCode, "W");
+
