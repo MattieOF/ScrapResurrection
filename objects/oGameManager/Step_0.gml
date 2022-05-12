@@ -46,10 +46,6 @@ with (currentChar)
 
 if (!global.flynnHook)
 {
-	show_debug_message(keyboard_lastchar);
-	show_debug_message(flynnHookProgress);
-	show_debug_message(array_length(flynnHookCode));
-	
 	if(keyboard_lastchar == string_lower(flynnHookCode[flynnHookProgress]))
 		flynnHookProgress++;
 	else if (keyboard_lastchar != "")
