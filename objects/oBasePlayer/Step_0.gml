@@ -15,7 +15,7 @@ var keyReload   = active ? control_check_pressed(controls.reload) : 0;
 
 if (global.drawDebugItems)
 {
-	add_debug_text(format_string("{0}{1}", name, active ? " [ACTIVE]" : ""));
+	add_debug_text(format_string("{0}{1}",      name, active ? " [ACTIVE]" : ""));
 	add_debug_text(format_string("Health:       {0}", hp));
 	add_debug_text(format_string("Armor:        {0}", armor));
 	add_debug_text(format_string("Pos:          [X: {0}, Y: {1}]", x, y));
@@ -88,7 +88,8 @@ if (keyHook && hasGrapplingHook)
 			break;
 	}
 }
-else if (state != playerState.missedHook) // Player has missed hook, keep them in that state
+else if (state != playerState.missedHook
+		 && state != playerState.swingingMelee) // Player has missed hook, keep them in that state
 	state = playerState.normal;
 	
 if (state == playerState.missedHook)

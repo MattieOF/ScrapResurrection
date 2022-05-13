@@ -2,6 +2,8 @@ global.weaponPistol = new WeaponHitscan("Pistol", sTestEnemy, 25, 1000, 0.75, 2,
 	new WeaponSounds(), 1, 0, false);
 global.weaponLMG = new WeaponHitscan("LMG", sTestEnemy, 15, 1000, 0.1, 2.5, 30, 120, 
 	new WeaponSounds(), 1, 2.5, true);
+global.weaponDagger = new WeaponMelee("Dagger", sTestEnemy, 30, 20, 5, 2, 
+	new WeaponSounds(), 0.75, 0.5, false);
 
 enum weaponType
 {
@@ -55,14 +57,15 @@ function WeaponProjectile(_name, _sprite, _projectile, _rof, _reloadTime, _clip,
 	else sounds = _sounds;
 }
 
-function WeaponMelee(_name, _sprite, _damage, _range, _rof, _sounds, _auto = false) constructor
+function WeaponMelee(_name, _sprite, _damage, _width, _height, _rof, _sounds, _attackTime, _speedMultiplier, _auto = false) constructor
 {
 	type = weaponType.melee;
 	name = _name;
 	if (!sprite_exists(_sprite)) log_format_string("In weapon {0}, provided sprite doesn't exist.", _name);
 	else sprite = _sprite;
 	damage = _damage;
-	range = _range;
+	width = _width;
+	height = _height;
 	rof = _rof;
 	if (!variable_struct_exists(_sounds, "soundShoot")) 
 		log_format_string("In weapon {0}, provided WeaponSounds is invalid.", _name);

@@ -32,6 +32,7 @@
     {"id":{"name":"scribble_font_scale","path":"scripts/scribble_font_scale/scribble_font_scale.yy",},"order":10,},
     {"id":{"name":"sHealthbarFrame","path":"sprites/sHealthbarFrame/sHealthbarFrame.yy",},"order":0,},
     {"id":{"name":"scribble_anim_shake","path":"scripts/scribble_anim_shake/scribble_anim_shake.yy",},"order":6,},
+    {"id":{"name":"oMelee","path":"objects/oMelee/oMelee.yy",},"order":3,},
     {"id":{"name":"scrDebugUtil","path":"scripts/scrDebugUtil/scrDebugUtil.yy",},"order":1,},
     {"id":{"name":"__shd_scribble_bake_shadow","path":"shaders/__shd_scribble_bake_shadow/__shd_scribble_bake_shadow.yy",},"order":4,},
     {"id":{"name":"scribble_glyph_get","path":"scripts/scribble_glyph_get/scribble_glyph_get.yy",},"order":13,},

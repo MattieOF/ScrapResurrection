@@ -5,7 +5,8 @@ enum playerState
 	normal,
 	shootingHook,
 	missedHook,
-	grappling
+	grappling,
+	swingingMelee
 }
 
 function state_string()
@@ -20,6 +21,8 @@ function state_string()
 			return "Missed Hook";
 		case playerState.grappling:
 			return "Grappling";
+		case playerState.swingingMelee:
+			return "Swinging Melee";
 	}
 }
 
@@ -126,6 +129,8 @@ function current_weapon()
 
 function switch_weapon(index)
 {
+	if (state == playerState.swingingMelee) return;
+	
 	if (array_length(loadout) == 0)
 	{
 		currentLoadoutSlot = -1;
@@ -171,8 +176,9 @@ function shoot()
 	switch (loadout[currentLoadoutSlot].weapon.type)
 	{
 		case weaponType.melee:
-			// Figure out how to do melee
-			// Sword slash object/sprite?
+			var wpn = loadout[currentLoadoutSlot].weapon;
+			var melee = instance_create_layer(x, y, layer, oMelee);
+			melee.init(wpn.width, wpn.height, wpn);
 			
 			play_sound_if_exists(loadout[currentLoadoutSlot].weapon.sounds.soundShoot, 1, false);
 			shootCooldown = loadout[currentLoadoutSlot].weapon.rof * room_speed;
@@ -241,6 +247,7 @@ function reload()
 alarm[0] = 1;
 
 add_weapon(global.weaponLMG);
+add_weapon(global.weaponDagger);
 add_weapon(global.weaponPistol);
 next_weapon();
 
