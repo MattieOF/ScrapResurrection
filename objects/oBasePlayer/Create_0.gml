@@ -177,7 +177,7 @@ function shoot()
 	{
 		case weaponType.melee:
 			var wpn = loadout[currentLoadoutSlot].weapon;
-			var melee = instance_create_layer(x, y, layer, oMelee);
+			var melee = instance_create_layer(x, y - 16, layer, oMelee);
 			melee.init(wpn.width, wpn.height, wpn);
 			
 			play_sound_if_exists(loadout[currentLoadoutSlot].weapon.sounds.soundShoot, 1, false);
