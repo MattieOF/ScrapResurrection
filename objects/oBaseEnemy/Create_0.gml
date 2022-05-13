@@ -4,6 +4,8 @@
 // Inherit the parent event
 event_inherited();
 
+_currentHurtTint = 0;
+
 function die()
 {
 	// This function could be used for death effects or animations
@@ -12,6 +14,7 @@ function die()
 
 function hurt(dmg)
 {
+	_currentHurtTint = 1;
 	hp -= dmg;
 	if (hp <= 0) 
 		die();
