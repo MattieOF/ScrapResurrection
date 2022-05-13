@@ -33,6 +33,7 @@ canJump = jumpFrames;
 dsp = 0;
 _currentDashTime = 0;
 maxDashCharges = dashCharges;
+baseWalkSpeed = walkSpeed;
 floating = false;
 _currentExtraJumps = extraJumps;
 _currentHookLen = 0;
@@ -41,6 +42,9 @@ _gX = 0;
 _gY = 0;
 hp = baseHealth;
 armor = 0;
+meleeAttack = noone;
+meleeAttackXOffset = 0;
+meleeAttackYOffset = -16;
 
 // Weapon related variables
 currentLoadoutSlot = -1;
@@ -177,10 +181,29 @@ function shoot()
 	{
 		case weaponType.melee:
 			var wpn = loadout[currentLoadoutSlot].weapon;
-			var melee = instance_create_layer(x, y - 16, layer, oMelee);
-			melee.init(wpn.width, wpn.height, wpn);
 			
+			// Create an initialise melee attack object
+			meleeAttack = instance_create_layer(x + meleeAttackXOffset,
+				y + meleeAttackYOffset, layer, oMelee);
+			meleeAttack.init(wpn.width, wpn.height, wpn);
+			
+			// Update movement speed
+			walkSpeed *= wpn.speedMultiplier;
+			
+			// Set attack offsets
+			meleeAttackXOffset = wpn.xOffset;
+			meleeAttackYOffset = wpn.yOffset;
+			
+			// Disable effects of melee after attack time has passed
+			alarm[2] = wpn.attackTime * room_speed;
+			
+			// Set state
+			state = playerState.swingingMelee;
+			
+			// Play sound
 			play_sound_if_exists(loadout[currentLoadoutSlot].weapon.sounds.soundShoot, 1, false);
+			
+			// Set weapon cooldown
 			shootCooldown = loadout[currentLoadoutSlot].weapon.rof * room_speed;
 			break;
 		case weaponType.hitscan:
@@ -247,7 +270,7 @@ function reload()
 alarm[0] = 1;
 
 add_weapon(global.weaponLMG);
-add_weapon(global.weaponDagger);
+add_weapon(global.weaponDagger); 
 add_weapon(global.weaponPistol);
 next_weapon();
 

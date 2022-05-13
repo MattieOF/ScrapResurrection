@@ -216,4 +216,11 @@ else if (keyPrevious)
 	
 if (keyReload)
 	reload_pressed();
+	
+// Update melee
+if (state == playerState.swingingMelee)
+{
+	meleeAttack.x = x + meleeAttackXOffset;
+	meleeAttack.y = y + meleeAttackYOffset;
+}
 

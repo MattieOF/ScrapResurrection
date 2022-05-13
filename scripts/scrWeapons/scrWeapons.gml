@@ -3,7 +3,7 @@ global.weaponPistol = new WeaponHitscan("Pistol", sTestEnemy, 25, 1000, 0.75, 2,
 global.weaponLMG = new WeaponHitscan("LMG", sTestEnemy, 15, 1000, 0.1, 2.5, 30, 120, 
 	new WeaponSounds(), 1, 2.5, true);
 global.weaponDagger = new WeaponMelee("Dagger", sTestEnemy, 30, 20, 5, 1.25, 
-	new WeaponSounds(), 0.5, 0.5, false);
+	new WeaponSounds(), 2.2, 0.4, 0, -16, false);
 
 enum weaponType
 {
@@ -23,7 +23,7 @@ function WeaponHitscan(_name, _sprite, _damage, _range, _rof, _reloadTime, _clip
 {
 	type = weaponType.hitscan;
 	name = _name;
-	if (!sprite_exists(_sprite)) log_format_string("In weapon {0}, provided sprite doesn't exist.", _name);
+	if (!sprite_exists(_sprite)) log_format_string("In weapon \"{0}\", provided sprite doesn't exist.", _name);
 	else sprite = _sprite;
 	damage = _damage;
 	range = _range;
@@ -35,7 +35,7 @@ function WeaponHitscan(_name, _sprite, _damage, _range, _rof, _reloadTime, _clip
 	spread = _spread;
 	auto = _auto;
 	if (!variable_struct_exists(_sounds, "soundShoot")) 
-		log_format_string("In weapon {0}, provided WeaponSounds is invalid.", _name);
+		log_format_string("In weapon \"{0}\", provided WeaponSounds is invalid.", _name);
 	else sounds = _sounds;
 }
 
@@ -43,7 +43,7 @@ function WeaponProjectile(_name, _sprite, _projectile, _rof, _reloadTime, _clip,
 {
 	type = weaponType.projectile;
 	name = _name;
-	if (!sprite_exists(_sprite)) log_format_string("In weapon {0}, provided sprite doesn't exist.", _name);
+	if (!sprite_exists(_sprite)) log_format_string("In weapon \"{0}\", provided sprite doesn't exist.", _name);
 	else sprite = _sprite;
 	projectile = _projectile;
 	rof = _rof;
@@ -53,22 +53,27 @@ function WeaponProjectile(_name, _sprite, _projectile, _rof, _reloadTime, _clip,
 	spread = _spread;
 	auto = _auto;
 	if (!variable_struct_exists(_sounds, "soundShoot")) 
-		log_format_string("In weapon {0}, provided WeaponSounds is invalid.", _name);
+		log_format_string("In weapon \"{0}\", provided WeaponSounds is invalid.", _name);
 	else sounds = _sounds;
 }
 
-function WeaponMelee(_name, _sprite, _damage, _width, _height, _rof, _sounds, _attackTime, _speedMultiplier, _auto = false) constructor
+function WeaponMelee(_name, _sprite, _damage, _width, _height, _rof, _sounds, _attackTime,
+	_speedMultiplier, _xOffset = 0, _yOffset = -16, _auto = false) constructor
 {
 	type = weaponType.melee;
 	name = _name;
-	if (!sprite_exists(_sprite)) log_format_string("In weapon {0}, provided sprite doesn't exist.", _name);
+	if (!sprite_exists(_sprite)) log_format_string("In weapon \"{0}\", provided sprite doesn't exist.", _name);
 	else sprite = _sprite;
 	damage = _damage;
 	width = _width;
 	height = _height;
 	rof = _rof;
+	attackTime = _attackTime;
+	xOffset = _xOffset;
+	yOffset = _yOffset;
+	speedMultiplier = _speedMultiplier;
 	if (!variable_struct_exists(_sounds, "soundShoot")) 
-		log_format_string("In weapon {0}, provided WeaponSounds is invalid.", _name);
+		log_format_string("In weapon \"{0}\", provided WeaponSounds is invalid.", _name);
 	else sounds = _sounds;
 	auto = _auto;
 }
