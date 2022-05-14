@@ -128,10 +128,8 @@ if (_currentDashTime > 0)
 	}
 }
 
-if (keyDash && dashCharges > 0)
+if (keyDash && dashCharges > 0 && state != playerState.swingingMelee)
 {
-	create_debris(sTestEnemy, x, y);
-	
 	_currentDashTime = dashRecharge * room_speed;
 	if (dashCharges == 0)
 		_currentDashTime *= outOfDashPenalty;
@@ -141,6 +139,9 @@ if (keyDash && dashCharges > 0)
 	if (_dir == 0) _dir = 1;
 	dsp = _dir * dashSpeed;
 	vsp = 0;
+	
+	var reverseDir = _dir ? -180 : 0;
+	create_debris(sDash, x, y,,,new Bound(15, 20), new Bound(reverseDir - 30, reverseDir + 30), new Bound(5, 8));
 	
 	// Float (no gravity) for amount of time it takes to dsp to decrease to 0
 	floating = true;
