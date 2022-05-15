@@ -22,5 +22,6 @@ if (active)
 	}
 }
 
+// Do this again in 15 frames
 alarm[0] = 15;
 

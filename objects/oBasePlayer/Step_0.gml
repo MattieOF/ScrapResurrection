@@ -1,4 +1,5 @@
-/// @description Movement
+/// @description Update everything
+/// This includes movement, shooting
 
 // Movement code adapted from https://www.youtube.com/watch?v=ywgkXbHYJNE
 

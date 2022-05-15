@@ -1,4 +1,4 @@
-/// @description Init some values
+/// @description Init values, declare functions
 
 enum playerState
 {

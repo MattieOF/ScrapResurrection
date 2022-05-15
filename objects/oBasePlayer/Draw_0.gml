@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Draw player + grappling hook
 
 draw_self();
 

@@ -1,3 +1,4 @@
+// George Knight Easter Egg
 if (keyboard_check(ord("G")) &&
     keyboard_check(ord("K")))
 {
