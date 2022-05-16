@@ -1,10 +1,16 @@
-/// @description Insert description here
-// You can write your code in this editor
-
+/// @description Init values and functions
 // Inherit the parent event
 event_inherited();
 
 _currentHurtTint = 0;
+
+target = noone;
+targetInView = false;
+targetLastX = 0;
+targetLastY = 0;
+awake = false;
+
+alarm[0] = 15;
 
 function die()
 {
