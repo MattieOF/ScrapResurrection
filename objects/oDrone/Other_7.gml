@@ -1,2 +1,3 @@
-/// @description Die instance_destroy(id);
+/// @description Die
+instance_destroy(id);
 
