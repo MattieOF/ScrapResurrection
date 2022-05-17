@@ -31,12 +31,13 @@
     {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [
-    {"varType":0,"value":"128","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"explosionRadius","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":0,"value":"160","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"explosionRadius","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":0,"value":"18","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"explosionSpriteFrame","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":0,"value":"25","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"damage","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [
     {"propertyId":{"name":"jumpHeight","path":"objects/oMovingEnemy/oMovingEnemy.yy",},"objectId":{"name":"oMovingEnemy","path":"objects/oMovingEnemy/oMovingEnemy.yy",},"value":"10","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"walkSpeed","path":"objects/oMovingEnemy/oMovingEnemy.yy",},"objectId":{"name":"oMovingEnemy","path":"objects/oMovingEnemy/oMovingEnemy.yy",},"value":"4","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"walkSpeed","path":"objects/oMovingEnemy/oMovingEnemy.yy",},"objectId":{"name":"oMovingEnemy","path":"objects/oMovingEnemy/oMovingEnemy.yy",},"value":"3","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "Enemies",

@@ -4,6 +4,11 @@ currentPlayer = undefined;
 showUseText = false;
 useText = undefined;
 useTextAlpha = 0;
+healthbarAlpha = 1;
+healthbarAlphaGoal = 1;
+prevHp = 0;
+prevArmor = 0;
+alarm[0] = healthbarShowTime * room_speed;
 pickupNotifs = array_create();
 
 function update_use_text(verb = "use", controlId = controls.use, show = true)

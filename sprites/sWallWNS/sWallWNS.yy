@@ -93,8 +93,8 @@
     "resourceType": "GMNineSliceData",
   },
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Particles",
+    "path": "folders/Sprites/Particles.yy",
   },
   "resourceVersion": "1.0",
   "name": "sWallWNS",

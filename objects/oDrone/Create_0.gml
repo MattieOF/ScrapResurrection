@@ -4,6 +4,4 @@
 event_inherited();
 
 image_speed = 0;
-drawExplosion = false;
-drawExplosionRadius = 0;
 
