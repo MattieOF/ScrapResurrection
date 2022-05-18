@@ -1,5 +1,11 @@
 /// @description Check for switch character pressed
 
+if (global.screenshakeEffect != undefined)
+{
+	var mag = fx_get_parameter(global.screenshakeEffect, "g_Magnitude");
+	fx_set_parameter(global.screenshakeEffect, "g_Magnitude", max(mag - screenshakeDecreasePerFrame, 0));
+}
+
 if (ds_list_size(characters) <= 0) exit;
 
 if (control_check_pressed(controls.switchCharacter))

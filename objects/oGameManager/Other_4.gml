@@ -5,6 +5,24 @@ currentCharacterIndex = 0;
 global.speedChangeBlocked = false;
 global.usablesLayer = layer_get_id("Usables");
 global.highlightedUsablesLayer = layer_get_id("UsablesHighlighted");
+global.screenshakeLayer = layer_get_id("Screenshake");
+global.screenshakeEffect = (global.screenshakeLayer == -1 ? undefined : layer_get_fx(global.screenshakeLayer));
+
+function set_screenshake(mag)
+{
+	if (global.screenshakeEffect == undefined)
+		return;
+	
+	fx_set_parameter(global.screenshakeEffect, "g_Magnitude", mag);
+}
+
+function get_screenshake()
+{
+	if (global.screenshakeEffect == undefined)
+		return;
+	
+	fx_get_parameter(global.screenshakeEffect, "g_Magnitude");
+}
 
 highlightedFx = undefined;
 
