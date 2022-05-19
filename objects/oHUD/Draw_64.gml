@@ -42,13 +42,13 @@ var remainder = width - offsetPixels;
 var alpha = lerp(0.3, 1, healthbarAlpha);
 var hp = currentChar.hp / currentChar.baseHealth;
 var _x = global.displayWidth / 2;
-var _y = global.displayHeight - 150;
+var _y = global.displayHeight - 100;
 draw_sprite_ext(sHealthbarFrame, 0, _x, _y, scale, scale, 0, c_white, alpha);
 draw_sprite_part_ext(sHealthbarFill, 0, 0, 0, offsetPixels + (hp * remainder), height, _x - ((width / 2) * scale), _y - ((height / 2) * scale) + 2, scale, scale, c_white, alpha);
 
 // Draw Armor bar
 var armor = currentChar.armor / currentChar.maxArmor;
-_y = global.displayHeight - 200;
+_y = global.displayHeight - 150;
 var col = armor <= 0 ? c_dkgray : c_white;
 draw_sprite_ext(sArmorbarFrame, 0, _x, _y, scale, scale, 0, col, alpha);
 draw_sprite_part_ext(sArmorbarFill, 0, 0, 0, offsetPixels + (armor * remainder), height, _x - ((width / 2) * scale), _y - ((height / 2) * scale) + 2, scale, scale, c_white, alpha);
