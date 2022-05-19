@@ -39,7 +39,7 @@ var height = sprite_get_height(sHealthbarFill);
 var remainder = width - offsetPixels;
 
 // Draw HP bar
-var alpha = lerp(0.3, 1, healthbarAlpha);
+var alpha = lerp(minHealthbarAlpha, 1, healthbarAlpha);
 var hp = currentChar.hp / currentChar.baseHealth;
 var _x = global.displayWidth / 2;
 var _y = global.displayHeight - 100;

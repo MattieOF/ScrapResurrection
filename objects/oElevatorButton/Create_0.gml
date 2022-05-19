@@ -7,6 +7,7 @@ function use(player)
 {
 	sprite.image_index = 1;
 	active = false;
+	elevator.moving = true;
 }
 
 // Initialise sprite based on range

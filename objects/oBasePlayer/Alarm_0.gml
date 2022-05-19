@@ -19,6 +19,11 @@ if (active)
 				oCamera.cameraAdjustFractionPerFrame = col.camAdjustFraction;	
 			}
 		}
+		
+		if (instance_exists(oHUD))
+		{
+			oHUD.minHealthbarAlpha = col.healthbarAlpha;
+		}
 	}
 }
 

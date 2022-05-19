@@ -10,6 +10,7 @@ prevHp = 0;
 prevArmor = 0;
 alarm[0] = healthbarShowTime * room_speed;
 pickupNotifs = array_create();
+minHealthbarAlpha = 0.3;
 
 function update_use_text(verb = "use", controlId = controls.use, show = true)
 {
