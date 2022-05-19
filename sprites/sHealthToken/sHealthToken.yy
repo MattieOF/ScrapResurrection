@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"cd313cb5-d02e-4426-902a-e731d0f2de78","path":"sprites/sTempHPPickup/sTempHPPickup.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"cd313cb5-d02e-4426-902a-e731d0f2de78","path":"sprites/sTempHPPickup/sTempHPPickup.yy",},"LayerId":{"name":"d143e8a8-fefa-4277-a82e-5894680a2114","path":"sprites/sTempHPPickup/sTempHPPickup.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sTempHPPickup","path":"sprites/sTempHPPickup/sTempHPPickup.yy",},"resourceVersion":"1.0","name":"cd313cb5-d02e-4426-902a-e731d0f2de78","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"d648a570-8415-4a43-986b-0fe510ce9730","path":"sprites/sHealthToken/sHealthToken.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"d648a570-8415-4a43-986b-0fe510ce9730","path":"sprites/sHealthToken/sHealthToken.yy",},"LayerId":{"name":"51d09e3f-30d8-4c4b-904f-bb1aa45d0057","path":"sprites/sHealthToken/sHealthToken.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sHealthToken","path":"sprites/sHealthToken/sHealthToken.yy",},"resourceVersion":"1.0","name":"d648a570-8415-4a43-986b-0fe510ce9730","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sTempHPPickup","path":"sprites/sTempHPPickup/sTempHPPickup.yy",},
+    "spriteId": {"name":"sHealthToken","path":"sprites/sHealthToken/sHealthToken.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"718ce307-f697-4be9-b115-ea1d09d38262","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cd313cb5-d02e-4426-902a-e731d0f2de78","path":"sprites/sTempHPPickup/sTempHPPickup.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"226e6e11-21fb-4cbe-92ab-378af861d3a6","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d648a570-8415-4a43-986b-0fe510ce9730","path":"sprites/sHealthToken/sHealthToken.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,22 +58,22 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sTempHPPickup","path":"sprites/sTempHPPickup/sTempHPPickup.yy",},
+    "parent": {"name":"sHealthToken","path":"sprites/sHealthToken/sHealthToken.yy",},
     "resourceVersion": "1.4",
-    "name": "sTempHPPickup",
+    "name": "sHealthToken",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d143e8a8-fefa-4277-a82e-5894680a2114","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"51d09e3f-30d8-4c4b-904f-bb1aa45d0057","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Old",
-    "path": "folders/Sprites/Items/Old.yy",
+    "name": "Items",
+    "path": "folders/Sprites/Items.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sTempHPPickup",
+  "name": "sHealthToken",
   "tags": [],
   "resourceType": "GMSprite",
 }

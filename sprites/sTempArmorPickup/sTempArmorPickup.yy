@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Items",
-    "path": "folders/Sprites/Items.yy",
+    "name": "Old",
+    "path": "folders/Sprites/Items/Old.yy",
   },
   "resourceVersion": "1.0",
   "name": "sTempArmorPickup",

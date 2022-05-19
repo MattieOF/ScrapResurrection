@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sTempHPPickup",
-    "path": "sprites/sTempHPPickup/sTempHPPickup.yy",
+    "name": "sHealthToken",
+    "path": "sprites/sHealthToken/sHealthToken.yy",
   },
   "solid": false,
   "visible": true,

@@ -25,7 +25,7 @@ switch (stage)
 		alpha -= 0.02;
 		if (alpha <= 0)
 		{
-			text = scribble("[fa_left][fa_top][c_gray][fntUiMain]Concept, Level Design, Art\n"
+			text = scribble("[fa_left][fa_top][c_gray][fntUiMain]Story, Level Design, and Art\n"
 			+ "[c_white][fntUiMainLarge]Daniel Harvey\n\n"
 			+ "[c_gray][fntUiMain]Character Designs and Music\n"
 			+ "[c_white][fntUiMainLarge]Sophie Hayward\n\n"

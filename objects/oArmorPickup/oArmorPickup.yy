@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sTempArmorPickup",
-    "path": "sprites/sTempArmorPickup/sTempArmorPickup.yy",
+    "name": "sArmorToken",
+    "path": "sprites/sArmorToken/sArmorToken.yy",
   },
   "solid": false,
   "visible": true,

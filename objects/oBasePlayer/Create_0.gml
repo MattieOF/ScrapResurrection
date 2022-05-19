@@ -68,7 +68,7 @@ function on_hit(hitInfo)
 function hurt(dmg)
 {
 	// We're in dash iframes, don't take dmg
-	if (dsp > 0)
+	if (dsp != 0)
 		return;
 	
 	if (armor > 0)
