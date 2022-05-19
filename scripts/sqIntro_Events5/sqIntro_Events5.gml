@@ -2,5 +2,6 @@
 
 function Done()
 {
-	room_goto(rmTest);
+	oIntro.intro_complete();
 }
+

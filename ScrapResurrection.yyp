@@ -124,6 +124,8 @@
     {"id":{"name":"scribble_super_create","path":"scripts/scribble_super_create/scribble_super_create.yy",},"order":1,},
     {"id":{"name":"__scribble_gen_1_model_limits_and_bezier_curves","path":"scripts/__scribble_gen_1_model_limits_and_bezier_curves/__scribble_gen_1_model_limits_and_bezier_curves.yy",},"order":0,},
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"order":0,},
+    {"id":{"name":"sStartRoom","path":"sprites/sStartRoom/sStartRoom.yy",},"order":0,},
+    {"id":{"name":"sElevator","path":"sprites/sElevator/sElevator.yy",},"order":1,},
     {"id":{"name":"oBaseEnemy","path":"objects/oBaseEnemy/oBaseEnemy.yy",},"order":0,},
     {"id":{"name":"__scribble_config_colours","path":"scripts/__scribble_config_colours/__scribble_config_colours.yy",},"order":1,},
     {"id":{"name":"rmLevel1","path":"rooms/rmLevel1/rmLevel1.yy",},"order":2,},
@@ -224,6 +226,8 @@
     {"folderPath":"folders/Sprites/Player.yy","order":20,"resourceVersion":"1.0","name":"Player","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Player/Old.yy","order":1,"resourceVersion":"1.0","name":"Old","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Enemies/Old.yy","order":3,"resourceVersion":"1.0","name":"Old","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/Level.yy","order":21,"resourceVersion":"1.0","name":"Level","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/Level/Level 1.yy","order":1,"resourceVersion":"1.0","name":"Level 1","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
