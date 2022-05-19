@@ -10,7 +10,7 @@ switch (stage)
 		alpha += 0.02;
 		if (alpha >= 1)
 		{
-			timer = 2 * room_speed;
+			timer = 2.5 * room_speed;
 			stage++;
 		}
 		break;
@@ -40,7 +40,10 @@ switch (stage)
 		alpha -= 0.02;
 		if (alpha <= 0)
 		{
-			text = scribble("[fa_left][fa_top][c_gray][fntUiMain]Developed in\n"
+			text = scribble("[fa_left][fa_top][c_gray][fntUiMain]3rd party assets\n"
+			+ "[c_white]Fantasy Knight by aamatniekss on itch.io\n"
+			+ "Scribble by JujuAdams\n\n"
+			+ "[c_gray][fntUiMain]Developed with\n"
 			+ "[c_white][sGMLogo]\n\n"
 			+ "[c_gray][fntUiMain]Developed at\n"
 			+ "[c_white][sFCLogo]");
