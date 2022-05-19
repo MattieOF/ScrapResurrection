@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Old",
+    "path": "folders/Sprites/Enemies/Old.yy",
   },
   "resourceVersion": "1.0",
   "name": "sTestEnemy",
