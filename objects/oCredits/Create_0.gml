@@ -1,4 +1,5 @@
 active = false;
+image_alpha = 0;
 
 // 0 = fade in lgoo
 // 1 = keep logo

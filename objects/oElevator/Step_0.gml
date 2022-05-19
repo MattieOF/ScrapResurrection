@@ -24,5 +24,12 @@ for (var i = 0; i < playerCollisionCheck.playerCount; i++)
 }
 
 if (xDelta == 0 && yDelta == 0)
+{
 	moving = false;
+	if (egg != noone)
+	{
+		if (egg.playerCount > 0)
+			spawnZone_elevatorEgg.spawn = true;
+	}
+}
 
