@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sTempPlayerB",
-    "path": "sprites/sTempPlayerB/sTempPlayerB.yy",
+    "name": "sWarriorIdle",
+    "path": "sprites/sWarriorIdle/sWarriorIdle.yy",
   },
   "solid": false,
   "visible": true,
@@ -23,7 +23,9 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [
     {"propertyId":{"name":"walkSpeed","path":"objects/oBasePlayer/oBasePlayer.yy",},"objectId":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"value":"7.5","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
@@ -36,6 +38,10 @@
     {"propertyId":{"name":"fallDmgStart","path":"objects/oBasePlayer/oBasePlayer.yy",},"objectId":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"value":"18","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"grappleStartCol","path":"objects/oBasePlayer/oBasePlayer.yy",},"objectId":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"value":"$FF9A00FF","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"grappleEndCol","path":"objects/oBasePlayer/oBasePlayer.yy",},"objectId":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"value":"$FFFFFFFF","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"jumpDownSprite","path":"objects/oBasePlayer/oBasePlayer.yy",},"objectId":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"value":"sWarriorJump","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"jumpUpSprite","path":"objects/oBasePlayer/oBasePlayer.yy",},"objectId":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"value":"sWarriorJump","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"runSprite","path":"objects/oBasePlayer/oBasePlayer.yy",},"objectId":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"value":"sWarriorRun","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"idleSprite","path":"objects/oBasePlayer/oBasePlayer.yy",},"objectId":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"value":"sWarriorIdle","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "Players",

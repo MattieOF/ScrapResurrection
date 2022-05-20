@@ -197,13 +197,21 @@ if (place_meeting(x, y + vsp, oWall))
 }
 y += vsp;
 
+// Update sprite
+sprite.x = x;
+sprite.y = y;
+
 if (hsp != 0 && vsp == 0)
-	sprite_index = runSprite;
+	sprite.sprite_index = runSprite;
+else if (vsp > 0)
+	sprite.sprite_index = jumpUpSprite;
+else if (vsp < 0)
+	sprite.sprite_index = jumpDownSprite;
 else
-	sprite_index = idleSprite;
+	sprite.sprite_index = idleSprite;
 	
 if (hsp != 0)
-	image_xscale = sign(hsp) * xscale;
+	sprite.image_xscale = sign(hsp) * xscale;
 
 if (shootCooldown > 0)
 	shootCooldown--;

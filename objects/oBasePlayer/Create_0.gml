@@ -58,6 +58,18 @@ shootCooldown = 0;
 
 state = playerState.normal;
 
+sprite = create_sprite(idleSprite, x, y, layer, 1, xscale, yscale);
+
+function set_scale(_x, _y)
+{
+	xscale = _x;
+	yscale = _y;
+	image_xscale = _x;
+	image_yscale = _y;
+	sprite.image_xscale = _x;
+	sprite.image_yscale = _y;
+}
+
 function is_grounded()
 {
 	return place_meeting(x, y + 1, oWall);

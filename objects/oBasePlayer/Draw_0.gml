@@ -1,7 +1,5 @@
 /// @description Draw player + grappling hook
 
-draw_self();
-
 if (global.drawDebugItems)
 {
 	draw_set_color(c_gray);

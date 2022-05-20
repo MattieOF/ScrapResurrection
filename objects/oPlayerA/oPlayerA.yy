@@ -42,6 +42,8 @@
     {"propertyId":{"name":"grappleStartCol","path":"objects/oBasePlayer/oBasePlayer.yy",},"objectId":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"value":"$FF00004C","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"runSprite","path":"objects/oBasePlayer/oBasePlayer.yy",},"objectId":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"value":"sFighterRun","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"idleSprite","path":"objects/oBasePlayer/oBasePlayer.yy",},"objectId":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"value":"sFighterIdle","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"jumpDownSprite","path":"objects/oBasePlayer/oBasePlayer.yy",},"objectId":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"value":"sFighterJumpDown","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"jumpUpSprite","path":"objects/oBasePlayer/oBasePlayer.yy",},"objectId":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"value":"sFighterJumpUp","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "Players",
