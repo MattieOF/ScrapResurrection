@@ -140,7 +140,10 @@ function shoot_hitscan(src, dir, _weapon, hittableObj = oHittable, wallObj = oWa
 		// Hit a wall
 		// Spawn debris
 		var angle = round((angle_reverse(dir) / 45)) * 45;
-		create_debris(sWallWNS, wallRaycast.X, wallRaycast.Y,,,,new Bound(angle - 8, angle + 8), new Bound(1, 2),,new Bound(0.6, 1.2));
+		var tex = global.tileTex;
+		if (variable_instance_exists(wallRaycast.obj, "tileTex") && wallRaycast.obj.tileTex != noone)
+			tex = wallRaycast.obj.tileTex;
+		create_debris(tex, wallRaycast.X, wallRaycast.Y,,,,new Bound(angle - 8, angle + 8), new Bound(1, 2),,new Bound(0.6, 1.2));
 		create_tracer(src.x, src.y, wallRaycast.X, wallRaycast.Y,,0.4);
 	}
 }

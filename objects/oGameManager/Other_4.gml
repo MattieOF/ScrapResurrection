@@ -8,6 +8,16 @@ global.highlightedUsablesLayer = layer_get_id("UsablesHighlighted");
 global.screenshakeLayer = layer_get_id("Screenshake");
 global.screenshakeEffect = (global.screenshakeLayer == -1 ? undefined : layer_get_fx(global.screenshakeLayer));
 
+switch (room)
+{
+	case rmLevel1:
+		global.tileTex = sLevel1TilesetP;
+		break;
+	default:
+		global.tileTex = sLevel1TilesetP;
+		break;
+}
+
 function set_screenshake(mag)
 {
 	if (global.screenshakeEffect == undefined)

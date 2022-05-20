@@ -33,7 +33,9 @@
     {"varType":0,"value":"5","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"elevatorSpeed","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":4,"value":"noone","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"egg","tags":[],"resourceType":"GMObjectProperty",},
   ],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"tileTex","path":"objects/oWall/oWall.yy",},"objectId":{"name":"oWall","path":"objects/oWall/oWall.yy",},"value":"sElevator","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
   "parent": {
     "name": "Elements",
     "path": "folders/Objects/Elements.yy",

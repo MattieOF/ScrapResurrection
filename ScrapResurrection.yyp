@@ -4,6 +4,7 @@
     {"id":{"name":"sHealthbarFill","path":"sprites/sHealthbarFill/sHealthbarFill.yy",},"order":1,},
     {"id":{"name":"__scribble_gen_5_finalize_bidi","path":"scripts/__scribble_gen_5_finalize_bidi/__scribble_gen_5_finalize_bidi.yy",},"order":5,},
     {"id":{"name":"__scribble_gen_6_build_lines","path":"scripts/__scribble_gen_6_build_lines/__scribble_gen_6_build_lines.yy",},"order":6,},
+    {"id":{"name":"sLevel1TilesetP","path":"sprites/sLevel1TilesetP/sLevel1TilesetP.yy",},"order":1,},
     {"id":{"name":"scribble_anim_wave","path":"scripts/scribble_anim_wave/scribble_anim_wave.yy",},"order":7,},
     {"id":{"name":"scribble_external_sound_exists","path":"scripts/scribble_external_sound_exists/scribble_external_sound_exists.yy",},"order":3,},
     {"id":{"name":"sDroneSpawnerAsleep","path":"sprites/sDroneSpawnerAsleep/sDroneSpawnerAsleep.yy",},"order":0,},

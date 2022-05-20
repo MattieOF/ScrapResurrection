@@ -68,7 +68,10 @@ if (keyHook && hasGrapplingHook)
 			if (hit.obj != noone)
 			{
 				var angleReverse = angle_reverse(_hookDir);
-				create_debris(sWallWNS, hit.X, hit.Y,,,,new Bound(angleReverse - 5, angleReverse + 5));
+				var tex = global.tileTex;
+				if (variable_instance_exists(hit.obj, "tileTex") && hit.obj.tileTex != noone)
+					tex = hit.obj.tileTex;
+				create_debris(tex, hit.X, hit.Y,,,,new Bound(angleReverse - 5, angleReverse + 5));
 				state = playerState.grappling;
 			}
 			_gX = hit.X;
