@@ -197,6 +197,14 @@ if (place_meeting(x, y + vsp, oWall))
 }
 y += vsp;
 
+if (hsp != 0 && vsp == 0)
+	sprite_index = runSprite;
+else
+	sprite_index = idleSprite;
+	
+if (hsp != 0)
+	image_xscale = sign(hsp) * xscale;
+
 if (shootCooldown > 0)
 	shootCooldown--;
 if (reloading)

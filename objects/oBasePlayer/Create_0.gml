@@ -46,6 +46,9 @@ meleeAttack = noone;
 meleeAttackXOffset = 0;
 meleeAttackYOffset = -16;
 
+xscale = 1;
+yscale = 1;
+
 // Weapon related variables
 currentLoadoutSlot = -1;
 loadout = array_create(0);

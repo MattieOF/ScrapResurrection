@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sTempPlayerA",
-    "path": "sprites/sTempPlayerA/sTempPlayerA.yy",
+    "name": "sFighterIdle",
+    "path": "sprites/sFighterIdle/sFighterIdle.yy",
   },
   "solid": false,
   "visible": true,
@@ -23,7 +23,9 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [
     {"propertyId":{"name":"walkSpeed","path":"objects/oBasePlayer/oBasePlayer.yy",},"objectId":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"value":"4","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
@@ -38,6 +40,8 @@
     {"propertyId":{"name":"grappleMaxLength","path":"objects/oBasePlayer/oBasePlayer.yy",},"objectId":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"value":"500","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"grappleEndCol","path":"objects/oBasePlayer/oBasePlayer.yy",},"objectId":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"value":"$FF0000E5","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"grappleStartCol","path":"objects/oBasePlayer/oBasePlayer.yy",},"objectId":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"value":"$FF00004C","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"runSprite","path":"objects/oBasePlayer/oBasePlayer.yy",},"objectId":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"value":"sFighterRun","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"idleSprite","path":"objects/oBasePlayer/oBasePlayer.yy",},"objectId":{"name":"oBasePlayer","path":"objects/oBasePlayer/oBasePlayer.yy",},"value":"sFighterIdle","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "Players",
