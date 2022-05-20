@@ -42,6 +42,8 @@ switch (stage)
 		{
 			text = scribble("[fa_left][fa_top][c_gray][fntUiMain]3rd party assets\n"
 			+ "[c_white]Fantasy Knight by aamatniekss on itch.io\n"
+			+ "Warrior Free Animation Set by Clembod on itch.io\n"
+			+ "Elementals: Metal Bladekeeper by chierit on itch.io\n"
 			+ "Scribble by JujuAdams\n\n"
 			+ "[c_gray][fntUiMain]Developed with\n"
 			+ "[c_white][sGMLogo]\n\n"
