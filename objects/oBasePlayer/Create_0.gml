@@ -70,6 +70,10 @@ function hurt(dmg)
 	// We're in dash iframes, don't take dmg
 	if (dsp != 0)
 		return;
+		
+	// Shake the screen depending on how much damage we're taking, only if active
+	if (active)
+		oGameManager.set_screenshake(min(dmg * hurtScreenshakeFactor, hurtScreenshakeCap));
 	
 	if (armor > 0)
 	{

@@ -32,7 +32,7 @@ function init(r, dmg, _enemyObj = oHittable, _src = undefined)
 	// Screenshake
 	// We can assume a game manager exists; if it doesn't we're in a broken state and should crash anyways
 	// GameManager will check the screenshake layer exists for us
-	oGameManager.set_screenshake(25);
+	oGameManager.set_screenshake(20);
 	
 	// Deal the damage
 	// Perhaps enable an option to do this on a delay
