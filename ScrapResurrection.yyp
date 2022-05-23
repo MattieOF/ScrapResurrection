@@ -114,6 +114,7 @@
     {"id":{"name":"sConscriptIdle","path":"sprites/sConscriptIdle/sConscriptIdle.yy",},"order":0,},
     {"id":{"name":"scrIniExtensions","path":"scripts/scrIniExtensions/scrIniExtensions.yy",},"order":3,},
     {"id":{"name":"scribble_anim_jitter","path":"scripts/scribble_anim_jitter/scribble_anim_jitter.yy",},"order":2,},
+    {"id":{"name":"oHint","path":"objects/oHint/oHint.yy",},"order":8,},
     {"id":{"name":"scribble_font_rename","path":"scripts/scribble_font_rename/scribble_font_rename.yy",},"order":9,},
     {"id":{"name":"scribble_font_set_style_family","path":"scripts/scribble_font_set_style_family/scribble_font_set_style_family.yy",},"order":12,},
     {"id":{"name":"sWall","path":"sprites/sWall/sWall.yy",},"order":2,},
