@@ -1,3 +1,5 @@
+/// @description Init values
+
 active = false;
 image_alpha = 0;
 

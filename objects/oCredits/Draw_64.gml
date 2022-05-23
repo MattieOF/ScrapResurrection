@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Draw text
 if (!active) exit;
 
 var width  = global.displayWidth;

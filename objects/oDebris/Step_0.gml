@@ -11,3 +11,6 @@ for (var i = 0; i < array_length(debris); i++)
 	}
 }
 
+if (shouldDieWhenNoElements && array_length(debris) == 0)
+	instance_destroy(id);
+
