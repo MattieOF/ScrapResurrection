@@ -2,6 +2,12 @@
 
 if (!active) exit;
 
+if (control_check_pressed(controls.quit) && relatedElevator != noone)
+{
+	relatedElevator.elevatorSpeed = 10;
+	instance_destroy(id);
+}
+
 switch (stage)
 {
 	case 0:
