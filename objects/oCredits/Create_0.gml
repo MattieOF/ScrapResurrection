@@ -12,6 +12,10 @@ image_alpha = 0;
 // 8 = fade other
 stage = 0;
 alpha = 0;
+skipAlpha = 0;
+showSkip = true;
 text = scribble("[fa_top][fa_left][sLogo]");
+show_debug_message(control_get_string(controls.quit));
+quitText = scribble("[fa_left][fa_bottom][c_white][fntUiMain]Press [c_yellow][[" + string(control_get_string(controls.quit)) + "] [c_white]to skip");
 timer = 3 * room_speed;
 

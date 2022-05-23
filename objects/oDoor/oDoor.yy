@@ -31,7 +31,9 @@
     {"varType":0,"value":"0.2","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"targetYScale","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":0,"value":"0.05","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"openSpeed","tags":[],"resourceType":"GMObjectProperty",},
   ],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"tileTex","path":"objects/oWall/oWall.yy",},"objectId":{"name":"oWall","path":"objects/oWall/oWall.yy",},"value":"sDoorWNS","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
   "parent": {
     "name": "Elements",
     "path": "folders/Objects/Elements.yy",

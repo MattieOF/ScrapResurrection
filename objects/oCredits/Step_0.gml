@@ -14,6 +14,7 @@ switch (stage)
 	case 3:
 	case 6:
 		alpha += 0.02;
+		skipAlpha += 0.02;
 		if (alpha >= 1)
 		{
 			timer = 2.5 * room_speed;
@@ -40,6 +41,7 @@ switch (stage)
 			+ "[c_gray][fntUiMain]Thanks to\n"
 			+ "[c_white][fntUiMain]Ben, Sam, Milenne, Chris");
 			stage++; 
+			showSkip = false;
 		}
 		break;
 	case 5:

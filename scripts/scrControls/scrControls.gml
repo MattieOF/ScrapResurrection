@@ -223,3 +223,20 @@ function save_controls(filename = "controls.json")
 	file_text_close(file);
 }
 
+function control_get_string(ctrl)
+{
+	var control = get_control(ctrl);
+	show_debug_message(control);
+	switch (control.type)
+	{
+		case controlType.key:
+			return key_string(control.value);
+		case controlType.mouse:
+			return mouse_button_string(control.value);
+		case controlType.mousewheel:
+			return mouse_wheel_string(control.value);
+		default:
+			return "Unknown";
+	}
+}
+

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sEmpty",
-    "path": "sprites/sEmpty/sEmpty.yy",
+    "name": "sMelee",
+    "path": "sprites/sMelee/sMelee.yy",
   },
   "solid": false,
   "visible": true,

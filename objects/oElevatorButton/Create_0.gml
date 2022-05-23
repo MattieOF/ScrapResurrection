@@ -19,7 +19,6 @@ var width  = sprite_get_width(hitboxSprite);
 var height = sprite_get_height(hitboxSprite);
 var scaleX = rangeWidth  / width;
 var scaleY = rangeHeight / height;
-visible = false;
 
 image_xscale = scaleX;
 image_yscale = scaleY;

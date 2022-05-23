@@ -258,6 +258,7 @@ function key_string(key)
 		case	173:	return "Mute"
 		case	174:	return "Volume Down"
 		case	175:	return "Volume Up"
+		case    vk_escape: return "Escape";
 
 		default:		return undefined;
 	}
