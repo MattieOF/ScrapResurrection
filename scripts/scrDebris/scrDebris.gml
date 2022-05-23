@@ -1,4 +1,4 @@
-function DebrisElement(_x, _y, _sprite, _width, _height, _spd, _dir, _rotateSpd, _lifetime, _grv = 0.2, _wallObj = oWall) constructor
+function DebrisElement(_x, _y, _sprite, _width, _height, _spd, _dir, _rotateSpd, _lifetime, _grv = 0.2, _collides = true, _wallObj = oWall) constructor
 {
 	X = _x;
 	Y = _y;
@@ -15,6 +15,7 @@ function DebrisElement(_x, _y, _sprite, _width, _height, _spd, _dir, _rotateSpd,
 	scale = 1;
 	tX = irandom_range(0, sprite_get_width(_sprite)  - width);
 	tY = irandom_range(0, sprite_get_height(_sprite) - height);
+	collides = _collides;
 	
 	X += hsp;
 	Y += vsp;
@@ -27,7 +28,7 @@ function DebrisElement(_x, _y, _sprite, _width, _height, _spd, _dir, _rotateSpd,
 		scale = min((lifetime / maxLifetime) * 3, 1);
 		
 		// Collide and move
-		if (collision_point(X + hsp, Y, wallObj, false, true))
+		if (collides && collision_point(X + hsp, Y, wallObj, false, true))
 		{
 			while (abs(hsp) > 0.1)
 			{
@@ -39,7 +40,7 @@ function DebrisElement(_x, _y, _sprite, _width, _height, _spd, _dir, _rotateSpd,
 		}
 		X += hsp;
 
-		if (collision_point(X, Y + vsp, wallObj, false, true))
+		if (collides && collision_point(X, Y + vsp, wallObj, false, true))
 		{
 			while (abs(vsp) > 0.1)
 			{
@@ -54,7 +55,7 @@ function DebrisElement(_x, _y, _sprite, _width, _height, _spd, _dir, _rotateSpd,
 	}
 }
 
-function create_debris(_sprite, _x, _y, _widthBound = new Bound(3, 5), _heightBound = new Bound(3, 5), _amountBound = new Bound(8, 16), _dirBound = new Bound(0, 359), _spdBound = new Bound(3, 8), _rotateSpdBound = new Bound(3, 15), _lifetimeBound = new Bound(1, 3), _grvBound = new Bound(0.2, 0.2))
+function create_debris(_sprite, _x, _y, _widthBound = new Bound(3, 5), _heightBound = new Bound(3, 5), _amountBound = new Bound(8, 16), _dirBound = new Bound(0, 359), _spdBound = new Bound(3, 8), _rotateSpdBound = new Bound(3, 15), _lifetimeBound = new Bound(1, 3), _grvBound = new Bound(0.2, 0.2), _collides = true)
 {
 	var inst = instance_create_layer(_x, _y, layer, oDebris);
 	var debris = array_create(0);
@@ -63,7 +64,7 @@ function create_debris(_sprite, _x, _y, _widthBound = new Bound(3, 5), _heightBo
 	for (var i = 0; i < count; i++)
 	{
 		array_push(debris, new DebrisElement(
-			_x, _y, _sprite, get_int_inside_bound(_widthBound), get_int_inside_bound(_heightBound), get_real_inside_bound(_spdBound), get_real_inside_bound(_dirBound), get_real_inside_bound(_rotateSpdBound), get_real_inside_bound(_lifetimeBound), get_real_inside_bound(_grvBound)
+			_x, _y, _sprite, get_int_inside_bound(_widthBound), get_int_inside_bound(_heightBound), get_real_inside_bound(_spdBound), get_real_inside_bound(_dirBound), get_real_inside_bound(_rotateSpdBound), get_real_inside_bound(_lifetimeBound), get_real_inside_bound(_grvBound), _collides
 		));
 	}
 	
@@ -71,13 +72,13 @@ function create_debris(_sprite, _x, _y, _widthBound = new Bound(3, 5), _heightBo
 	inst.init(debris);
 }
 
-function add_debris_element(_debrisObj, _x, _y, _sprite, _widthBound = new Bound(3, 5), _heightBound = new Bound(3, 5), _amountBound = new Bound(8, 16), _dirBound = new Bound(0, 359), _spdBound = new Bound(3, 8), _rotateSpdBound = new Bound(3, 15), _lifetimeBound = new Bound(1, 3), _grvBound = new Bound(0.2, 0.2))
+function add_debris_element(_debrisObj, _x, _y, _sprite, _widthBound = new Bound(3, 5), _heightBound = new Bound(3, 5), _amountBound = new Bound(8, 16), _dirBound = new Bound(0, 359), _spdBound = new Bound(3, 8), _rotateSpdBound = new Bound(3, 15), _lifetimeBound = new Bound(1, 3), _grvBound = new Bound(0.2, 0.2), _collides = true)
 {
 	var count = get_int_inside_bound(_amountBound);
 	for (var i = 0; i < count; i++)
 	{
 		array_push(_debrisObj.debris, new DebrisElement(
-			_x, _y, _sprite, get_int_inside_bound(_widthBound), get_int_inside_bound(_heightBound), get_real_inside_bound(_spdBound), get_real_inside_bound(_dirBound), get_real_inside_bound(_rotateSpdBound), get_real_inside_bound(_lifetimeBound), get_real_inside_bound(_grvBound)
+			_x, _y, _sprite, get_int_inside_bound(_widthBound), get_int_inside_bound(_heightBound), get_real_inside_bound(_spdBound), get_real_inside_bound(_dirBound), get_real_inside_bound(_rotateSpdBound), get_real_inside_bound(_lifetimeBound), get_real_inside_bound(_grvBound), _collides
 		));
 	}
 }

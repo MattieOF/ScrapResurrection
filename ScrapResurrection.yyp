@@ -149,7 +149,7 @@
     {"id":{"name":"scribble_super_glyph_copy_all","path":"scripts/scribble_super_glyph_copy_all/scribble_super_glyph_copy_all.yy",},"order":3,},
     {"id":{"name":"oDebris","path":"objects/oDebris/oDebris.yy",},"order":4,},
     {"id":{"name":"sLevel1Tileset","path":"sprites/sLevel1Tileset/sLevel1Tileset.yy",},"order":0,},
-    {"id":{"name":"oActivatorTrigger","path":"objects/oActivatorTrigger/oActivatorTrigger.yy",},"order":7,},
+    {"id":{"name":"oSpawnTrigger","path":"objects/oSpawnTrigger/oSpawnTrigger.yy",},"order":7,},
     {"id":{"name":"sFCLogo","path":"sprites/sFCLogo/sFCLogo.yy",},"order":1,},
     {"id":{"name":"sCrosshairGrappling","path":"sprites/sCrosshairGrappling/sCrosshairGrappling.yy",},"order":5,},
     {"id":{"name":"oExplosion","path":"objects/oExplosion/oExplosion.yy",},"order":5,},
