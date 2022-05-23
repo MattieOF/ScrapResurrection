@@ -1,8 +1,10 @@
 {
   "resources": [
     {"id":{"name":"scrDrawUtils","path":"scripts/scrDrawUtils/scrDrawUtils.yy",},"order":11,},
+    {"id":{"name":"oDoorLever","path":"objects/oDoorLever/oDoorLever.yy",},"order":4,},
     {"id":{"name":"sHealthbarFill","path":"sprites/sHealthbarFill/sHealthbarFill.yy",},"order":1,},
     {"id":{"name":"__scribble_gen_5_finalize_bidi","path":"scripts/__scribble_gen_5_finalize_bidi/__scribble_gen_5_finalize_bidi.yy",},"order":5,},
+    {"id":{"name":"oDoor","path":"objects/oDoor/oDoor.yy",},"order":2,},
     {"id":{"name":"__scribble_gen_6_build_lines","path":"scripts/__scribble_gen_6_build_lines/__scribble_gen_6_build_lines.yy",},"order":6,},
     {"id":{"name":"sLevel1TilesetP","path":"sprites/sLevel1TilesetP/sLevel1TilesetP.yy",},"order":1,},
     {"id":{"name":"sWarriorSlide","path":"sprites/sWarriorSlide/sWarriorSlide.yy",},"order":5,},
@@ -155,6 +157,7 @@
     {"id":{"name":"__scribble_gen_1_model_limits_and_bezier_curves","path":"scripts/__scribble_gen_1_model_limits_and_bezier_curves/__scribble_gen_1_model_limits_and_bezier_curves.yy",},"order":0,},
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"order":0,},
     {"id":{"name":"sFighterJumpUp","path":"sprites/sFighterJumpUp/sFighterJumpUp.yy",},"order":4,},
+    {"id":{"name":"sDoor","path":"sprites/sDoor/sDoor.yy",},"order":7,},
     {"id":{"name":"sStartRoom","path":"sprites/sStartRoom/sStartRoom.yy",},"order":0,},
     {"id":{"name":"sElevator","path":"sprites/sElevator/sElevator.yy",},"order":1,},
     {"id":{"name":"oBaseEnemy","path":"objects/oBaseEnemy/oBaseEnemy.yy",},"order":0,},
