@@ -94,6 +94,10 @@
         {"properties":[
             {"propertyId":{"name":"elevator","path":"objects/oElevatorButton/oElevatorButton.yy",},"objectId":{"name":"oElevatorButton","path":"objects/oElevatorButton/oElevatorButton.yy",},"value":"elevator2","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
           ],"isDnd":false,"objectId":{"name":"oElevatorButton","path":"objects/oElevatorButton/oElevatorButton.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":175.0,"y":1038.0,"resourceVersion":"1.0","name":"elevator2_buttons","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"oHealthPickup","path":"objects/oHealthPickup/oHealthPickup.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":384.0,"y":1888.0,"resourceVersion":"1.0","name":"inst_59DE9C1","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[
+            {"propertyId":{"name":"target","path":"objects/oDestroyLever/oDestroyLever.yy",},"objectId":{"name":"oDestroyLever","path":"objects/oDestroyLever/oDestroyLever.yy",},"value":"noone","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+          ],"isDnd":false,"objectId":{"name":"oDestroyLever","path":"objects/oDestroyLever/oDestroyLever.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":844.0,"y":1696.0,"resourceVersion":"1.0","name":"fireLever","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":500,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Usables","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"oPlayerCollisionCheck","path":"objects/oPlayerCollisionCheck/oPlayerCollisionCheck.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":9.5,"scaleY":7.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1280.0,"y":576.0,"resourceVersion":"1.0","name":"colCheck_easterEgg","tags":[],"resourceType":"GMRInstance",},
@@ -101,6 +105,7 @@
       ],"visible":true,"depth":600,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Egg","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"oDroneSpawner","path":"objects/oDroneSpawner/oDroneSpawner.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4288256409,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1184.0,"y":1068.0,"resourceVersion":"1.0","name":"inst_7F84422B","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"oDroneSpawner","path":"objects/oDroneSpawner/oDroneSpawner.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4288256409,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":430.0,"y":1804.0,"resourceVersion":"1.0","name":"inst_4E3D8140","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":700,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Enemies","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"oPlayerCollisionCheck","path":"objects/oPlayerCollisionCheck/oPlayerCollisionCheck.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.5,"scaleY":1.75,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1760.0,"y":432.0,"resourceVersion":"1.0","name":"elevator1_playerCollider","tags":[],"resourceType":"GMRInstance",},
@@ -122,9 +127,6 @@
           ],"isDnd":false,"objectId":{"name":"oElevator","path":"objects/oElevator/oElevator.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":-1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":224.0,"y":984.0,"resourceVersion":"1.0","name":"elevator2","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oPlayerCollisionCheck","path":"objects/oPlayerCollisionCheck/oPlayerCollisionCheck.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.5,"scaleY":1.6875,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":128.0,"y":1034.0,"resourceVersion":"1.0","name":"elevator2_playerCollision","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oPosition","path":"objects/oPosition/oPosition.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":224.0,"y":1588.0,"resourceVersion":"1.0","name":"elevator2_endPos","tags":[],"resourceType":"GMRInstance",},
-        {"properties":[
-            {"propertyId":{"name":"target","path":"objects/oDestroyLever/oDestroyLever.yy",},"objectId":{"name":"oDestroyLever","path":"objects/oDestroyLever/oDestroyLever.yy",},"value":"noone","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-          ],"isDnd":false,"objectId":{"name":"oDestroyLever","path":"objects/oDestroyLever/oDestroyLever.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":844.0,"y":1696.0,"resourceVersion":"1.0","name":"fireLever","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oPosition","path":"objects/oPosition/oPosition.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":576.0,"y":1712.0,"resourceVersion":"1.0","name":"fire1Pos","tags":[],"resourceType":"GMRInstance",},
         {"properties":[
             {"propertyId":{"name":"object","path":"objects/oSpawnTrigger/oSpawnTrigger.yy",},"objectId":{"name":"oSpawnTrigger","path":"objects/oSpawnTrigger/oSpawnTrigger.yy",},"value":"oFire","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
@@ -302,12 +304,14 @@
     {"name":"inst_14E10C9E","path":"rooms/rmLevel1/rmLevel1.yy",},
     {"name":"inst_245434","path":"rooms/rmLevel1/rmLevel1.yy",},
     {"name":"inst_361423AE","path":"rooms/rmLevel1/rmLevel1.yy",},
-    {"name":"fireLever","path":"rooms/rmLevel1/rmLevel1.yy",},
     {"name":"fire1Pos","path":"rooms/rmLevel1/rmLevel1.yy",},
     {"name":"fireSpawner","path":"rooms/rmLevel1/rmLevel1.yy",},
     {"name":"movementHint","path":"rooms/rmLevel1/rmLevel1.yy",},
     {"name":"attackHint","path":"rooms/rmLevel1/rmLevel1.yy",},
     {"name":"hintDash","path":"rooms/rmLevel1/rmLevel1.yy",},
+    {"name":"inst_4E3D8140","path":"rooms/rmLevel1/rmLevel1.yy",},
+    {"name":"inst_59DE9C1","path":"rooms/rmLevel1/rmLevel1.yy",},
+    {"name":"fireLever","path":"rooms/rmLevel1/rmLevel1.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
