@@ -205,22 +205,22 @@ function shoot()
 			
 			// Get direction
 			if (mouse_x < x)
-				meleeDir = 180;
+				meleeDir = true;
 			else
-				meleeDir = 0;
+				meleeDir = false;
 			
 			// Create an initialise melee attack object
-			meleeAttack = instance_create_layer(x + (meleeDir == 0 ? wpn.xOffset : -wpn.xOffset),
+			meleeAttack = instance_create_layer(x + (meleeDir == false ? wpn.xOffset : -(wpn.xOffset)),
 				y + wpn.yOffset, layer, oMelee);
 			meleeAttack.init(wpn.width, wpn.height, wpn, id);
-			meleeAttack.image_angle = meleeAttack;
+			meleeAttack.image_angle = meleeDir ? 180 : 0;
 			meleeSpriteWidth = sprite_get_width(meleeAttack.sprite_index);
 			
 			// Update movement speed
 			walkSpeed *= wpn.speedMultiplier;
 			
 			// Set attack offsets
-			meleeAttackXOffset = dir == 0 ? wpn.xOffset : -wpn.xOffset;
+			meleeAttackXOffset = meleeDir == false ? wpn.xOffset : -(wpn.xOffset);
 			meleeAttackYOffset = wpn.yOffset;
 			
 			// Disable effects of melee after attack time has passed

@@ -247,8 +247,5 @@ if (state == playerState.swingingMelee)
 {
 	meleeAttack.x = x + meleeAttackXOffset;
 	meleeAttack.y = y + meleeAttackYOffset;
-	
-	if (meleeDir == 180)
-		meleeAttack.x -= meleeSpriteWidth * meleeAttack.image_xscale;
 }
 
