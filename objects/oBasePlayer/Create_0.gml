@@ -226,6 +226,13 @@ function shoot()
 			// Disable effects of melee after attack time has passed
 			alarm[2] = wpn.attackTime * room_speed;
 			
+			// Setup sprite speed
+			if (meleeAttackSprite != noone)
+			{
+				sprite.image_index = 0;
+				sprite.image_speed = (sprite_get_number(meleeAttackSprite) / sprite_get_speed(meleeAttackSprite)) / (wpn.attackTime);
+			}
+			
 			// Set state
 			state = playerState.swingingMelee;
 			
