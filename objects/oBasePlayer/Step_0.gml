@@ -209,8 +209,10 @@ else if (vsp < 0)
 	sprite.sprite_index = jumpDownSprite;
 else
 	sprite.sprite_index = idleSprite;
-	
-if (hsp != 0)
+
+if (state == playerState.swingingMelee)
+	sprite.image_xscale = (meleeDir == 0 ? xscale : -xscale);
+else if (hsp != 0)
 	sprite.image_xscale = sign(hsp) * xscale;
 
 if (shootCooldown > 0)
@@ -243,5 +245,8 @@ if (state == playerState.swingingMelee)
 {
 	meleeAttack.x = x + meleeAttackXOffset;
 	meleeAttack.y = y + meleeAttackYOffset;
+	
+	if (meleeDir == 180)
+		meleeAttack.x -= meleeSpriteWidth * meleeAttack.image_xscale;
 }
 
