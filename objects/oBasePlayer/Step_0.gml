@@ -140,7 +140,7 @@ if (keyDash && dashCharges > 0 && state != playerState.swingingMelee)
 	dashCharges--;
 	
 	var _dir = sign(hsp);
-	if (_dir == 0) _dir = 1;
+	if (_dir == 0) _dir = sign(sprite.image_xscale);
 	dsp = _dir * dashSpeed;
 	vsp = 0;
 	
@@ -238,10 +238,10 @@ if (keyNext)
 	next_weapon();
 else if (keyPrevious)
 	previous_weapon();
-	
+
 if (keyReload)
 	reload_pressed();
-	
+
 // Update melee
 if (state == playerState.swingingMelee)
 {
