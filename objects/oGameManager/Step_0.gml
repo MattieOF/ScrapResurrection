@@ -60,7 +60,14 @@ if (!global.flynnHook)
 	keyboard_lastchar = "";
 	
 	if (flynnHookProgress == array_length(flynnHookCode))
+	{
+		var currentChar = current_character();
+		var inst = instance_create_layer(currentChar.x, currentChar.y, layer, oHint);
+		inst.set_text(scribble(format_string("[fntUiMain][fa_middle][fa_center][c_white][rainbow]Flynn grappling hook activated!\n")));
+		inst.add_required_control(controls.grapplingHook);
+
 		global.flynnHook = true;
+	}
 }
 
 //if (highlightedFx != undefined)
