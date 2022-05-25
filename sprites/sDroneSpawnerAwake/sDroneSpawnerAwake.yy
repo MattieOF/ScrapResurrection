@@ -56,7 +56,7 @@
     "spriteId": {"name":"sDroneSpawnerAwake","path":"sprites/sDroneSpawnerAwake/sDroneSpawnerAwake.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 3.0,
+    "playbackSpeed": 5.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
