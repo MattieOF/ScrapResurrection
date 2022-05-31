@@ -119,6 +119,7 @@
     {"id":{"name":"scribble_anim_blink","path":"scripts/scribble_anim_blink/scribble_anim_blink.yy",},"order":0,},
     {"id":{"name":"__scribble_gen_4_build_words","path":"scripts/__scribble_gen_4_build_words/__scribble_gen_4_build_words.yy",},"order":4,},
     {"id":{"name":"sHealthToken","path":"sprites/sHealthToken/sHealthToken.yy",},"order":3,},
+    {"id":{"name":"scrSave","path":"scripts/scrSave/scrSave.yy",},"order":12,},
     {"id":{"name":"sConscriptIdle","path":"sprites/sConscriptIdle/sConscriptIdle.yy",},"order":0,},
     {"id":{"name":"scrIniExtensions","path":"scripts/scrIniExtensions/scrIniExtensions.yy",},"order":3,},
     {"id":{"name":"scribble_anim_jitter","path":"scripts/scribble_anim_jitter/scribble_anim_jitter.yy",},"order":2,},

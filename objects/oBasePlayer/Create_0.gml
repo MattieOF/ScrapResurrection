@@ -323,3 +323,10 @@ add_weapon(global.weaponDagger);
 add_weapon(global.weaponLMG); 
 next_weapon();
 
+if (global.gameSave != undefined && global.gameSave[$ "characters"][$ saveId] != undefined)
+{
+	hp = global.gameSave[$ "characters"][$ saveId][$ "hp"];
+	armor = global.gameSave[$ "characters"][$ saveId][$ "armor"];
+	loadout = global.gameSave[$ "characters"][$ saveId][$ "loadout"];
+}
+

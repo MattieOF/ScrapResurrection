@@ -1,8 +1,8 @@
-/// @description Insert description here
+/// @description Define functions
 
 function intro_complete()
 {
-	room_goto(rmLevel1);
+	load();
 }
 
 if (global.skipIntro) intro_complete();

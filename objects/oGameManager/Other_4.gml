@@ -117,3 +117,5 @@ array_push(flynnHookCode, "F");
 array_push(flynnHookCode, "F");
 array_push(flynnHookCode, "W");
 
+alarm[3] = 1;
+
