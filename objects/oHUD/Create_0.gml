@@ -8,9 +8,14 @@ healthbarAlpha = 1;
 healthbarAlphaGoal = 1;
 prevHp = 0;
 prevArmor = 0;
+prevChar = undefined;
+prevCurrentCharge = 0;
 alarm[0] = healthbarShowTime * room_speed;
 pickupNotifs = array_create();
 minHealthbarAlpha = 0.3;
+
+// Dash UI
+dashUIs = array_create(0);
 
 function update_use_text(verb = "use", controlId = controls.use, show = true)
 {

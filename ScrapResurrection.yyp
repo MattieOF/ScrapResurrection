@@ -111,6 +111,7 @@
     {"id":{"name":"scribble_font_bake_outline_8dir","path":"scripts/scribble_font_bake_outline_8dir/scribble_font_bake_outline_8dir.yy",},"order":1,},
     {"id":{"name":"oTestEnemy","path":"objects/oTestEnemy/oTestEnemy.yy",},"order":1,},
     {"id":{"name":"fntDebugText","path":"fonts/fntDebugText/fntDebugText.yy",},"order":1,},
+    {"id":{"name":"sDashIcon","path":"sprites/sDashIcon/sDashIcon.yy",},"order":6,},
     {"id":{"name":"sTempPlayer","path":"sprites/sTempPlayer/sTempPlayer.yy",},"order":0,},
     {"id":{"name":"scribble_anim_blink","path":"scripts/scribble_anim_blink/scribble_anim_blink.yy",},"order":0,},
     {"id":{"name":"__scribble_gen_4_build_words","path":"scripts/__scribble_gen_4_build_words/__scribble_gen_4_build_words.yy",},"order":4,},
