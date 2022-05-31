@@ -248,6 +248,7 @@ function shoot()
 			{
 				play_sound_if_exists(loadout[currentLoadoutSlot].weapon.sounds.soundDryFire, 1, false);
 				shootCooldown = loadout[currentLoadoutSlot].weapon.rof * room_speed;
+				oHUD.ammoTextScale = 1.25;
 				return;
 			}
 			

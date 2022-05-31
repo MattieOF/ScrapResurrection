@@ -39,6 +39,7 @@ else if (prevCurrentCharge != currentChar.dashCharges
          && prevCurrentCharge != currentChar.maxDashCharges)
 {
 	dashUIs[prevCurrentCharge] = 5;
+	healthbarAlpha = 1;
 	healthbarAlphaGoal = 1;
 	alarm[0] = healthbarShowTime * room_speed;
 }
@@ -57,20 +58,20 @@ var remainder = width - offsetPixels;
 var alpha = lerp(minHealthbarAlpha, 1, healthbarAlpha);
 var hp = currentChar.hp / currentChar.baseHealth;
 var _x = global.displayWidth / 2;
-var _y = global.displayHeight - 140;
+var _y = global.displayHeight - 160;
 draw_sprite_ext(sHealthbarFrame, 0, _x, _y, scale, scale, 0, c_white, alpha);
 draw_sprite_part_ext(sHealthbarFill, 0, 0, 0, offsetPixels + (hp * remainder), height, _x - ((width / 2) * scale), _y - ((height / 2) * scale) + 2, scale, scale, c_white, alpha);
 
 // Draw Armor bar
 var armor = currentChar.armor / currentChar.maxArmor;
-_y = global.displayHeight - 100;
+_y = global.displayHeight - 120;
 var col = armor <= 0 ? c_dkgray : c_white;
 draw_sprite_ext(sArmorbarFrame, 0, _x, _y, scale, scale, 0, col, alpha);
 draw_sprite_part_ext(sArmorbarFill, 0, 0, 0, offsetPixels + (armor * remainder), height, _x - ((width / 2) * scale), _y - ((height / 2) * scale) + 2, scale, scale, c_white, alpha);
 
 // Draw dash
 draw_set_alpha(alpha);
-_y = global.displayHeight - 70;
+_y = global.displayHeight - 90;
 scale = 0.5;
 var fullWidth = width * 4;
 _x -= (fullWidth / 2);
@@ -97,6 +98,14 @@ for (var i = 0; i < array_length(dashUIs); i++)
 	else if (i < currentCharge)
 		draw_rectangle(_x - dashOffset, _y - dashOffset, _x + dashUiLength + dashOffset, _y + 10 + dashOffset, false);
 	_x += dashUiLength + 5;
+}
+
+// Ammo
+if (weaponText != undefined)
+{
+	weaponText.blend(c_white, alpha);
+	weaponText.transform(ammoTextScale, ammoTextScale, 0);
+	weaponText.draw(global.displayWidth / 2, global.displayHeight - 45);
 }
 
 draw_set_alpha(1);

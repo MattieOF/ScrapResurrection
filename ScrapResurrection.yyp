@@ -94,6 +94,7 @@
     {"id":{"name":"rmInit","path":"rooms/rmInit/rmInit.yy",},"order":1,},
     {"id":{"name":"fntUiMain","path":"fonts/fntUiMain/fntUiMain.yy",},"order":2,},
     {"id":{"name":"oHUD","path":"objects/oHUD/oHUD.yy",},"order":3,},
+    {"id":{"name":"sAmmoIcon","path":"sprites/sAmmoIcon/sAmmoIcon.yy",},"order":7,},
     {"id":{"name":"oGameManager","path":"objects/oGameManager/oGameManager.yy",},"order":1,},
     {"id":{"name":"scribble","path":"scripts/scribble/scribble.yy",},"order":7,},
     {"id":{"name":"sConscriptRun","path":"sprites/sConscriptRun/sConscriptRun.yy",},"order":3,},

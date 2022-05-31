@@ -10,8 +10,11 @@ prevHp = 0;
 prevArmor = 0;
 prevChar = undefined;
 prevCurrentCharge = 0;
+prevWeapon = undefined;
+weaponText = scribble("[fa_center][fa_middle]hello");
+ammoTextScale = 1;
 alarm[0] = healthbarShowTime * room_speed;
-pickupNotifs = array_create();
+pickupNotifs = array_create(0);
 minHealthbarAlpha = 0.3;
 
 // Dash UI
