@@ -1,6 +1,6 @@
 global.weaponPistol = new WeaponHitscan("Pistol", sTestEnemy, 25, 1000, 0.75, 2, 10, 40, 
 	new WeaponSounds(), 1, 0, false);
-global.weaponLMG = new WeaponHitscan("LMG", sTestEnemy, 15, 1000, 0.1, 2.5, 30, 120, 
+global.weaponLMG = new WeaponHitscan("Assault Rifle", sAssaultRifle, 15, 1000, 0.1, 2.5, 30, 120, 
 	new WeaponSounds(), 1, 2.5, true);
 global.weaponDagger = new WeaponMelee("Dagger", sTestEnemy, 50, 35, 5, 1.25, 
 	new WeaponSounds(), 0.3, 0.4, 10, 5, false);

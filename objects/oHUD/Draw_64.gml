@@ -48,7 +48,7 @@ draw_sprite_part_ext(sHealthbarFill, 0, 0, 0, offsetPixels + (hp * remainder), h
 
 // Draw Armor bar
 var armor = currentChar.armor / currentChar.maxArmor;
-_y = global.displayHeight - 150;
+_y = global.displayHeight - 140;
 var col = armor <= 0 ? c_dkgray : c_white;
 draw_sprite_ext(sArmorbarFrame, 0, _x, _y, scale, scale, 0, col, alpha);
 draw_sprite_part_ext(sArmorbarFill, 0, 0, 0, offsetPixels + (armor * remainder), height, _x - ((width / 2) * scale), _y - ((height / 2) * scale) + 2, scale, scale, c_white, alpha);

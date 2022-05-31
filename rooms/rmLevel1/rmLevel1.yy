@@ -112,6 +112,7 @@
         {"properties":[
             {"propertyId":{"name":"door","path":"objects/oDoorLever/oDoorLever.yy",},"objectId":{"name":"oDoorLever","path":"objects/oDoorLever/oDoorLever.yy",},"value":"door2","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
           ],"isDnd":false,"objectId":{"name":"oDoorLever","path":"objects/oDoorLever/oDoorLever.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1696.0,"y":1998.0,"resourceVersion":"1.0","name":"inst_377192D0","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"oWeaponPickup","path":"objects/oWeaponPickup/oWeaponPickup.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":384.0,"y":1056.0,"resourceVersion":"1.0","name":"inst_28EA6AC4","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":500,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Usables","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"oPlayerCollisionCheck","path":"objects/oPlayerCollisionCheck/oPlayerCollisionCheck.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":9.5,"scaleY":7.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1280.0,"y":576.0,"resourceVersion":"1.0","name":"colCheck_easterEgg","tags":[],"resourceType":"GMRInstance",},
@@ -343,6 +344,7 @@
     {"name":"inst_507E54AB","path":"rooms/rmLevel1/rmLevel1.yy",},
     {"name":"door2","path":"rooms/rmLevel1/rmLevel1.yy",},
     {"name":"inst_377192D0","path":"rooms/rmLevel1/rmLevel1.yy",},
+    {"name":"inst_28EA6AC4","path":"rooms/rmLevel1/rmLevel1.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
