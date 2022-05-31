@@ -108,5 +108,68 @@ if (weaponText != undefined)
 	weaponText.draw(global.displayWidth / 2, global.displayHeight - 45);
 }
 
+// Weapon select
+if (_weaponSelectProgress > 0)
+{
+	var wpnCount = array_length(currentChar.loadout);
+	var wpnIndex = currentChar.currentLoadoutSlot;
+	var largestText = 0;
+	
+	weaponSelectText = array_create(wpnCount);
+	// Regenerate weapon select text array
+	for (var i = 0; i < wpnCount; i++)
+	{
+		var wpn = currentChar.loadout[i];
+		if (wpn.ammoClip != pointer_null)
+		{
+			weaponSelectText[i] = scribble(format_string("[fa_left][fa_middle][{0}] {1}\n[c_{2}] {3}/{4}",
+										sprite_get_name(wpn.weapon.sprite), wpn.weapon.name, wpn.ammoClip == 0 ? "red" : "white", wpn.ammoClip, wpn.ammoReserve));
+		} 
+		else
+		{
+			weaponSelectText[i] = scribble(format_string("[fa_left][fa_middle][{0}] {1}",
+										sprite_get_name(wpn.weapon.sprite), wpn.weapon.name));
+		}
+		var width = weaponSelectText[i].get_width();
+		if (width > largestText)
+			largestText = width;
+	}
+	
+	var height = sprite_get_height(sWeaponSelectWhole) * 1.5;
+	var xscale = (largestText + 10) / 60;
+	var width = largestText + 10 + (22 * xscale);
+	var _x = lerp(-width, 0, _weaponSelectProgress);
+	var _y = (global.displayHeight / 2) - (((wpnCount - 1) / 2) * height);
+	
+	for (var i = 0; i < wpnCount; i++)
+	{
+		if (wpnCount == 1)
+		{
+			draw_sprite_ext(sWeaponSelectWhole, 1, _x, _y, xscale, 1.5, 0, c_white, 1);
+			weaponSelectText[i].draw(_x + 5, _y);
+		} 
+		else if (wpnCount == 2)
+		{
+			draw_sprite_ext(i == 0 ? sWeaponSelectTop : sWeaponSelectBottom, i == wpnIndex ? 1 : 0, _x, _y, xscale, 1.5, 0, c_white, 1);
+			weaponSelectText[i].draw(_x + 5, _y);
+		}
+		else
+		{
+			var sprite = undefined;
+			if (i == 0)
+				sprite = sWeaponSelectTop;
+			else if (i == wpnCount - 1)
+				sprite = sWeaponSelectBottom;
+			else
+				sprite = sWeaponSelectMiddle;
+			
+			draw_sprite_ext(sprite, i == wpnIndex ? 1 : 0, _x, _y, xscale, 1.5, 0, c_white, 1);
+			weaponSelectText[i].draw(_x + 5, _y);
+		}
+		
+		_y += height;
+	}
+}
+
 draw_set_alpha(1);
 

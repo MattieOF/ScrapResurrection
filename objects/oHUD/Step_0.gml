@@ -4,6 +4,7 @@ if (showUseText && useTextAlpha < 1) useTextAlpha += 0.04;
 else if (!showUseText && useTextAlpha > 0) useTextAlpha -= 0.04;
 
 healthbarAlpha = approach(healthbarAlpha, healthbarAlphaGoal, 0.03);
+_weaponSelectProgress = approach(_weaponSelectProgress, weaponSelectOpen ? 1 : 0, 0.02);
 
 var currentChar = oGameManager.current_character();
 if (currentChar == undefined) exit;
@@ -18,7 +19,7 @@ if (currentChar.hp != prevHp || currentChar.armor != prevArmor)
 var wpn = currentChar.current_weapon();
 if (wpn != undefined)
 {
-	if (!variable_struct_exists(wpn, "ammoClip"))
+	if (!variable_struct_exists(wpn, "ammoClip") || wpn.ammoClip == pointer_null)
 		weaponText = undefined;
 	else
 	{
@@ -31,6 +32,17 @@ if (wpn != undefined)
 		}
 	}
 }
+
+var wpnCount = array_length(currentChar.loadout);
+var wpnIndex = currentChar.currentLoadoutSlot;
+if (wpnIndex != prevWpnIndex || prevLoadoutSize != wpnCount)
+{
+	weaponSelectOpen = true;
+	alarm[1] = 3 * room_speed;
+}
+
+prevWpnIndex = wpnIndex;
+prevLoadoutSize = wpnCount;
 
 if (ammoTextScale > 1)
 	ammoTextScale -= 0.02;
