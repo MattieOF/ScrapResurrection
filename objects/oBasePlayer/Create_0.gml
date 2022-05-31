@@ -85,6 +85,10 @@ function on_hit(hitInfo)
 
 function hurt(dmg)
 {
+	// We're dead, don't bother
+	if (hp <= 0)
+		exit;
+	
 	// We're in dash iframes, don't take dmg
 	if (dsp != 0)
 		return;
