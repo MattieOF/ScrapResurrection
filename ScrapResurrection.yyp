@@ -2,6 +2,7 @@
   "resources": [
     {"id":{"name":"scrDrawUtils","path":"scripts/scrDrawUtils/scrDrawUtils.yy",},"order":11,},
     {"id":{"name":"oDoorLever","path":"objects/oDoorLever/oDoorLever.yy",},"order":4,},
+    {"id":{"name":"oLevel1Transition","path":"objects/oLevel1Transition/oLevel1Transition.yy",},"order":9,},
     {"id":{"name":"sHealthbarFill","path":"sprites/sHealthbarFill/sHealthbarFill.yy",},"order":1,},
     {"id":{"name":"__scribble_gen_5_finalize_bidi","path":"scripts/__scribble_gen_5_finalize_bidi/__scribble_gen_5_finalize_bidi.yy",},"order":5,},
     {"id":{"name":"oDoor","path":"objects/oDoor/oDoor.yy",},"order":2,},
