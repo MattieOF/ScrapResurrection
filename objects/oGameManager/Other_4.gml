@@ -2,11 +2,16 @@
 
 characters = ds_list_create();
 currentCharacterIndex = 0;
+dead = false;
 global.speedChangeBlocked = false;
 global.usablesLayer = layer_get_id("Usables");
 global.highlightedUsablesLayer = layer_get_id("UsablesHighlighted");
 global.screenshakeLayer = layer_get_id("Screenshake");
 global.screenshakeEffect = (global.screenshakeLayer == -1 ? undefined : layer_get_fx(global.screenshakeLayer));
+global.deathLayer = layer_get_id("Death");
+global.deathEffect = (global.deathLayer == -1 ? undefined : layer_get_fx(global.deathLayer));
+if (global.deathLayer != undefined)
+	fx_set_parameter(global.deathEffect, "g_Intensity", 0);
 
 switch (room)
 {
@@ -32,6 +37,25 @@ function get_screenshake()
 		return;
 	
 	fx_get_parameter(global.screenshakeEffect, "g_Magnitude");
+}
+
+function index_of_player(player)
+{
+	for (var i = 0; i < ds_list_size(characters); i++)
+		if (characters[| i] == player) return i;
+	return -1;
+}
+
+function death(playerIndex)
+{
+	switch_character(playerIndex, false);
+	dead = true;
+	characters[| playerIndex].active = false;
+	hud.shouldDraw = false;
+	instance_destroy(oHint);
+	
+	alarm[1] = 4 * room_speed;
+	alarm[2] = 5 * room_speed;
 }
 
 highlightedFx = undefined;
@@ -80,6 +104,7 @@ switch_character(0, true);
 hud = instance_create_layer(0, 0, layer_create(0, "HUD"), oHUD);
 if (ds_list_size(characters) > 0) 
 	hud.currentPlayer = characters[| currentCharacterIndex];
+hud.shouldDraw = true;
 
 if (global.highlightedUsablesLayer != -1)
 {

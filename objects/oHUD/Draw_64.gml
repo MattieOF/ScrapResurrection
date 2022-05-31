@@ -1,5 +1,7 @@
 /// @description Draw HUD
 
+if (!shouldDraw) exit;
+
 if (useTextAlpha > 0)
 {
 	useText.blend(c_white, useTextAlpha);

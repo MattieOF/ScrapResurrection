@@ -115,6 +115,14 @@ function hurt(dmg)
 	
 	// If there is still dmg to take after the armor, then subtract it from HP
 	hp -= dmg;
+	
+	if (hp <= 0)
+		die();
+}
+
+function die()
+{
+	oGameManager.death(oGameManager.index_of_player(id));
 }
 
 function add_armor(amount)

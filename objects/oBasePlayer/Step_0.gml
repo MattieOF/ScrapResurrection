@@ -205,7 +205,9 @@ y += vsp;
 sprite.x = x;
 sprite.y = y;
 
-if (state == playerState.swingingMelee && meleeAttackSprite != noone)
+if (hp <= 0)
+	sprite.sprite_index = deathSprite;
+else if (state == playerState.swingingMelee && meleeAttackSprite != noone)
 	sprite.sprite_index = meleeAttackSprite;
 else if (hsp != 0 && vsp == 0)
 	sprite.sprite_index = runSprite;

@@ -1,4 +1,4 @@
-if (room == rmInit) return;
+if (room == rmInit || oGameManager.dead) return;
 var sx = window_mouse_get_x();
 var sy = window_mouse_get_y();
 if (grappling)

@@ -6,9 +6,15 @@ if (global.screenshakeEffect != undefined)
 	fx_set_parameter(global.screenshakeEffect, "g_Magnitude", max(mag - screenshakeDecreasePerFrame, 0));
 }
 
+if (dead && global.deathLayer != undefined)
+{
+	var intensity = fx_get_parameter(global.deathEffect, "g_Intensity");
+	fx_set_parameter(global.deathEffect, "g_Intensity", min(intensity + 0.02, 0.5));
+}
+
 if (ds_list_size(characters) <= 0) exit;
 
-if (control_check_pressed(controls.switchCharacter))
+if (control_check_pressed(controls.switchCharacter) && !dead)
 {
 	switch_character(currentCharacterIndex + 1, false);
 }

@@ -1,5 +1,6 @@
 /// @description Define state
 
+shouldDraw = true;
 currentPlayer = undefined;
 showUseText = false;
 useText = undefined;
