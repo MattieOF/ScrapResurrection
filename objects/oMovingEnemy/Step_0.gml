@@ -17,6 +17,8 @@ if (awake)
 	}
 }
 
+if (gag && !awake) exit;
+
 // Collision code
 vsp += grv;
 
@@ -48,4 +50,9 @@ if (place_meeting(x, y + vsp, oWall)
 	hsp = 0;
 }
 y += vsp;
+
+if (hsp != 0)
+	image_xscale = sign(hsp) * xscale;
+	
+image_angle = 0;
 

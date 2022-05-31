@@ -124,6 +124,15 @@
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"oDroneSpawner","path":"objects/oDroneSpawner/oDroneSpawner.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4288256409,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1184.0,"y":1068.0,"resourceVersion":"1.0","name":"inst_7F84422B","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"oDroneSpawner","path":"objects/oDroneSpawner/oDroneSpawner.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4288256409,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":430.0,"y":1804.0,"resourceVersion":"1.0","name":"inst_4E3D8140","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[
+            {"propertyId":{"name":"gag","path":"objects/oMovingEnemy/oMovingEnemy.yy",},"objectId":{"name":"oMovingEnemy","path":"objects/oMovingEnemy/oMovingEnemy.yy",},"value":"True","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+          ],"isDnd":false,"objectId":{"name":"oDrone","path":"objects/oDrone/oDrone.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":-90.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1423.0,"y":1877.0,"resourceVersion":"1.0","name":"inst_523AC55A","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[
+            {"propertyId":{"name":"gag","path":"objects/oMovingEnemy/oMovingEnemy.yy",},"objectId":{"name":"oMovingEnemy","path":"objects/oMovingEnemy/oMovingEnemy.yy",},"value":"True","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+          ],"isDnd":false,"objectId":{"name":"oDrone","path":"objects/oDrone/oDrone.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":90.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1521.0,"y":1877.0,"resourceVersion":"1.0","name":"inst_661DA452","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[
+            {"propertyId":{"name":"gag","path":"objects/oMovingEnemy/oMovingEnemy.yy",},"objectId":{"name":"oMovingEnemy","path":"objects/oMovingEnemy/oMovingEnemy.yy",},"value":"True","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+          ],"isDnd":false,"objectId":{"name":"oDrone","path":"objects/oDrone/oDrone.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":180.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1471.0,"y":1839.0,"resourceVersion":"1.0","name":"inst_445D9AAE","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":700,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Enemies","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"oPlayerCollisionCheck","path":"objects/oPlayerCollisionCheck/oPlayerCollisionCheck.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.5,"scaleY":1.75,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1760.0,"y":432.0,"resourceVersion":"1.0","name":"elevator1_playerCollider","tags":[],"resourceType":"GMRInstance",},
@@ -350,6 +359,9 @@
     {"name":"inst_377192D0","path":"rooms/rmLevel1/rmLevel1.yy",},
     {"name":"inst_28EA6AC4","path":"rooms/rmLevel1/rmLevel1.yy",},
     {"name":"inst_13550578","path":"rooms/rmLevel1/rmLevel1.yy",},
+    {"name":"inst_523AC55A","path":"rooms/rmLevel1/rmLevel1.yy",},
+    {"name":"inst_661DA452","path":"rooms/rmLevel1/rmLevel1.yy",},
+    {"name":"inst_445D9AAE","path":"rooms/rmLevel1/rmLevel1.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

@@ -4,6 +4,7 @@ event_inherited();
 
 vsp = 0;
 hsp = 0;
+xscale = image_xscale;
 
 function is_grounded()
 {
