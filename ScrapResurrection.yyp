@@ -30,6 +30,7 @@
     {"id":{"name":"scribble_font_has_character","path":"scripts/scribble_font_has_character/scribble_font_has_character.yy",},"order":8,},
     {"id":{"name":"scribble_super_glyph_delete","path":"scripts/scribble_super_glyph_delete/scribble_super_glyph_delete.yy",},"order":4,},
     {"id":{"name":"sFinalRoom","path":"sprites/sFinalRoom/sFinalRoom.yy",},"order":10,},
+    {"id":{"name":"oFade","path":"objects/oFade/oFade.yy",},"order":9,},
     {"id":{"name":"sMelee","path":"sprites/sMelee/sMelee.yy",},"order":4,},
     {"id":{"name":"scrHUD","path":"scripts/scrHUD/scrHUD.yy",},"order":6,},
     {"id":{"name":"sTempPlayerA","path":"sprites/sTempPlayerA/sTempPlayerA.yy",},"order":1,},
