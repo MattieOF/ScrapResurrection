@@ -147,11 +147,6 @@ if (_weaponSelectProgress > 0)
 		{
 			draw_sprite_ext(sWeaponSelectWhole, 1, _x, _y, xscale, 1.5, 0, c_white, 1);
 			weaponSelectText[i].draw(_x + 5, _y);
-		} 
-		else if (wpnCount == 2)
-		{
-			draw_sprite_ext(i == 0 ? sWeaponSelectTop : sWeaponSelectBottom, i == wpnIndex ? 1 : 0, _x, _y, xscale, 1.5, 0, c_white, 1);
-			weaponSelectText[i].draw(_x + 5, _y);
 		}
 		else
 		{

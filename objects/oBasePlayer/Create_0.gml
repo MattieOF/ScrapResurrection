@@ -307,8 +307,7 @@ function reload()
 
 alarm[0] = 1;
 
-add_weapon(global.weaponLMG);
 add_weapon(global.weaponDagger); 
-add_weapon(global.weaponPistol);
+add_weapon(global.weaponLMG); 
 next_weapon();
 

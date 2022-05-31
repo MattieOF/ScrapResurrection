@@ -35,7 +35,8 @@ if (wpn != undefined)
 
 var wpnCount = array_length(currentChar.loadout);
 var wpnIndex = currentChar.currentLoadoutSlot;
-if (wpnIndex != prevWpnIndex || prevLoadoutSize != wpnCount)
+if (wpnIndex != prevWpnIndex || prevLoadoutSize != wpnCount
+	|| control_check_pressed(controls.weaponNext) || control_check_pressed(controls.weaponPrevious))
 {
 	weaponSelectOpen = true;
 	alarm[1] = 3 * room_speed;
