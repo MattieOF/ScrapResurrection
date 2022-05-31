@@ -12,6 +12,7 @@ else
 if (instance_exists(oGameManager))
 {
 	grappling = false;
+	tryingToGrapple = false;
 	
 	var currentChar = oGameManager.current_character();
 	if (currentChar != undefined && variable_struct_exists(currentChar.current_weapon().weapon, "reloadTime"))
@@ -23,6 +24,11 @@ if (instance_exists(oGameManager))
 	if (currentChar != undefined && (currentChar.state == playerState.grappling || currentChar.state == playerState.missedHook || currentChar.state == playerState.shootingHook))
 	{
 		grappling = true;
+		col = color_lerp(currentChar.grappleEndCol, currentChar.grappleStartCol, 0.5);
+	}
+	else if (currentChar != undefined && control_check(controls.grapplingHook))
+	{
+		tryingToGrapple = true;
 		col = color_lerp(currentChar.grappleEndCol, currentChar.grappleStartCol, 0.5);
 	}
 }

@@ -46,15 +46,19 @@ if (global.flynnHook)
 }
 
 if (keyHook && hasGrapplingHook)
-{	
+{
 	switch(state)
 	{
 		case playerState.normal:
+			if (_grappleCooldown > 0)
+				break;
+			
 			_hookDir = point_direction(x, y, mouse_x, mouse_y);
 			state = playerState.shootingHook;
 			_currentHookLen = 0;
 			_gX = x;
 			_gY = y;
+			_grappleCooldown = grappleCooldown * room_speed;
 			break;
 		case playerState.shootingHook:
 			var targetDir = point_direction(x, y, mouse_x, mouse_y);
@@ -221,6 +225,9 @@ if (shootCooldown > 0)
 	shootCooldown--;
 if (reloading)
 	reloadTime--;
+	
+if (_grappleCooldown > 0)
+	_grappleCooldown--;
 
 if (reloading && reloadTime <= 0)
 {

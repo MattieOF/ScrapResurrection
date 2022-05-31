@@ -39,6 +39,8 @@ else if (prevCurrentCharge != currentChar.dashCharges
          && prevCurrentCharge != currentChar.maxDashCharges)
 {
 	dashUIs[prevCurrentCharge] = 5;
+	healthbarAlphaGoal = 1;
+	alarm[0] = healthbarShowTime * room_speed;
 }
 
 prevChar = currentChar;
@@ -67,12 +69,12 @@ draw_sprite_ext(sArmorbarFrame, 0, _x, _y, scale, scale, 0, col, alpha);
 draw_sprite_part_ext(sArmorbarFill, 0, 0, 0, offsetPixels + (armor * remainder), height, _x - ((width / 2) * scale), _y - ((height / 2) * scale) + 2, scale, scale, c_white, alpha);
 
 // Draw dash
-draw_set_alpha(1);
+draw_set_alpha(alpha);
 _y = global.displayHeight - 70;
 scale = 0.5;
 var fullWidth = width * 4;
 _x -= (fullWidth / 2);
-draw_sprite_ext(sDashIcon, 0, _x, _y, scale, scale, 0, c_white, 1);
+draw_sprite_ext(sDashIcon, 0, _x, _y, scale, scale, 0, c_white, alpha);
 _x += (sprite_get_width(sDashIcon) * scale) + 5;
 fullWidth -= (sprite_get_width(sDashIcon) * scale) + 5;
 _y += 6;
@@ -89,7 +91,7 @@ for (var i = 0; i < array_length(dashUIs); i++)
 	var chargePercent = 1 - (currentChar._currentDashTime / (currentChar.dashRecharge * room_speed));
 	draw_set_color(color_lerp(c_white, c_green, dashOffset / 5));
 	if (dashOffset > 0)
-		dashUIs[i] -= 0.5;
+		dashUIs[i] -= 0.25;
 	if (i == currentCharge)
 		draw_rectangle(_x - dashOffset, _y - dashOffset, _x + (dashUiLength * chargePercent) + dashOffset, _y + 10 + dashOffset, false);
 	else if (i < currentCharge)
@@ -97,4 +99,5 @@ for (var i = 0; i < array_length(dashUIs); i++)
 	_x += dashUiLength + 5;
 }
 
+draw_set_alpha(1);
 

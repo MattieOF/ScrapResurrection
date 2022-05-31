@@ -52,6 +52,7 @@ switch (stage)
 			+ "[c_white]Fantasy Knight by aamatniekss on itch.io\n"
 			+ "Warrior Free Animation Set by Clembod on itch.io\n"
 			+ "Elementals: Metal Bladekeeper by chierit on itch.io\n"
+			+ "Some icons from game-icons.net, licensed under CC BY 3.0\n"
 			+ "Scribble by JujuAdams\n"
 			+ "[c_gray]All of which were edited slightly\n\n"
 			+ "[c_gray][fntUiMain]Developed with\n"

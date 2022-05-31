@@ -40,6 +40,7 @@ _currentHookLen = 0;
 _hookDir = 0;
 _gX = 0;
 _gY = 0;
+_grappleCooldown = 0;
 hp = baseHealth;
 armor = 0;
 meleeAttack = noone;
