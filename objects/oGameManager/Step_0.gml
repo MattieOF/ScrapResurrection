@@ -76,6 +76,8 @@ if (!global.flynnHook)
 	}
 }
 
+time++;
+
 //if (highlightedFx != undefined)
 //{
 //	var col = make_color_hsv((current_time / 50) % 255, 40, 255);

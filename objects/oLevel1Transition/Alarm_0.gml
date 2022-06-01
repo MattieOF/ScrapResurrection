@@ -1,8 +1,8 @@
 oGameManager.screenshakeDecreasePerFrame = 0.5;
-oFade.fadeColour = c_black;
-save();
+save(, rmLevel2);
 
-// Show mission end screen
-
-game_end();
+window_set_cursor(cr_default);
+oGameManager.current_character().active = false;
+var inst = instance_create_layer(0, 0, layer, oMissionEndScreen);
+inst.init(oGameManager.killScore, oGameManager.time / room_speed, rmLevel2, c_black);
 

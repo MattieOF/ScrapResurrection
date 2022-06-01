@@ -31,6 +31,7 @@
   "properties": [],
   "overriddenProperties": [
     {"propertyId":{"name":"hp","path":"objects/oBaseEnemy/oBaseEnemy.yy",},"objectId":{"name":"oBaseEnemy","path":"objects/oBaseEnemy/oBaseEnemy.yy",},"value":"200","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"value","path":"objects/oBaseEnemy/oBaseEnemy.yy",},"objectId":{"name":"oBaseEnemy","path":"objects/oBaseEnemy/oBaseEnemy.yy",},"value":"100","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "Enemies",

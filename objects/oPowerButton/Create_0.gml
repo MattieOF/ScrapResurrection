@@ -9,6 +9,8 @@ function use(player)
 {
 	sprite.image_speed = 1;
 	sprite.image_index = 1;
+	lvl2_sparks.active = true;
+	lvl2_sparks_deathZone.active = true;
 	active = false;
 	hasPower = true;
 }

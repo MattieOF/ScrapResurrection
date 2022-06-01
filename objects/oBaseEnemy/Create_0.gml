@@ -14,6 +14,7 @@ alarm[0] = 15;
 
 function die()
 {
+	oGameManager.killScore += value;
 	// This function could be used for death effects or animations
 	instance_destroy(id);
 }

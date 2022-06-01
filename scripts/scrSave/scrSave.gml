@@ -17,6 +17,26 @@
 
 global.gameSave = undefined;
 
+function new_save(filename = "save.json", level = rmLevel1)
+{
+	if (file_exists(filename))
+		file_copy(filename, filename + ".bak");
+		
+	global.gameSave = 
+	{
+		currentLevel : level,
+		characters : { }
+	}
+		
+	if (file_exists(filename)) file_delete(filename);
+		
+	var file = file_text_open_write(filename);
+	file_text_write_string(file, json_stringify(global.gameSave));
+	file_text_close(file);
+	
+	load();
+}
+
 function default_save(filename = "save.json")
 {
 	if (file_exists(filename))
@@ -43,16 +63,18 @@ function default_save(filename = "save.json")
 	file_text_close(file);
 }
 
-function save(filename = "save.json")
+function save(filename = "save.json", rm = undefined)
 {
 	if (global.gameSave == undefined)
 		default_save();
 	else
 	{
-		global.gameSave[$ "currentLevel"] = room;
+		global.gameSave[$ "currentLevel"] = (rm == undefined ? room : rm);
 		
 		with (oBasePlayer)
 		{
+			if (global.gameSave[$ "characters"][$ saveId] == undefined)
+				global.gameSave[$ "characters"][$ saveId] = { }
 			global.gameSave[$ "characters"][$ saveId][$ "hp"] = hp;
 			global.gameSave[$ "characters"][$ saveId][$ "armor"] = armor;
 			global.gameSave[$ "characters"][$ saveId][$ "loadout"] = loadout;

@@ -5,5 +5,6 @@ if (room == rmInit ||
 	exit;
 }
 
+fadeColour = c_black;
 fade_in();
 

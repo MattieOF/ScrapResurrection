@@ -12,6 +12,8 @@ if (sprite.image_index < 1 && hasPower)
 {
 	hasPower = false;
 	active = true;
+	lvl2_sparks.active = false;
+	lvl2_sparks_deathZone.active = false;
 	sprite.image_speed = 0;
 	sprite.image_index = 0;
 }

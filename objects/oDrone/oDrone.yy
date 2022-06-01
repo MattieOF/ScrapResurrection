@@ -38,6 +38,7 @@
   "overriddenProperties": [
     {"propertyId":{"name":"jumpHeight","path":"objects/oMovingEnemy/oMovingEnemy.yy",},"objectId":{"name":"oMovingEnemy","path":"objects/oMovingEnemy/oMovingEnemy.yy",},"value":"10","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"walkSpeed","path":"objects/oMovingEnemy/oMovingEnemy.yy",},"objectId":{"name":"oMovingEnemy","path":"objects/oMovingEnemy/oMovingEnemy.yy",},"value":"3","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"value","path":"objects/oBaseEnemy/oBaseEnemy.yy",},"objectId":{"name":"oBaseEnemy","path":"objects/oBaseEnemy/oBaseEnemy.yy",},"value":"20","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "Enemies",

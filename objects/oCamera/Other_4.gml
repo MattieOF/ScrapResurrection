@@ -2,6 +2,9 @@
 
 // Code adapted from https://www.youtube.com/watch?v=Pd54vNc2N4E
 
+width = 960;
+height = 540;
+
 function set_target(newTarget, instant)
 {
 	if (instance_exists(newTarget))
@@ -72,9 +75,6 @@ display_set_gui_size(global.displayWidth, global.displayHeight); // Same for GUI
 // Center window after one frame
 if (!centeredWindow)
 	alarm[0] = 1;
-
-// if (instance_exists(oBasePlayer))
-// 	set_target(oBasePlayer, true);
 
 xTo = x;
 yTo = y;

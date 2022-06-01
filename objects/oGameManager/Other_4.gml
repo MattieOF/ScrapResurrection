@@ -3,6 +3,8 @@
 characters = ds_list_create();
 currentCharacterIndex = 0;
 dead = false;
+killScore = 0;
+time = 0;
 global.speedChangeBlocked = false;
 global.usablesLayer = layer_get_id("Usables");
 global.highlightedUsablesLayer = layer_get_id("UsablesHighlighted");
@@ -12,6 +14,9 @@ global.deathLayer = layer_get_id("Death");
 global.deathEffect = (global.deathLayer == -1 ? undefined : layer_get_fx(global.deathLayer));
 if (global.deathLayer != undefined)
 	fx_set_parameter(global.deathEffect, "g_Intensity", 0);
+
+alarm[1] = -1;
+alarm[2] = -1;
 
 switch (room)
 {
