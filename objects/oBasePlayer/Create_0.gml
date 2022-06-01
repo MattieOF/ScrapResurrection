@@ -319,8 +319,7 @@ function reload()
 
 alarm[0] = 1;
 
-add_weapon(global.weaponDagger); 
-add_weapon(global.weaponLMG); 
+add_weapon(global.weaponDagger);
 next_weapon();
 
 if (global.gameSave != undefined && global.gameSave[$ "characters"][$ saveId] != undefined)
