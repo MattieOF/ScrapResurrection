@@ -53,9 +53,10 @@ function death(playerIndex)
 	characters[| playerIndex].active = false;
 	hud.shouldDraw = false;
 	instance_destroy(oHint);
-	
+	window_set_cursor(cr_default);
+
+	alarm[2] = 1 * room_speed;
 	alarm[1] = 4 * room_speed;
-	alarm[2] = 5 * room_speed;
 }
 
 highlightedFx = undefined;
