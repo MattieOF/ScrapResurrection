@@ -34,6 +34,7 @@
     {"varType":0,"value":"32","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"rangeWidth","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":0,"value":"32","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"rangeHeight","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":5,"value":"sHitbox","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"hitboxSprite","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":0,"value":"0","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"requiredPlayers","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [
     {"propertyId":{"name":"verb","path":"objects/oBaseUsable/oBaseUsable.yy",},"objectId":{"name":"oBaseUsable","path":"objects/oBaseUsable/oBaseUsable.yy",},"value":"press","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},

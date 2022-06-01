@@ -5,6 +5,12 @@ event_inherited();
 
 function use(player)
 {
+	if (elevator.playerCollisionCheck.playerCount < requiredPlayers)
+	{
+		add_pickup_notif(0, "[c_red]Both players need to be in the elevator", true, sCross, 2);
+		return;
+	}
+	
 	sprite.image_index = 1;
 	active = false;
 	elevator.moving = true;

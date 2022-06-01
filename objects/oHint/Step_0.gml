@@ -5,7 +5,10 @@ switch (state)
 	case 1:
 		boxPercent += 0.05;
 		if (boxPercent >= 1)
+		{
+			text.blend(c_white, 1);
 			state++;
+		}
 		break;
 	case 2:
 		for (var i = 0; i < array_length(control_requirements); i++)

@@ -228,7 +228,7 @@ if (shootCooldown > 0)
 if (reloading)
 	reloadTime--;
 	
-if (_grappleCooldown > 0)
+if (_grappleCooldown > 0 && state != playerState.grappling && state != playerState.shootingHook)
 	_grappleCooldown--;
 
 if (reloading && reloadTime <= 0)

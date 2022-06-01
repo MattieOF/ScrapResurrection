@@ -226,7 +226,6 @@ function save_controls(filename = "controls.json")
 function control_get_string(ctrl)
 {
 	var control = get_control(ctrl);
-	show_debug_message(control);
 	switch (control.type)
 	{
 		case controlType.key:

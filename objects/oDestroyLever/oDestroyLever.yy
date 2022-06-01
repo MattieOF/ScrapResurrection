@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sLever",
-    "path": "sprites/sLever/sLever.yy",
+    "name": "sPowerControl",
+    "path": "sprites/sPowerControl/sPowerControl.yy",
   },
   "solid": false,
   "visible": true,

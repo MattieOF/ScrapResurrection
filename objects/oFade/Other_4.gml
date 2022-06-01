@@ -1,5 +1,9 @@
-if (room == rmLevel1)
+if (room == rmInit || 
+    room == rmTest || 
+	room == rmLevelBase) 
 {
-	fade_in();
+	exit;
 }
+
+fade_in();
 
