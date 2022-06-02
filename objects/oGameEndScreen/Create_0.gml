@@ -5,6 +5,7 @@ function restart()
 
 function to_menu()
 {
+	room_goto(rmMainMenu);
 }
 
 function to_desktop()

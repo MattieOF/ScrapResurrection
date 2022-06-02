@@ -1,4 +1,4 @@
-if (room == rmInit) exit;
+if (room == rmInit || room == rmMainMenu) exit;
 
 paused = false;
 inSubMenu = false;
@@ -51,6 +51,8 @@ function unpause()
 
 function to_menu()
 {
+	instance_activate_all();
+	room_goto(rmMainMenu);
 }
 
 function to_menu_btn()
@@ -89,6 +91,9 @@ add_stack_spacing(100);
 add_to_stack(create_button(0, 0, 200, 50, "Resume", unpause, id,,,,,fa_top, fa_left, 1, 1, false));
 add_to_stack(create_button(0, 0, 200, 50, "Exit to Menu", to_menu_btn, id,,,,,fa_top, fa_left, 1, 1, false));
 add_to_stack(create_button(0, 0, 200, 50, "Exit to Desktop", to_desktop, id,,,,,fa_top, fa_left, 1, 1, false));
+add_stack_spacing(10);
+global.ui_currentX += 55;
+add_to_stack(create_checkbox(0, 0, "Fullscreen", window_set_fullscreen, window_get_fullscreen(),,,,,,fntUiMain, 1, 1));
 end_stack();
 instance_deactivate_layer("PauseMenu");
 

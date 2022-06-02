@@ -12,7 +12,7 @@ global.screenshakeLayer = layer_get_id("Screenshake");
 global.screenshakeEffect = (global.screenshakeLayer == -1 ? undefined : layer_get_fx(global.screenshakeLayer));
 global.deathLayer = layer_get_id("Death");
 global.deathEffect = (global.deathLayer == -1 ? undefined : layer_get_fx(global.deathLayer));
-if (global.deathLayer != undefined)
+if (global.deathLayer != -1)
 	fx_set_parameter(global.deathEffect, "g_Intensity", 0);
 
 alarm[1] = -1;

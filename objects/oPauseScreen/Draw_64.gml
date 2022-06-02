@@ -1,3 +1,5 @@
+if (room == rmInit || room == rmMainMenu) exit;
+
 radius = approach(radius, 10, 0.3);
 
 if (paused && surface_exists(pauseSurf))

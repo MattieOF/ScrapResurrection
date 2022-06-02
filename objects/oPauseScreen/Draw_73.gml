@@ -1,17 +1,16 @@
 /// @description Check for pause
+if (room == rmInit || room == rmMainMenu) exit;
+
 if (control_check_pressed(controls.quit))
 {
-	if (room != rmInit)
+	if (paused)
 	{
-		if (paused)
-		{
-			if (inSubMenu)
-				return_to_pause();
-			else
-				unpause();
-		}
+		if (inSubMenu)
+			return_to_pause();
 		else
-			pause();
+			unpause();
 	}
+	else
+		pause();
 }
 

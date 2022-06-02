@@ -5,6 +5,7 @@ function next_level()
 
 function to_menu()
 {
+	room_goto(rmMainMenu);
 }
 
 function to_desktop()

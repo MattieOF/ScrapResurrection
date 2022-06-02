@@ -305,3 +305,8 @@ function get_int_inside_bound(bound)
 	return irandom_range(bound.minimum, bound.maximum);
 }
 
+function fullscreen(val)
+{
+	window_set_fullscreen(val);
+}
+

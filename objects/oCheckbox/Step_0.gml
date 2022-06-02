@@ -1,5 +1,7 @@
 if (!interactable) return;
 
+show_debug_message("active!");
+
 if (point_in_rectangle(device_mouse_x_to_gui(0), device_mouse_y_to_gui(0), x + width / 2 - height, y - (height / 2), x + width / 2, y + (height / 2)))
 {
 	checkboxColor = hoveredCheckboxColor;
