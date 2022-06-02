@@ -4,7 +4,12 @@ if (control_check_pressed(controls.quit))
 	if (room != rmInit)
 	{
 		if (paused)
-			unpause();
+		{
+			if (inSubMenu)
+				return_to_pause();
+			else
+				unpause();
+		}
 		else
 			pause();
 	}
