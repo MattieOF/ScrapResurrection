@@ -5,7 +5,7 @@ function load_checkpoint()
 
 function to_menu()
 {
-	
+	room_goto(rmMainMenu);
 }
 
 function to_desktop()
