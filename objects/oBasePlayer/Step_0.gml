@@ -201,6 +201,15 @@ if (place_meeting(x, y + vsp, oWall))
 }
 y += vsp;
 
+// Footstep sounds
+if (_currentFootstepCooldown > 0)
+	_currentFootstepCooldown--;
+else if (is_grounded() && hsp != 0)
+{
+	audio_sound_gain(audio_play_sound(choose(sndFootstep1, sndFootstep2, sndFootstep3, sndFootstep4, sndFootstep5), 0, false), 0.4, 0);
+	_currentFootstepCooldown = footstepCooldown * room_speed;
+}
+
 // Update sprite
 sprite.x = x;
 sprite.y = y;

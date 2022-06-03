@@ -48,6 +48,7 @@ meleeAttackXOffset = 0;
 meleeAttackYOffset = -16;
 meleeDir = 0;
 meleeSpriteWidth = 0;
+_currentFootstepCooldown = 0;
 
 xscale = 1;
 yscale = 1;

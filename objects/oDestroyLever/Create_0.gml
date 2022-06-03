@@ -7,6 +7,7 @@ function use(player)
 {
 	sprite.image_index = 1;
 	active = false;
+	audio_play_sound(sndLeverMetalPull, 0, false);
 	instance_destroy(target);
 }
 

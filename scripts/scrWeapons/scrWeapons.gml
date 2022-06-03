@@ -1,10 +1,8 @@
 /// @description Weapon related functions
-global.weaponPistol = new WeaponHitscan("Pistol", sAssaultRifle, 25, 1000, 0.75, 2, 10, 40, 
-	new WeaponSounds(), 1, 0, false);
-global.weaponLMG = new WeaponHitscan("Assault Rifle", sAssaultRifle, 15, 1000, 0.1, 2.5, 30, 120, 
-	new WeaponSounds(), 1, 2.5, true);
+global.weaponLMG = new WeaponHitscan("Assault Rifle", sAssaultRifle, 15, 1000, 0.1, 1.75, 30, 120, 
+	new WeaponSounds(sndARFire, sndARReload, sndDryfire), 1, 2.5, true);
 global.weaponDagger = new WeaponMelee("Dagger", sDagger, 50, 35, 5, 1.25, 
-	new WeaponSounds(), 0.3, 0.4, 10, 5, false);
+	new WeaponSounds(sndMeleeSwing), 0.3, 0.4, 10, 5, false);
 
 enum weaponType
 {

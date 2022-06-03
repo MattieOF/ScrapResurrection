@@ -23,7 +23,10 @@ switch (state)
 		}
 		
 		if (progress = controlLength)
+		{
+			audio_play_sound(sndSuccess, 0, false);
 			state++;
+		}
 		
 		break;
 	case 3:

@@ -7,6 +7,7 @@ hasPower = false;
 
 function use(player)
 {
+	audio_play_sound(sndLeverMetalPull, 0, false);
 	sprite.image_speed = 1;
 	sprite.image_index = 1;
 	lvl2_sparks.active = true;

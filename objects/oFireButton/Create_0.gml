@@ -7,10 +7,12 @@ function use(player)
 {
 	if (!powerButton.hasPower)
 	{
+		audio_play_sound(sndFailure, 0, false);
 		add_pickup_notif(0, "[c_red]No power", true, sCross);
 		return;
 	}
 	
+	audio_play_sound(sndLeverPull, 0, false);
 	var inst = instance_create_layer(gunPosition.x, gunPosition.y, layer, oBigGunProjectile);
 	inst.direction = point_direction(gunPosition.x, gunPosition.y, oBlockage.x, oBlockage.y);
 	inst.image_angle = inst.direction;

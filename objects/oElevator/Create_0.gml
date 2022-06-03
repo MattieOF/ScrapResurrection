@@ -3,4 +3,5 @@
 
 relatedCollision = ds_list_create();
 moving = false;
+sound = noone;
 

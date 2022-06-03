@@ -9,6 +9,7 @@ targetInView = false;
 targetLastX = 0;
 targetLastY = 0;
 awake = false;
+hitSoundFunc = noone;
 
 alarm[0] = 15;
 
@@ -30,5 +31,7 @@ function hurt(dmg)
 function on_hit(hitInfo)
 {
 	hurt(hitInfo.damage);
+	if (hitSoundFunc != noone)
+		hitSoundFunc();
 }
 

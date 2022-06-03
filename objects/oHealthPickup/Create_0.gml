@@ -11,6 +11,7 @@ function onPickup(player)
 	player.hp = min(player.hp + healthValue, player.baseHealth);
 	addedHealth = player.hp - prevHp;
 	instance_destroy(id);
+	audio_play_sound(sndHealthPickup, 0, false);
 	return true;
 }
 onPickupFunc = onPickup;

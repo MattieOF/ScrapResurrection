@@ -1,6 +1,10 @@
 /// @description Move elevator
 
-if (!moving) exit;
+if (!moving) 
+{
+	if (sound != noone) audio_stop_sound(sound);
+	exit;
+}
 
 var oldX = x;
 var oldY = y;
@@ -29,6 +33,7 @@ for (var i = 0; i < playerCollisionCheck.playerCount; i++)
 
 if (xDelta == 0 && yDelta == 0)
 {
+	audio_play_sound(sndElevatorLand, 0, false);
 	moving = false;
 	if (egg != noone)
 	{

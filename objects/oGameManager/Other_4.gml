@@ -14,6 +14,8 @@ global.deathLayer = layer_get_id("Death");
 global.deathEffect = (global.deathLayer == -1 ? undefined : layer_get_fx(global.deathLayer));
 if (global.deathLayer != -1)
 	fx_set_parameter(global.deathEffect, "g_Intensity", 0);
+	
+audio_stop_all();
 
 alarm[1] = -1;
 alarm[2] = -1;
@@ -54,6 +56,7 @@ function index_of_player(player)
 function death(playerIndex)
 {
 	switch_character(playerIndex, false);
+	audio_play_sound(sndDeath, 0, false);
 	dead = true;
 	characters[| playerIndex].active = false;
 	hud.shouldDraw = false;

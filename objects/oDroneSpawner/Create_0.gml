@@ -2,6 +2,8 @@
 
 event_inherited();
 
+hitSoundFunc = sound_metal_impact;
+
 function die()
 {
 	oGameManager.killScore += value;

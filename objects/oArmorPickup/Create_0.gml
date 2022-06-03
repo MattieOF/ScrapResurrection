@@ -11,6 +11,7 @@ function onPickup(player)
 	player.armor = min(player.armor + armorValue, player.maxArmor);
 	addedArmor = player.armor - prevArmor;
 	instance_destroy(id);
+	audio_play_sound(sndArmorPickup, 0, false);
 	return true;
 }
 onPickupFunc = onPickup;
