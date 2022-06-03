@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Update sprite
 // You can write your code in this editor
 
 // Inherit the parent event

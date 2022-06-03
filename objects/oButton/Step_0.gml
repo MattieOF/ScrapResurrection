@@ -1,3 +1,4 @@
+/// @description Check for hover and press
 if (!interactable) return;
 
 if (point_in_rectangle(device_mouse_x_to_gui(0), device_mouse_y_to_gui(0), drawX1, drawY1, drawX2, drawY2))

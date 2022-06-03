@@ -1,3 +1,4 @@
+/// @description Create menu, init values
 function load_checkpoint()
 {
 	load();

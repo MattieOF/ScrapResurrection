@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Draw particles
 for (var i = 0; i < array_length(debris); i++)
 {
 	var scale  = debris[i].scale;

@@ -1,3 +1,4 @@
+/// @description Draw hitbox in debug mode
 if (global.drawDebugItems)
 {
 	draw_set_color(c_purple);

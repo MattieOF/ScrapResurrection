@@ -1,3 +1,4 @@
+/// @description Check for any hit enemies
 var hitsList = ds_list_create();
 var hits = collision_rectangle_list(bbox_left, bbox_top, bbox_right, bbox_bottom, enemyObject, false, true, hitsList, false);
 

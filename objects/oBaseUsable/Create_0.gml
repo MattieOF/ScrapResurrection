@@ -1,3 +1,4 @@
+/// @description Define base functions and values
 highlighted = false;
 
 function use(player)

@@ -1,3 +1,4 @@
+/// @description Special code to also start level transition
 function use(player)
 {
 	player.add_weapon(weapon);

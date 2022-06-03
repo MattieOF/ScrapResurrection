@@ -1,3 +1,4 @@
+/// @description Create menu, get shader uniform locations
 if (room == rmInit || room == rmMainMenu) exit;
 
 paused = false;

@@ -1,4 +1,4 @@
-// George Knight Easter Egg
+/// @description Check for George Knight easter egg
 if (keyboard_check(ord("G")) &&
     keyboard_check(ord("K")))
 {

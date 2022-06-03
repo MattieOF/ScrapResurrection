@@ -1,3 +1,4 @@
+/// @description HUD related helper functions
 function PickupNotif(_text, _time = 1.5) constructor
 {
 	text = _text;

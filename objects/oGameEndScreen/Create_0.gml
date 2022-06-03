@@ -1,3 +1,4 @@
+/// @description Create menu
 function restart()
 {
 	new_save();

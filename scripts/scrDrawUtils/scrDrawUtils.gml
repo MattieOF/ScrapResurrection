@@ -1,3 +1,4 @@
+/// @description Code to assist with drawing
 /// @desc Creating this struct populates the halign and valign variables with the current draw_halign and draw_valign
 function DrawAligns() constructor
 {

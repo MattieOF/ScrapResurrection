@@ -1,3 +1,4 @@
+/// @description Do screenshake, save game, create level end UI
 oGameManager.screenshakeDecreasePerFrame = 0.5;
 save(, rmLevel2);
 

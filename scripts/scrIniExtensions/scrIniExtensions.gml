@@ -1,3 +1,4 @@
+/// @description INI related helper functions
 function ini_read_bool(section, key, valueDefault)
 {
 	var value = ini_read_string(section, key, valueDefault ? "true" : "false");

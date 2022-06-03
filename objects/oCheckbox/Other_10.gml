@@ -1,3 +1,4 @@
+/// @description Update width/height
 var oldFont = draw_get_font();
 if (font == noone) font = -1;
 draw_set_font(font);

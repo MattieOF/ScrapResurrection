@@ -1,3 +1,4 @@
+/// @description General helper functions
 randomize();
 global.flynnHook = false;
 

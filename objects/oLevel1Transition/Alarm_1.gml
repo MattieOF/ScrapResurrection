@@ -1,3 +1,4 @@
+/// @description Begin transition
 oGameManager.screenshakeDecreasePerFrame = -0.5;
 oFade.fadeColour = c_white;
 oFade.fade_out(5);

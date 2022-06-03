@@ -1,3 +1,4 @@
+/// @description Create UI
 function next_level()
 {
 	room_goto(nextRoom);

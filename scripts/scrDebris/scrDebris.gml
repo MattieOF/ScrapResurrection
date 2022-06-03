@@ -1,3 +1,4 @@
+/// @description Code related to oDebris
 function DebrisElement(_x, _y, _sprite, _width, _height, _spd, _dir, _rotateSpd, _lifetime, _grv = 0.2, _collides = true, _wallObj = oWall) constructor
 {
 	X = _x;

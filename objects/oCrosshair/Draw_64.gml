@@ -1,3 +1,4 @@
+/// @description Draw crosshair
 if (room == rmInit || room == rmMainMenu || oGameManager.dead || oFade.currentFade != 0) return;
 var sx = window_mouse_get_x();
 var sy = window_mouse_get_y();

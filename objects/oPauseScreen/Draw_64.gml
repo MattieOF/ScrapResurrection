@@ -1,3 +1,4 @@
+/// @description Draw pause surface, blur
 if (room == rmInit || room == rmMainMenu) exit;
 
 radius = approach(radius, 10, 0.3);

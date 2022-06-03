@@ -1,3 +1,4 @@
+/// @description Raycasting function
 // From https://marketplace.yoyogames.com/assets/8889/raycast-2d
 
 ///@desc raycast(x, y, dir, range, obj);

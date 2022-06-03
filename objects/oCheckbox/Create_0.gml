@@ -1,3 +1,4 @@
+/// @description Define draw function and values
 function draw()
 {
 	var values = new DrawValues();

@@ -1,3 +1,4 @@
+/// @description Init values, declare draw function
 event_user(0);
 
 function draw()

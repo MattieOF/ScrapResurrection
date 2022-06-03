@@ -1,3 +1,4 @@
+/// @description Save related helper functions
 // While I was orginally planning to have full level state (de)serialisation implemented
 // for saving and loading, that was a lot of work that I really could not be arsed with.
 // Therefore, I've decided to instead take advantage of this games level-based approach,

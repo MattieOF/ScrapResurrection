@@ -1,3 +1,4 @@
+/// @description Declare variables and functions
 currentFade = 0;
 onFinishFunc = undefined;
 fading = false;

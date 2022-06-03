@@ -1,3 +1,4 @@
+/// @description Spawn enemy if its time to
 if (!spawn) exit;
 
 _currentTimer--;

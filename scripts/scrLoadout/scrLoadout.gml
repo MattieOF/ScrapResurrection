@@ -1,3 +1,4 @@
+/// @description Loadout related helper functions
 function LoadoutItem(_weapon) constructor
 {
 	weapon      = _weapon;

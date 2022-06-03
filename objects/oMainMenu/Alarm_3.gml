@@ -1,2 +1,3 @@
+/// @description Load game
 load();
 

@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Shoot bullet/drone
 if (awake && targetInView)
 {
 	var inst = instance_create_layer(x, y, layer, oDroneSpawnerProjectile);

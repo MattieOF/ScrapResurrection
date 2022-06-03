@@ -1,3 +1,4 @@
+/// @description Options related helper functions
 #macro options_filename "sr_options.ini"
 
 function load_options()

@@ -1,3 +1,4 @@
+/// @description String related helper functions
 /// @desc Get the current date and time in a format usable in a file name
 /// @returns date/time in format "current day_current month_current year-current hour_current minute_current second"
 function get_file_formatted_datetime()

@@ -1,3 +1,4 @@
+/// @description Draw fade
 if (currentFade <= 0) exit;
 
 draw_set_color(fadeColour);

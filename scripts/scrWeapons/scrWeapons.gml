@@ -1,3 +1,4 @@
+/// @description Weapon related functions
 global.weaponPistol = new WeaponHitscan("Pistol", sAssaultRifle, 25, 1000, 0.75, 2, 10, 40, 
 	new WeaponSounds(), 1, 0, false);
 global.weaponLMG = new WeaponHitscan("Assault Rifle", sAssaultRifle, 15, 1000, 0.1, 2.5, 30, 120, 

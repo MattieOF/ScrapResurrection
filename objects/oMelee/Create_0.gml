@@ -1,3 +1,4 @@
+/// @description Declare variables, initialise size
 function init(width, height, wpn, src)
 {
 	var sw = sprite_get_width(sprite_index);
