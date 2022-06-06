@@ -54,6 +54,7 @@ switch (stage)
 			+ "Elementals: Metal Bladekeeper by chierit on itch.io\n"
 			+ "Some icons from game-icons.net, licensed under CC BY 3.0\n"
 			+ "Scribble by JujuAdams\n"
+			+ "Sounds from freesound.org\n"
 			+ "[c_gray]All of which were edited slightly\n\n"
 			+ "[c_gray][fntUiMain]Developed with\n"
 			+ "[c_white][sGMLogo]\n\n"

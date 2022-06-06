@@ -265,9 +265,9 @@ function shoot()
 				return;
 			}
 			
+			var spread = loadout[currentLoadoutSlot].weapon.spread;
 			repeat (loadout[currentLoadoutSlot].weapon.shots)
 			{
-				var spread = loadout[currentLoadoutSlot].weapon.spread;
 				var shotDir = dir + random_range(-spread, spread);
 				shoot_hitscan(id, shotDir, loadout[currentLoadoutSlot].weapon);
 			}

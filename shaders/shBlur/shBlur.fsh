@@ -8,10 +8,6 @@ uniform float xs, ys;
 uniform float r;
 uniform int axis;
 
-const int Quality = 6;
-const int Directions = 12;
-const float Pi = 6.28318530718;//pi * 2
-
 void main()
 {
 	float x,y,xx,yy,rr=r*r,dx,dy,w,w0;
