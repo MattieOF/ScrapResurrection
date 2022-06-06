@@ -8,6 +8,7 @@ radius = 0;
 xs = shader_get_uniform(shBlur, "xs");
 ys = shader_get_uniform(shBlur, "ys");
 r = shader_get_uniform(shBlur, "r");
+tint = shader_get_uniform(shBlur, "tint");
 
 function pause()
 {

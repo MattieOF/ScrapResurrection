@@ -4,6 +4,7 @@
 varying vec2 v_vTexcoord;
 varying vec4 v_vColour;
 
+uniform vec4 tint;
 uniform float xs, ys;
 uniform float r;
 uniform int axis;
@@ -19,7 +20,7 @@ void main()
       if (xx+yy<=rr)
         {
         w=w0*exp((-xx-yy)/(2.0*rr));
-        col+=texture2D(gm_BaseTexture,p)*w;
+        col+=texture2D(gm_BaseTexture,p)*w*tint;
         }}}
     gl_FragColor=col;
 }

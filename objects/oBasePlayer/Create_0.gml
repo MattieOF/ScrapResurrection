@@ -298,7 +298,7 @@ function reload_pressed()
 {
 	// Return if we can't reload
 	if (reloading) return; // Already reloading
-	if (!variable_struct_exists(loadout[currentLoadoutSlot], "ammoClip")) return; // Ammoless weapon
+	if (loadout[currentLoadoutSlot].ammoClip == pointer_null) return; // Ammoless weapon
 	if (loadout[currentLoadoutSlot].ammoClip == loadout[currentLoadoutSlot].weapon.ammoClip) 
 		return;  // Clip is full
 	if (loadout[currentLoadoutSlot].ammoReserve == 0) return; // Out of reserve ammo
