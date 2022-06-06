@@ -1,6 +1,8 @@
 /// @description Weapon related functions
 global.weaponLMG = new WeaponHitscan("Assault Rifle", sAssaultRifle, 15, 1000, 0.1, 1.75, 30, 120, 
 	new WeaponSounds(sndARFire, sndARReload, sndDryfire), 1, 2.5, true);
+global.weaponPistol = new WeaponHitscan("Pistol", sPistol, 25, 1000, 0.75, 1.45, 12, 48, 
+	new WeaponSounds(sndPistolFire, sndPistolReload, sndDryfire), 1, 0.5, false);
 global.weaponDagger = new WeaponMelee("Dagger", sDagger, 50, 35, 5, 1.25, 
 	new WeaponSounds(sndMeleeSwing), 0.3, 0.4, 10, 5, false);
 

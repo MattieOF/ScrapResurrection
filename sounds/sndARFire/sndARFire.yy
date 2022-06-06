@@ -14,8 +14,8 @@
   "soundFile": "sndARFire.wav",
   "duration": 0.233208,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "AR",
+    "path": "folders/Sounds/Weapons/AR.yy",
   },
   "resourceVersion": "1.0",
   "name": "sndARFire",

@@ -6,8 +6,6 @@ if (sprite.layer == global.highlightedUsablesLayer && (!highlighted || !active))
 sprite.x = x;
 sprite.y = y;
 
-show_debug_message(sprite.image_index);
-show_debug_message(hasPower);
 if (sprite.image_index < 1 && hasPower)
 {
 	hasPower = false;

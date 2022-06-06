@@ -14,8 +14,8 @@
   "soundFile": "sndARReload.wav",
   "duration": 1.522222,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "AR",
+    "path": "folders/Sounds/Weapons/AR.yy",
   },
   "resourceVersion": "1.0",
   "name": "sndARReload",

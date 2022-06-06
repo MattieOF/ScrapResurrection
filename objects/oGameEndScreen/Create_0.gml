@@ -16,7 +16,7 @@ function to_desktop()
 
 function init(enemyScore, time, _color = c_white)
 {
-	var timeScore = floor(min(lerp(20000, 0, time / 120), 15000));
+	var timeScore = floor(min(lerp(20000, 0, max(time / 120, 0)), 15000));
 	
 	start_stack("EndMissionScreen", 100, 100, 10, stackDir.vertical, false);
 	add_to_stack(create_label(0, 0, "GAME COMPLETE.",, _color, fntUiMainMassive, fa_top, fa_left, 0, 1, true));

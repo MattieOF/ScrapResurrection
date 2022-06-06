@@ -11,7 +11,7 @@ if (paused && surface_exists(pauseSurf))
 	shader_set_uniform_f(xs, width);
 	shader_set_uniform_f(ys, height);
 	shader_set_uniform_f(r, radius);
-	shader_set_uniform_f(tint, lerp(0, 0, radius / 10), lerp(0, 0, radius / 10), lerp(0, 0, radius / 10), 1);
+	shader_set_uniform_f(tint, lerp(1, 1, radius / 10), lerp(1, 1, radius / 10), lerp(1, 1, radius / 10), 1);
 	draw_surface_ext(pauseSurf, 0, 0, 1, 1, 0, c_white, 1);
 	shader_reset();
 }
